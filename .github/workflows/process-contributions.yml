@@ -4,58 +4,126 @@ on:
   push:
     branches: [agent-contributions]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
-  validate-and-notify:
+  create-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Detect new projects
         id: detect
         run: |
-          # Find project directories added in this push
+          # Find project directories added vs main
           NEW_PROJECTS=$(git diff --name-only origin/main...HEAD -- 'src/projects/*/App.jsx' | sed 's|src/projects/||;s|/App.jsx||' | sort -u)
-          echo "projects=$NEW_PROJECTS" >> $GITHUB_OUTPUT
-          echo "count=$(echo "$NEW_PROJECTS" | grep -c . || true)" >> $GITHUB_OUTPUT
+
+          if [ -z "$NEW_PROJECTS" ]; then
+            echo "No new projects detected."
+            echo "has_projects=false" >> $GITHUB_OUTPUT
+          else
+            echo "New projects detected:"
+            echo "$NEW_PROJECTS"
+            echo "has_projects=true" >> $GITHUB_OUTPUT
+
+            # Build PR title and body from project names
+            COUNT=$(echo "$NEW_PROJECTS" | wc -l | tr -d ' ')
+            echo "count=$COUNT" >> $GITHUB_OUTPUT
+
+            if [ "$COUNT" -eq 1 ]; then
+              TITLE="Community contribution: $NEW_PROJECTS"
+            else
+              TITLE="Community contribution: $COUNT new research projects"
+            fi
+            echo "title=$TITLE" >> $GITHUB_OUTPUT
+
+            # Build body with project list
+            BODY="## New Research Projects\n\n"
+            for PROJECT in $NEW_PROJECTS; do
+              BODY="${BODY}- \`${PROJECT}\`\n"
+            done
+            BODY="${BODY}\n**Pushed by:** ${{ github.actor }}\n**Commit:** \`${{ github.sha }}\`\n\n---\n_Auto-created from \`agent-contributions\` branch. The validate-pr workflow will run full validation checks automatically._"
+
+            # Use a delimiter for multiline output
+            echo "body<<EOF" >> $GITHUB_OUTPUT
+            echo -e "$BODY" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
           echo "### New projects detected:" >> $GITHUB_STEP_SUMMARY
           echo "$NEW_PROJECTS" >> $GITHUB_STEP_SUMMARY
 
-      - name: Validate project structure
-        if: steps.detect.outputs.count > 0
-        run: |
-          EXIT_CODE=0
-          for PROJECT in ${{ steps.detect.outputs.projects }}; do
-            echo "Validating: $PROJECT"
-            # Check required files exist
-            if [ ! -f "src/projects/$PROJECT/App.jsx" ]; then
-              echo "❌ Missing App.jsx for $PROJECT"
-              EXIT_CODE=1
-            fi
-            if [ ! -d "src/projects/$PROJECT/data" ]; then
-              echo "❌ Missing data/ directory for $PROJECT"
-              EXIT_CODE=1
-            fi
-            if [ ! -d "src/projects/$PROJECT/components" ]; then
-              echo "❌ Missing components/ directory for $PROJECT"
-              EXIT_CODE=1
-            fi
-            # Check for registry entry
-            if ! grep -q "'$PROJECT'" src/projects/index.js 2>/dev/null; then
-              echo "⚠️  $PROJECT not found in projects/index.js registry"
-            fi
-            echo "✅ $PROJECT structure looks valid"
-          done
-          exit $EXIT_CODE
+      - name: Check for existing PR
+        id: existing
+        if: steps.detect.outputs.has_projects == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:agent-contributions`,
+              base: 'main',
+              state: 'open',
+            });
+            if (prs.length > 0) {
+              core.setOutput('exists', 'true');
+              core.setOutput('pr_number', prs[0].number);
+              console.log(`Existing PR #${prs[0].number} found — it will be updated automatically.`);
+            } else {
+              core.setOutput('exists', 'false');
+              console.log('No existing PR found — will create one.');
+            }
 
-      - name: Build test
-        if: steps.detect.outputs.count > 0
-        run: |
-          npm ci
-          npx vite build
+      - name: Create PR
+        if: steps.detect.outputs.has_projects == 'true' && steps.existing.outputs.exists == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `${{ steps.detect.outputs.title }}`,
+              body: `${{ steps.detect.outputs.body }}`,
+              head: 'agent-contributions',
+              base: 'main',
+            });
+            console.log(`Created PR #${pr.number}: ${pr.html_url}`);
 
-      - name: Create summary
+            // Add a label
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                labels: ['community-contribution'],
+              });
+            } catch (e) {
+              console.log(`Note: Could not add label (${e.message}).`);
+            }
+
+      - name: Update existing PR
+        if: steps.detect.outputs.has_projects == 'true' && steps.existing.outputs.exists == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ steps.existing.outputs.pr_number || 0 }};
+            if (prNumber > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: `🔄 New push to \`agent-contributions\` detected.\n\n${{ steps.detect.outputs.body }}\n\nValidation will re-run automatically.`,
+              });
+              console.log(`Updated PR #${prNumber} with new comment.`);
+            }
+
+      - name: Summary
         if: always()
         run: |
           echo "## Community Contribution Report" >> $GITHUB_STEP_SUMMARY

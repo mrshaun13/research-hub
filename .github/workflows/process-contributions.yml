@@ -112,8 +112,12 @@ jobs:
           Validation: ✅ structure passed, ✅ build passed"
 
           # Push using admin PAT to bypass branch protection ruleset
-          # Use credential helper to avoid URL-encoding issues with PAT special chars
-          git -c "http.https://github.com/.extraheader=Authorization: basic $(echo -n "x-access-token:${ADMIN_PAT}" | base64 -w0)" push origin main
+          # Clear the checkout-injected auth header, then set our own
+          git config --unset-all http.https://github.com/.extraheader || true
+          echo "https://x-access-token:${ADMIN_PAT}@github.com" > ~/.git-credentials
+          git config credential.helper 'store --file ~/.git-credentials'
+          git push origin main
+          rm -f ~/.git-credentials
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### ✅ Auto-merged to main" >> $GITHUB_STEP_SUMMARY

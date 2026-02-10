@@ -1,0 +1,66 @@
+name: Process Community Contributions
+
+on:
+  push:
+    branches: [agent-contributions]
+
+jobs:
+  validate-and-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect new projects
+        id: detect
+        run: |
+          # Find project directories added in this push
+          NEW_PROJECTS=$(git diff --name-only origin/main...HEAD -- 'src/projects/*/App.jsx' | sed 's|src/projects/||;s|/App.jsx||' | sort -u)
+          echo "projects=$NEW_PROJECTS" >> $GITHUB_OUTPUT
+          echo "count=$(echo "$NEW_PROJECTS" | grep -c . || true)" >> $GITHUB_OUTPUT
+          echo "### New projects detected:" >> $GITHUB_STEP_SUMMARY
+          echo "$NEW_PROJECTS" >> $GITHUB_STEP_SUMMARY
+
+      - name: Validate project structure
+        if: steps.detect.outputs.count > 0
+        run: |
+          EXIT_CODE=0
+          for PROJECT in ${{ steps.detect.outputs.projects }}; do
+            echo "Validating: $PROJECT"
+            # Check required files exist
+            if [ ! -f "src/projects/$PROJECT/App.jsx" ]; then
+              echo "❌ Missing App.jsx for $PROJECT"
+              EXIT_CODE=1
+            fi
+            if [ ! -d "src/projects/$PROJECT/data" ]; then
+              echo "❌ Missing data/ directory for $PROJECT"
+              EXIT_CODE=1
+            fi
+            if [ ! -d "src/projects/$PROJECT/components" ]; then
+              echo "❌ Missing components/ directory for $PROJECT"
+              EXIT_CODE=1
+            fi
+            # Check for registry entry
+            if ! grep -q "'$PROJECT'" src/projects/index.js 2>/dev/null; then
+              echo "⚠️  $PROJECT not found in projects/index.js registry"
+            fi
+            echo "✅ $PROJECT structure looks valid"
+          done
+          exit $EXIT_CODE
+
+      - name: Build test
+        if: steps.detect.outputs.count > 0
+        run: |
+          npm ci
+          npx vite build
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Community Contribution Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** agent-contributions" >> $GITHUB_STEP_SUMMARY
+          echo "**Projects:** ${{ steps.detect.outputs.count }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Pushed by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY

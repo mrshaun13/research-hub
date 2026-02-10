@@ -112,8 +112,8 @@ jobs:
           Validation: ✅ structure passed, ✅ build passed"
 
           # Push using admin PAT to bypass branch protection ruleset
-          git remote set-url origin "https://x-access-token:${ADMIN_PAT}@github.com/${{ github.repository }}.git"
-          git push origin main
+          # Use credential helper to avoid URL-encoding issues with PAT special chars
+          git -c "http.https://github.com/.extraheader=Authorization: basic $(echo -n "x-access-token:${ADMIN_PAT}" | base64 -w0)" push origin main
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### ✅ Auto-merged to main" >> $GITHUB_STEP_SUMMARY

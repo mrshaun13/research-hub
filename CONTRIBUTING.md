@@ -21,8 +21,9 @@ Only the **project-level files** for the specific research you agree to share:
 
 **What is NOT shared:**
 - Your local config.json (contains machine-specific paths)
-- Your other research projects (only the ones you explicitly share)
 - Any personal information beyond what's in the research content itself
+
+**Note:** When opted in, all research projects you build are automatically shared. If you want to stop sharing, update your config.json `library.enabled` to `false`.
 
 ## Project Structure Requirements
 

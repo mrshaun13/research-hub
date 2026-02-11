@@ -495,7 +495,7 @@ export const projectRegistry = [
         estimatedLabel: '~75 min fun exploration',
       },
     },
-  },,
+  },
 ];
 
 export const projectComponents = {

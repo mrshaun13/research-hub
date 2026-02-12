@@ -569,4 +569,5 @@ export const projectComponents = {
   'solar-system-explorer-mrshaun13': lazy(() => import('./solar-system-explorer-mrshaun13/App')),
   'traitors-s3-analytics-mrshaun13': lazy(() => import('./traitors-s3-analytics-mrshaun13/App')),
   'skill-showcase-mrshaun13': lazy(() => import('./skill-showcase-mrshaun13/App')),
+  'coffee-beans-deep-dive-djagger': lazy(() => import('./coffee-beans-deep-dive-djagger/App')),
 };

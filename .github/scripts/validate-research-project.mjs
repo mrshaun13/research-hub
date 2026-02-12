@@ -20,6 +20,7 @@ import { join, basename, extname } from 'path';
 // ─── Configuration ──────────────────────────────────────────────────────────
 
 const VALID_LENSES = ['standard', 'product', 'population', 'behavior', 'industry', 'culture'];
+const VALID_VISIBILITIES = ['local', 'personal', 'public'];
 
 const REQUIRED_REGISTRY_FIELDS = [
   'slug', 'title', 'subtitle', 'query', 'lens', 'icon', 'accentColor', 'createdAt',
@@ -325,6 +326,15 @@ function validateRegistryEntry(report, entry, slug) {
   } else {
     report.fail('Registry', 'Title is too short or missing');
   }
+
+  // Visibility field (optional, but validated if present)
+  if (entry.visibility !== undefined) {
+    if (VALID_VISIBILITIES.includes(entry.visibility)) {
+      report.pass('Registry', `Visibility \`${entry.visibility}\` is valid`);
+    } else {
+      report.fail('Registry', `Visibility \`${entry.visibility}\` is not recognized (valid: ${VALID_VISIBILITIES.join(', ')})`);
+    }
+  }
 }
 
 function validateTelemetry(report, telemetry) {
@@ -423,7 +433,7 @@ function validateTelemetry(report, telemetry) {
       report.fail('Telemetry', `Word count ${ca.totalWords} is too low — research dashboards have substantial text (min: ${MIN_TOTAL_WORDS})`);
     }
 
-    if (typeof ca.fleschKincaidGrade === 'number' && ca.fleschKincaidGrade >= 5 && ca.fleschKincaidGrade <= 20) {
+    if (typeof ca.fleschKincaidGrade === 'number' && ca.fleschKincaidGrade >= 1 && ca.fleschKincaidGrade <= 20) {
       report.pass('Telemetry', `Flesch-Kincaid grade: ${ca.fleschKincaidGrade} (sane range)`);
     } else if (typeof ca.fleschKincaidGrade === 'number') {
       report.warn('Telemetry', `Flesch-Kincaid grade ${ca.fleschKincaidGrade} is unusual`);

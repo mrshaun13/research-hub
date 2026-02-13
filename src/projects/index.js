@@ -556,6 +556,51 @@ export const projectRegistry = [
       },
     },
   },
+  {
+    slug: 'japanese-learning-center-djagger',
+    title: 'Japanese Learning Center',
+    subtitle: 'Beginner to Advanced \u2014 Romaji, Hiragana & Katakana (No Kanji)',
+    query: 'Build a Japanese language learning center from beginner to advanced. Cover all topics needed for fluency. Use romaji, hiragana and katakana only.',
+    lens: 'standard',
+    icon: 'Languages',
+    accentColor: 'rose',
+    visibility: 'public',
+    createdAt: '2026-02-13T20:38:00Z',
+    telemetry: {
+      runStartedAt: '2026-02-13T20:38:00Z',
+      runCompletedAt: '2026-02-13T21:30:00Z',
+      durationMinutes: 52,
+      includedSetup: false,
+      skillVersion: '6.4',
+      userPrompt: 'Build a Japanese language learning center from beginner to advanced fluency using romaji, hiragana and katakana only.',
+      searchesPerformed: 7,
+      sourcesCount: 12,
+      sectionsBuilt: 8,
+      chartsBuilt: 0,
+      filesGenerated: 15,
+      dataPointsCollected: 800,
+      phaseTiming: { environment: 1, interpret: 1, survey: 3, discover: 2, research: 5, analyze: 3, build: 32, present: 5 },
+      contentAnalysis: {
+        fleschKincaidGrade: 7,
+        fleschKincaidLabel: '7th Grade',
+        bloomsLevel: 3,
+        bloomsLabel: 'Apply',
+        bloomsRange: 'Remember \u2192 Apply',
+        totalWords: 15000,
+        totalSentences: 900,
+        readabilityNote: 'Comprehensive Japanese language curriculum with guided learning path, interactive reference pages, and 200+ example sentences across all JLPT levels',
+      },
+      hoursSaved: {
+        researchHours: 30,
+        totalHoursSaved: 180,
+        equivalentLabel: '~5 weeks full-time',
+      },
+      consumptionTime: {
+        estimatedMinutes: 600,
+        estimatedLabel: '~10 hours deep study',
+      },
+    },
+  },
 ];
 
 export const projectComponents = {
@@ -569,4 +614,5 @@ export const projectComponents = {
   'solar-system-explorer-mrshaun13': lazy(() => import('./solar-system-explorer-mrshaun13/App')),
   'traitors-s3-analytics-mrshaun13': lazy(() => import('./traitors-s3-analytics-mrshaun13/App')),
   'skill-showcase-mrshaun13': lazy(() => import('./skill-showcase-mrshaun13/App')),
+  'japanese-learning-center-djagger': lazy(() => import('./japanese-learning-center-djagger/App')),
 };

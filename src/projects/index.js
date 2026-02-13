@@ -9,6 +9,7 @@ export const projectRegistry = [
     lens: 'standard',
     icon: 'Building2',
     accentColor: 'cyan',
+    visibility: 'public',
     createdAt: '2026-02-08T12:00:00Z',
     telemetry: {
       runStartedAt: '2026-02-08T12:00:00Z',
@@ -47,6 +48,9 @@ export const projectRegistry = [
         estimatedMinutes: 39,
         estimatedLabel: '~40 min deep read',
       },
+      promptComplexity: { wordCount: 12, entityCount: 1, ambiguityScore: 0.3 },
+      sourceDiversityScore: 0.67,
+      dataQualityDistribution: { t1: 15, t2: 85, t3: 55, t4: 25 },
     },
   },
   {
@@ -57,6 +61,7 @@ export const projectRegistry = [
     lens: 'product',
     icon: 'Axe',
     accentColor: 'orange',
+    visibility: 'public',
     createdAt: '2026-02-09T12:00:00Z',
     telemetry: {
       runStartedAt: '2026-02-09T12:00:00Z',
@@ -95,6 +100,9 @@ export const projectRegistry = [
         estimatedMinutes: 54,
         estimatedLabel: '~55 min deep read',
       },
+      promptComplexity: { wordCount: 11, entityCount: 0, ambiguityScore: 0.6 },
+      sourceDiversityScore: 0.56,
+      dataQualityDistribution: { t1: 20, t2: 120, t3: 130, t4: 54 },
     },
   },
   {
@@ -105,6 +113,7 @@ export const projectRegistry = [
     lens: 'standard',
     icon: 'Globe',
     accentColor: 'cyan',
+    visibility: 'public',
     createdAt: '2026-02-10T05:53:00Z',
     telemetry: {
       runStartedAt: '2026-02-10T05:53:00Z',
@@ -143,6 +152,9 @@ export const projectRegistry = [
         estimatedMinutes: 42,
         estimatedLabel: '~42 min deep read',
       },
+      promptComplexity: { wordCount: 9, entityCount: 1, ambiguityScore: 0.2 },
+      sourceDiversityScore: 0.67,
+      dataQualityDistribution: { t1: 25, t2: 95, t3: 70, t4: 30 },
     },
   },
   {
@@ -153,6 +165,7 @@ export const projectRegistry = [
     lens: 'product',
     icon: 'Zap',
     accentColor: 'amber',
+    visibility: 'public',
     createdAt: '2026-02-10T06:16:00Z',
     telemetry: {
       runStartedAt: '2026-02-10T06:16:00Z',
@@ -191,6 +204,9 @@ export const projectRegistry = [
         estimatedMinutes: 58,
         estimatedLabel: '~1 hr deep read',
       },
+      promptComplexity: { wordCount: 50, entityCount: 6, ambiguityScore: 0.2 },
+      sourceDiversityScore: 0.64,
+      dataQualityDistribution: { t1: 25, t2: 110, t3: 105, t4: 48 },
     },
   },
   {
@@ -201,6 +217,7 @@ export const projectRegistry = [
     lens: 'standard',
     icon: 'GraduationCap',
     accentColor: 'violet',
+    visibility: 'public',
     createdAt: '2026-02-10T09:06:00Z',
     telemetry: {
       runStartedAt: '2026-02-10T09:06:00Z',
@@ -239,6 +256,9 @@ export const projectRegistry = [
         estimatedMinutes: 48,
         estimatedLabel: '~50 min deep read',
       },
+      promptComplexity: { wordCount: 30, entityCount: 5, ambiguityScore: 0.3 },
+      sourceDiversityScore: 0.65,
+      dataQualityDistribution: { t1: 10, t2: 80, t3: 120, t4: 50 },
     },
   },
   {
@@ -249,6 +269,7 @@ export const projectRegistry = [
     lens: 'product',
     icon: 'Smartphone',
     accentColor: 'emerald',
+    visibility: 'public',
     createdAt: '2026-02-10T18:23:00Z',
     telemetry: {
       runStartedAt: '2026-02-10T18:00:00Z',
@@ -292,6 +313,9 @@ export const projectRegistry = [
         interactiveOverheadMinutes: 4,
         estimatedLabel: '~35 min deep read',
       },
+      promptComplexity: { wordCount: 22, entityCount: 1, ambiguityScore: 0.4 },
+      sourceDiversityScore: 0.58,
+      dataQualityDistribution: { t1: 30, t2: 100, t3: 95, t4: 39 },
     },
   },
   {
@@ -302,6 +326,7 @@ export const projectRegistry = [
     lens: 'standard',
     icon: 'Brain',
     accentColor: 'cyan',
+    visibility: 'public',
     createdAt: '2026-02-10T22:49:00Z',
     telemetry: {
       runStartedAt: '2026-02-10T22:00:00Z',
@@ -345,6 +370,9 @@ export const projectRegistry = [
         interactiveOverheadMinutes: 11.6,
         estimatedLabel: '~1 hr deep read',
       },
+      promptComplexity: { wordCount: 40, entityCount: 4, ambiguityScore: 0.4 },
+      sourceDiversityScore: 0.80,
+      dataQualityDistribution: { t1: 20, t2: 110, t3: 120, t4: 50 },
     },
   },
   {
@@ -355,6 +383,7 @@ export const projectRegistry = [
     lens: 'standard',
     icon: 'Coffee',
     accentColor: 'amber',
+    visibility: 'public',
     createdAt: '2026-02-10T22:57:00Z',
     telemetry: {
       runStartedAt: '2026-02-10T22:57:00Z',
@@ -393,6 +422,9 @@ export const projectRegistry = [
         estimatedMinutes: 25,
         estimatedLabel: '~25 min deep read',
       },
+      promptComplexity: { wordCount: 40, entityCount: 0, ambiguityScore: 0.5 },
+      sourceDiversityScore: 0.75,
+      dataQualityDistribution: { t1: 30, t2: 120, t3: 100, t4: 35 },
     },
   },
   {
@@ -403,6 +435,7 @@ export const projectRegistry = [
     lens: 'standard',
     icon: 'Globe',
     accentColor: 'blue',
+    visibility: 'public',
     createdAt: '2026-02-11T03:48:00Z',
     telemetry: {
       runStartedAt: '2026-02-11T03:46:00Z',
@@ -446,6 +479,9 @@ export const projectRegistry = [
         interactiveOverheadMinutes: 22.5,
         estimatedLabel: '~75 min fun exploration',
       },
+      promptComplexity: { wordCount: 35, entityCount: 0, ambiguityScore: 0.4 },
+      sourceDiversityScore: 0.75,
+      dataQualityDistribution: { t1: 280, t2: 200, t3: 100, t4: 40 },
     },
   },
   {
@@ -500,6 +536,9 @@ export const projectRegistry = [
         interactiveOverheadMinutes: 25,
         estimatedLabel: '~90 min deep exploration',
       },
+      promptComplexity: { wordCount: 25, entityCount: 2, ambiguityScore: 0.2 },
+      sourceDiversityScore: 0.53,
+      dataQualityDistribution: { t1: 50, t2: 150, t3: 180, t4: 70 },
     },
   },
   {
@@ -554,6 +593,9 @@ export const projectRegistry = [
         interactiveOverheadMinutes: 8.3,
         estimatedLabel: '~50 min deep read',
       },
+      promptComplexity: { wordCount: 30, entityCount: 1, ambiguityScore: 0.3 },
+      sourceDiversityScore: 0.67,
+      dataQualityDistribution: { t1: 60, t2: 50, t3: 30, t4: 10 },
     },
   },
   {
@@ -609,6 +651,9 @@ export const projectRegistry = [
         interactiveOverheadMinutes: 7.7,
         estimatedLabel: '~45 min deep exploration',
       },
+      promptComplexity: { wordCount: 50, entityCount: 2, ambiguityScore: 0.3 },
+      sourceDiversityScore: 0.64,
+      dataQualityDistribution: { t1: 40, t2: 180, t3: 190, t4: 70 },
     },
   },
 ];

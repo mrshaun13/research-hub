@@ -1,0 +1,61 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-11T03:33:00Z",
+    "runCompletedAt": "2026-02-11T04:15:00Z",
+    "durationMinutes": 42,
+    "includedSetup": false,
+    "skillVersion": "6.1",
+    "userPrompt": "I'm 50 years old in Hendersonville TN, been an EA my whole career. Considering a lifestyle change — exploring options from receptionist at a dentist's office or Costco to event planning. Help me explore my options with pay ranges and stress levels.",
+    "researchPlan": "TOPIC: Career Pivot Explorer — Hendersonville, TN\nPROFILE: 50yo, 25yr EA veteran, Hendersonville TN\nTIERS: Chill Zone, Comfortable Middle, Leveraged Pivot, Ambitious Stretch\nJOBS: 18 roles across 4 stress tiers\nMETRICS: Salary range, O*NET stress score, take-home drama factor, skill match %, entry barrier, benefits quality\nPROPOSED SECTIONS: Overview, The Spectrum, Tier Breakdown, Head-to-Head, Your Skills, The Money Math, Sources & Next Steps",
+    "checkpointModified": false,
+    "model": null,
+    "tokenUsage": null,
+    "searchesPerformed": 15,
+    "sourcesCount": 15,
+    "sectionsBuilt": 7,
+    "chartsBuilt": 8,
+    "filesGenerated": 10,
+    "productsCompared": null,
+    "dataPointsCollected": 324,
+    "phaseTiming": {
+      "environment": 1,
+      "interpret": 2,
+      "survey": 8,
+      "discover": 6,
+      "research": 8,
+      "analyze": 3,
+      "build": 10,
+      "present": 4
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 9.2,
+      "fleschKincaidLabel": "9th Grade",
+      "bloomsLevel": 5,
+      "bloomsLabel": "Evaluate",
+      "bloomsRange": "Understand → Evaluate",
+      "totalWords": 6200,
+      "totalSentences": 310,
+      "readabilityNote": "Conversational career guidance with data-driven salary and stress analysis personalized to user profile"
+    },
+    "hoursSaved": {
+      "researchHours": 18.5,
+      "totalHoursSaved": 94,
+      "equivalentLabel": "~2.5 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 75.5,
+        "white-paper": 42,
+        "blog-post": 27,
+        "technical-doc": 24,
+        "presentation": 15,
+        "github-repo": 46
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 55,
+      "readingMinutes": 31,
+      "chartExplorationMinutes": 16,
+      "interactiveOverheadMinutes": 8,
+      "estimatedLabel": "~55 min deep read"
+    }
+  }
+}

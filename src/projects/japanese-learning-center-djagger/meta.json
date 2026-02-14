@@ -3,7 +3,7 @@
   "runCompletedAt": "2026-02-13T21:30:00Z",
   "durationMinutes": 52,
   "includedSetup": false,
-  "skillVersion": "6.4",
+  "skillVersion": "7.0",
   "userPrompt": "Build a Japanese language learning center from beginner to advanced. Cover all topics needed for fluency. Use romaji, hiragana and katakana only. Have in depth examples. Have a learning path with all information in a guided path. Have vocabulary, grammar and verb reference pages.",
   "researchPlan": "TOPIC: Japanese Language Learning Center\nSCOPE: N5 (Beginner) through N1 (Advanced)\nWRITING: Romaji + Hiragana + Katakana only\nSECTIONS: Overview, Learning Path (7 units, 20+ lessons), Writing Systems (hiragana/katakana charts), Grammar Reference (43 points), Vocabulary (8 categories, 100+ words), Verb Reference (16 verbs, 11 forms each), Particles (20 particles), Sources\nKEY FEATURE: All content self-contained — no external links needed for learning",
   "checkpointModified": false,
@@ -37,23 +37,35 @@
     "readabilityNote": "Comprehensive Japanese language curriculum with guided learning path, interactive reference pages, and 200+ example sentences across all JLPT levels"
   },
   "hoursSaved": {
-    "researchHours": 30,
-    "totalHoursSaved": 180,
-    "equivalentLabel": "~5 weeks full-time",
+    "researchHours": 26.75,
     "productionHours": {
-      "interactive-dashboard": 150,
-      "white-paper": 80,
-      "blog-post": 50,
-      "technical-doc": 60,
-      "presentation": 25,
-      "github-repo": 90
-    }
+      "interactive-dashboard": 55.5,
+      "white-paper": 46,
+      "blog-post": 20,
+      "technical-doc": 27.6,
+      "presentation": 12,
+      "github-repo": 31.5
+    },
+    "totalHoursSaved": 82.25,
+    "equivalentLabel": "~2 weeks full-time"
   },
   "consumptionTime": {
-    "estimatedMinutes": 600,
-    "readingMinutes": 400,
+    "estimatedMinutes": 120,
+    "readingMinutes": 100,
     "chartExplorationMinutes": 0,
-    "interactiveOverheadMinutes": 200,
-    "estimatedLabel": "~10 hours deep study"
+    "interactiveOverheadMinutes": 20,
+    "estimatedLabel": "~2 hr deep read"
+  },
+  "dataQualityDistribution": {
+    "t1": 0,
+    "t2": 350,
+    "t3": 400,
+    "t4": 50
+  },
+  "sourceDiversityScore": 0.85,
+  "promptComplexity": {
+    "wordCount": 42,
+    "entityCount": 3,
+    "ambiguityScore": 0.3
   }
 }

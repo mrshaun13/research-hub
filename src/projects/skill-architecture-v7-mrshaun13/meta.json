@@ -6,7 +6,7 @@
     "includedSetup": false,
     "skillVersion": "7.0",
     "userPrompt": "Deep research the research-visualizer skill v7.0 architecture — pipeline flow, config layers, extension system, hub architecture, telemetry, visibility, and community library. Present as a product demo showing both how it works and what the end user experiences.",
-    "researchPlan": "TOPIC: Research Visualizer Skill v7.0 — Complete Architecture Deep Dive\nTIME AXIS: Current state (v7.0) with version evolution context\nPOPULATIONS: 8 subsystems (Pipeline, Config, Extensions, Hub, Telemetry, Visibility, Library, Collections)\nCORE METRICS: Component count, data flow paths, decision points, file counts, config fields\nTAXONOMIES: Pipeline phases (8), Config layers (3), Extension hooks (3 types), Visibility tiers (3), Data quality tiers (4), Research lenses (4)\nPROPOSED SECTIONS: 8 sections\n  1. Skill Overview & Pipeline Flow\n  2. Config Architecture (3-Layer)\n  3. Pipeline Deep Dive (8 Phases)\n  4. Extension System\n  5. Hub Architecture & UI\n  6. Telemetry & Metrics\n  7. Visibility, Sync & Community Library\n  8. Sources & Methodology\nKEY DATA SOURCES: SKILL.md, 9 reference files, 2 extension files, README.md, hub-config.json",
+    "researchPlan": "TOPIC: Research Visualizer Skill v7.0 — Complete Architecture Deep Dive\nTIME AXIS: Current state (v7.0) with version evolution context\nPOPULATIONS: 8 subsystems (Pipeline, Config, Extensions, Hub, Telemetry, Visibility, Library, Collections)\nCORE METRICS: Component count, data flow paths, decision points, file counts, config fields\nSECTIONS: 8 sections",
     "checkpointModified": false,
     "model": "claude-sonnet-4-20250514",
     "tokenUsage": null,
@@ -27,18 +27,6 @@
       "build": 10,
       "present": 2
     },
-    "dataQualityDistribution": {
-      "t1": 186,
-      "t2": 0,
-      "t3": 0,
-      "t4": 0
-    },
-    "sourceDiversityScore": 0.8,
-    "promptComplexity": {
-      "wordCount": 42,
-      "entityCount": 7,
-      "ambiguityScore": 0.2
-    },
     "contentAnalysis": {
       "fleschKincaidGrade": 11.4,
       "fleschKincaidLabel": "11th Grade",
@@ -51,16 +39,16 @@
     },
     "hoursSaved": {
       "researchHours": 11.72,
-      "productionHours": {
-        "interactive-dashboard": 81.0,
-        "white-paper": 38.86,
-        "blog-post": 29.0,
-        "technical-doc": 27.0,
-        "presentation": 16.5,
-        "github-repo": 48.0
-      },
       "totalHoursSaved": 92.72,
-      "equivalentLabel": "~2.5 weeks full-time"
+      "equivalentLabel": "~2.5 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 81,
+        "white-paper": 38.86,
+        "blog-post": 29,
+        "technical-doc": 27,
+        "presentation": 16.5,
+        "github-repo": 48
+      }
     },
     "consumptionTime": {
       "estimatedMinutes": 52,
@@ -68,6 +56,18 @@
       "chartExplorationMinutes": 6.75,
       "interactiveOverheadMinutes": 8.75,
       "estimatedLabel": "~52 min deep read"
+    },
+    "dataQualityDistribution": {
+      "t1": 186,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "sourceDiversityScore": 0.8,
+    "promptComplexity": {
+      "wordCount": 42,
+      "entityCount": 7,
+      "ambiguityScore": 0.2
     }
   }
 }

@@ -1,0 +1,73 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-11T03:46:00Z",
+    "runCompletedAt": "2026-02-11T16:45:00Z",
+    "durationMinutes": 180,
+    "includedSetup": false,
+    "skillVersion": "6.1",
+    "userPrompt": "Build a cool learning experience for a seven-year-old advanced first grader to learn about our solar system with the ability to zoom in to all the planets and see every stat about their size and everything. Add a funny dad joke per planet too.",
+    "researchPlan": "TOPIC: Our Solar System — An Interactive Space Explorer for Kids\nAUDIENCE: 7-year-old advanced first grader\nPLANETS: All 8 + Sun + Pluto\nGROUPING: Inner Rocky vs Outer Giants\nKEY STATS: Distance, diameter, day/year length, gravity, temperature, moons, atmosphere, fun facts, dad jokes, exploration history\nSECTIONS: Mission Control, Planet Explorer, Space Records (7 sub-tabs), Size Showdown, Hot & Cold, Gravity Playground, Race to the Sun, Earth Moon & Seasons, Night Sky, Space Events, Space Timeline, Trivia Game, Space Lab, Space Library\nINTERACTIVES: Wind Race Game, Time Converter, Spinning Planet Comparator, Gravity Calculator, Distance Race, Constellation Viewer, Trivia Game",
+    "checkpointModified": true,
+    "model": null,
+    "tokenUsage": null,
+    "searchesPerformed": 5,
+    "sourcesCount": 8,
+    "sectionsBuilt": 14,
+    "chartsBuilt": 22,
+    "filesGenerated": 23,
+    "productsCompared": null,
+    "dataPointsCollected": 620,
+    "phaseTiming": {
+      "environment": 1,
+      "interpret": 1,
+      "survey": 2,
+      "discover": 1,
+      "research": 2,
+      "analyze": 1,
+      "build": 160,
+      "present": 12
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 3.5,
+      "fleschKincaidLabel": "3rd–4th Grade",
+      "bloomsLevel": 3,
+      "bloomsLabel": "Apply",
+      "bloomsRange": "Remember → Apply",
+      "totalWords": 9200,
+      "totalSentences": 780,
+      "readabilityNote": "Kid-friendly space exploration with interactive games, animated comparisons, real-world analogies, and hands-on learning for a 7-year-old audience. Includes wind speed race game, planet time converter, spinning planet comparator, and rich record book."
+    },
+    "hoursSaved": {
+      "researchHours": 12,
+      "totalHoursSaved": 98,
+      "equivalentLabel": "~2.5 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 86,
+        "white-paper": 38,
+        "blog-post": 26,
+        "technical-doc": 28,
+        "presentation": 16,
+        "github-repo": 52
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 75,
+      "readingMinutes": 36,
+      "chartExplorationMinutes": 16.5,
+      "interactiveOverheadMinutes": 22.5,
+      "estimatedLabel": "~75 min fun exploration"
+    },
+    "promptComplexity": {
+      "wordCount": 35,
+      "entityCount": 0,
+      "ambiguityScore": 0.4
+    },
+    "sourceDiversityScore": 0.75,
+    "dataQualityDistribution": {
+      "t1": 280,
+      "t2": 200,
+      "t3": 100,
+      "t4": 40
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-10T18:00:00Z",
+    "runCompletedAt": "2026-02-10T19:09:00Z",
+    "durationMinutes": 44,
+    "includedSetup": true,
+    "skillVersion": "5.1",
+    "userPrompt": "I want to do research about if it is worth upgrading from the pixel 9 pro to a new pixel phone right now.",
+    "researchPlan": "PRODUCT TYPE: Google Pixel Smartphone (Upgrade Analysis)\nPHONES COMPARED: 6 models (Pixel 6 Pro through 10 Pro)\nSECTIONS: Overview, Spec Comparison, Feature Delta, Innovation Cycles, Upgrade Cost, Pros & Cons, Recommendations, Sources",
+    "checkpointModified": true,
+    "model": null,
+    "tokenUsage": null,
+    "searchesPerformed": 8,
+    "sourcesCount": 12,
+    "sectionsBuilt": 8,
+    "chartsBuilt": 4,
+    "filesGenerated": 12,
+    "productsCompared": 6,
+    "dataPointsCollected": 264,
+    "phaseTiming": {
+      "environment": 15,
+      "interpret": 3,
+      "survey": 5,
+      "discover": 8,
+      "research": 10,
+      "analyze": 2,
+      "build": 20,
+      "present": 6
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 10.1,
+      "fleschKincaidLabel": "10th Grade",
+      "bloomsLevel": 5,
+      "bloomsLabel": "Evaluate",
+      "bloomsRange": "Understand → Evaluate",
+      "totalWords": 4500,
+      "totalSentences": 225,
+      "readabilityNote": "Consumer-friendly product analysis with data-driven recommendations and decision frameworks"
+    },
+    "hoursSaved": {
+      "researchHours": 16.3,
+      "totalHoursSaved": 82,
+      "equivalentLabel": "~2 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 66,
+        "white-paper": 40.6,
+        "blog-post": 24,
+        "technical-doc": 27.6,
+        "presentation": 14,
+        "github-repo": 38
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 37,
+      "readingMinutes": 22.5,
+      "chartExplorationMinutes": 10,
+      "interactiveOverheadMinutes": 4,
+      "estimatedLabel": "~35 min deep read"
+    },
+    "promptComplexity": {
+      "wordCount": 22,
+      "entityCount": 1,
+      "ambiguityScore": 0.4
+    },
+    "sourceDiversityScore": 0.58,
+    "dataQualityDistribution": {
+      "t1": 30,
+      "t2": 100,
+      "t3": 95,
+      "t4": 39
+    }
+  }
+}

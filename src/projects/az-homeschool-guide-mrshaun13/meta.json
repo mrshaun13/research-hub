@@ -6,7 +6,7 @@
     "includedSetup": false,
     "skillVersion": "7.0",
     "userPrompt": "Homeschool Curriculum & Co-op Guide for a kid in zip code 85234. Advanced learner, grade acceleration, parent-chosen curriculum. 13 curricula, 7 co-op programs, cost analysis, AZ law & ESA, recommendations.",
-    "researchPlan": "TOPIC: AZ Homeschool Curriculum & Co-op Guide — 85234 (Gilbert)\nTIME AXIS: Current (2025-2026 school year)\nPOPULATIONS: 13 curricula, 7 co-op programs near 85234\nCORE METRICS: Cost per year, advanced-friendliness, self-pacing, rigor, parent involvement, ESA coverage\nTAXONOMIES: Curriculum types (All-in-One, Modular, Online, Hybrid), Co-op types (Academic, Social, Classical, Enrichment)\nPROPOSED SECTIONS: Overview, Curriculum Comparison, Cost Analysis, Co-op Programs, AZ Law & ESA, Recommendations, Sources",
+    "researchPlan": "TOPIC: AZ Homeschool Curriculum & Co-op Guide — 85234 (Gilbert)\nTIME AXIS: Current (2025-2026 school year)\nPOPULATIONS: 13 curricula, 7 co-op programs near 85234\nCORE METRICS: Cost per year, advanced-friendliness, self-pacing, rigor, parent involvement, ESA coverage\nPROPOSED SECTIONS: Overview, Curriculum Comparison, Cost Analysis, Co-op Programs, AZ Law & ESA, Recommendations, Sources",
     "checkpointModified": false,
     "model": "claude-sonnet-4-20250514",
     "tokenUsage": null,
@@ -46,7 +46,7 @@
         "white-paper": 42.4,
         "blog-post": 22.5,
         "technical-doc": 28.2,
-        "presentation": 13.0,
+        "presentation": 13,
         "github-repo": 43.5
       }
     },

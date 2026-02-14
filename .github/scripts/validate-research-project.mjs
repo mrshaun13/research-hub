@@ -248,6 +248,14 @@ function validateStructure(report, projectDir, slug) {
     report.fail('Structure', '`components/` directory is missing');
   }
 
+  // meta.json exists (v3.0 architecture — telemetry stored per-project)
+  const metaPath = join(projectDir, 'meta.json');
+  if (existsSync(metaPath)) {
+    report.pass('Structure', '`meta.json` exists (v3.0 telemetry)');
+  } else {
+    report.warn('Structure', '`meta.json` not found — telemetry will be missing from hub display');
+  }
+
   // data/ directory exists with files
   if (existsSync(dataDir) && statSync(dataDir).isDirectory()) {
     const dataFiles = readdirSync(dataDir).filter(f => f.endsWith('.js'));
@@ -272,6 +280,18 @@ function validateStructure(report, projectDir, slug) {
     }
   } else {
     report.fail('Structure', '`data/` directory is missing');
+  }
+}
+
+function loadTelemetry(projectDir) {
+  const metaPath = join(projectDir, 'meta.json');
+  if (!existsSync(metaPath)) return null;
+  try {
+    const raw = readFileSync(metaPath, 'utf-8');
+    const parsed = JSON.parse(raw);
+    return parsed.telemetry || null;
+  } catch {
+    return null;
   }
 }
 
@@ -632,12 +652,15 @@ async function main() {
     // Find registry entry
     const entry = registry?.find(e => e.slug === slug) || null;
 
+    // Load telemetry from meta.json (v3.0 architecture) or fall back to inline (v2.0 compat)
+    const telemetry = loadTelemetry(projectDir) || entry?.telemetry || null;
+
     // Run all validation checks
     validateStructure(report, projectDir, slug);
     validateRegistryEntry(report, entry, slug);
-    validateTelemetry(report, entry?.telemetry);
+    validateTelemetry(report, telemetry);
     validateContentQuality(report, projectDir);
-    validateProductLensExtras(report, entry, entry?.telemetry);
+    validateProductLensExtras(report, entry, telemetry);
 
     reports.push(report);
     if (!report.ok) allPassed = false;

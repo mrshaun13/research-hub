@@ -1,0 +1,55 @@
+// Fantasy expansion — pirates, monsters, fairy tales, robots (batch 2)
+export const fantasyJokes2 = [
+  // ===== PIRATES (expanded) =====
+  { id: 'pi2_001', text: 'What did the pirate say when he turned 80?', punchline: 'Aye matey!', style: 'pun', topics: ['pirates', 'birthday'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_002', text: 'Why did the pirate go to the Apple Store?', punchline: 'To get a new iPatch!', style: 'pun', topics: ['pirates', 'technology'], ageMin: 7, generation: 'universal' },
+  { id: 'pi2_003', text: 'What\'s a pirate\'s favorite letter of the alphabet?', punchline: 'You\'d think it\'s R, but his first love be the C!', style: 'riddle', topics: ['pirates', 'ocean', 'language'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_004', text: 'Knock knock.', punchline: 'Who\'s there? Arrr. Arrr who? Arrr you ready for another pirate joke?', style: 'knock-knock', topics: ['pirates'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_005', text: 'What did the pirate say during the winter storm?', punchline: 'Thar she snows!', style: 'pun', topics: ['pirates', 'nature'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_006', text: 'Why couldn\'t the pirate learn the alphabet?', punchline: 'He kept getting lost at C!', style: 'pun', topics: ['pirates', 'school', 'language', 'ocean'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_007', text: 'What\'s a pirate\'s favorite country?', punchline: 'Arrr-gentina!', style: 'pun', topics: ['pirates', 'geography'], ageMin: 7, generation: 'universal' },
+  { id: 'pi2_008', text: 'What do pirates wear in the fall?', punchline: 'Pumpkin patches!', style: 'pun', topics: ['pirates', 'halloween', 'nature'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_009', text: 'Why did the pirate go to the gym?', punchline: 'To improve his arrrms!', style: 'pun', topics: ['pirates', 'sports'], ageMin: 4, generation: 'universal' },
+  { id: 'pi2_010', text: 'What\'s a pirate\'s favorite type of cookie?', punchline: 'Ships Ahoy!', style: 'pun', topics: ['pirates', 'food', 'ocean'], ageMin: 4, generation: 'universal' },
+
+  // ===== MONSTERS (expanded) =====
+  { id: 'mo2_001', text: 'What do you call a vampire who lives in the kitchen?', punchline: 'Count Spatula!', style: 'pun', topics: ['monsters', 'food'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_002', text: 'Why did the zombie skip school?', punchline: 'He felt rotten!', style: 'dad-joke', topics: ['monsters', 'school'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_003', text: 'What\'s a ghost\'s favorite fruit?', punchline: 'Boo-berries!', style: 'pun', topics: ['monsters', 'food'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_004', text: 'Knock knock.', punchline: 'Who\'s there? Fangs. Fangs who? Fangs for opening the door!', style: 'knock-knock', topics: ['monsters'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_005', text: 'What do you call a monster with a high IQ?', punchline: 'Frank-Einstein!', style: 'pun', topics: ['monsters', 'science', 'school'], ageMin: 7, generation: 'universal' },
+  { id: 'mo2_006', text: 'Why did the mummy go on vacation?', punchline: 'He needed to unwind!', style: 'dad-joke', topics: ['monsters', 'travel'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_007', text: 'What\'s Dracula\'s favorite coffee order?', punchline: 'A decoffin-ated!', style: 'pun', topics: ['monsters', 'food'], ageMin: 7, generation: 'universal' },
+  { id: 'mo2_008', text: 'Why did the ghost go to the bar?', punchline: 'For the boos!', style: 'pun', topics: ['monsters', 'food'], ageMin: 7, generation: 'universal' },
+  { id: 'mo2_009', text: 'What do you call a witch who lives at the beach?', punchline: 'A sand-witch!', style: 'pun', topics: ['monsters', 'ocean', 'food'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_010', text: 'Why don\'t zombies eat comedians?', punchline: 'They taste funny!', style: 'dad-joke', topics: ['monsters', 'food'], ageMin: 7, generation: 'universal' },
+  { id: 'mo2_011', text: 'What\'s a ghost\'s favorite position in soccer?', punchline: 'Ghoul-keeper!', style: 'pun', topics: ['monsters', 'sports'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_012', text: 'Why did the skeleton go to the barbecue?', punchline: 'To get another rib!', style: 'pun', topics: ['monsters', 'food'], ageMin: 7, generation: 'universal' },
+  { id: 'mo2_013', text: 'What do you call a monster who loves to dance?', punchline: 'The Boogie Man!', style: 'pun', topics: ['monsters', 'music'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_014', text: 'Why did the werewolf go to the salon?', punchline: 'He needed a howl-icut!', style: 'pun', topics: ['monsters'], ageMin: 4, generation: 'universal' },
+  { id: 'mo2_015', text: 'What\'s a vampire\'s favorite sport?', punchline: 'Bat-minton!', style: 'pun', topics: ['monsters', 'sports'], ageMin: 4, generation: 'universal' },
+
+  // ===== FAIRY TALES (expanded) =====
+  { id: 'ft2_001', text: 'Why did the prince kiss the frog?', punchline: 'He heard it was a ribbiting experience!', style: 'pun', topics: ['fairy-tales', 'animals'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_002', text: 'What did Hansel say to Gretel at the candy house?', punchline: 'This is sweet!', style: 'dad-joke', topics: ['fairy-tales', 'food'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_003', text: 'Why did the three bears never lock their door?', punchline: 'Because Goldilocks would just break in anyway!', style: 'dad-joke', topics: ['fairy-tales', 'animals'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_004', text: 'Knock knock.', punchline: 'Who\'s there? Giant. Giant who? Giant you glad I didn\'t say Fee-fi-fo-fum?', style: 'knock-knock', topics: ['fairy-tales'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_005', text: 'What\'s Rumpelstiltskin\'s favorite type of music?', punchline: 'Spin class beats!', style: 'pun', topics: ['fairy-tales', 'music', 'sports'], ageMin: 7, generation: 'universal' },
+  { id: 'ft2_006', text: 'Why did the dragon go to the doctor?', punchline: 'He had a sore throat from breathing fire!', style: 'dad-joke', topics: ['fairy-tales'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_007', text: 'What\'s a dragon\'s favorite snack?', punchline: 'Firecrackers!', style: 'pun', topics: ['fairy-tales', 'food'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_008', text: 'Why did the knight bring a pencil to battle?', punchline: 'To draw his sword!', style: 'pun', topics: ['fairy-tales', 'history'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_009', text: 'What do you call a unicorn that\'s been working out?', punchline: 'A buff-a-corn!', style: 'pun', topics: ['fairy-tales', 'sports'], ageMin: 4, generation: 'universal' },
+  { id: 'ft2_010', text: 'Why did the magic carpet go to school?', punchline: 'To get a higher education!', style: 'dad-joke', topics: ['fairy-tales', 'school', 'disney'], ageMin: 4, generation: 'universal' },
+
+  // ===== ROBOTS (expanded) =====
+  { id: 'ro2_001', text: 'What do you call a robot that always runs into walls?', punchline: 'Wall-E!', style: 'pun', topics: ['robots', 'disney'], ageMin: 4, generation: 'universal' },
+  { id: 'ro2_002', text: 'Why did the robot go on a diet?', punchline: 'It had too many megabytes!', style: 'pun', topics: ['robots', 'technology', 'food'], ageMin: 7, generation: 'universal' },
+  { id: 'ro2_003', text: 'What\'s a robot\'s favorite genre of movie?', punchline: 'Sci-fi — they can really relate!', style: 'dad-joke', topics: ['robots', 'technology'], ageMin: 7, generation: 'universal' },
+  { id: 'ro2_004', text: 'Knock knock.', punchline: 'Who\'s there? AI. AI who? AI can\'t believe you don\'t recognize me!', style: 'knock-knock', topics: ['robots', 'technology'], ageMin: 7, generation: 'gen-z' },
+  { id: 'ro2_005', text: 'Why did the robot fail the driving test?', punchline: 'It kept crashing!', style: 'pun', topics: ['robots', 'technology', 'cars'], ageMin: 7, generation: 'universal' },
+  { id: 'ro2_006', text: 'What did the robot say to the centipede?', punchline: 'Stop being so leggy!', style: 'dad-joke', topics: ['robots', 'animals'], ageMin: 4, generation: 'universal' },
+  { id: 'ro2_007', text: 'Why did the chatbot go to school?', punchline: 'To improve its language model!', style: 'dad-joke', topics: ['robots', 'technology', 'school'], ageMin: 10, generation: 'gen-z' },
+  { id: 'ro2_008', text: 'What\'s Alexa\'s favorite type of music?', punchline: 'Algo-rhythm!', style: 'pun', topics: ['robots', 'technology', 'music'], ageMin: 10, generation: 'gen-alpha' },
+  { id: 'ro2_009', text: 'Why did the robot break up with the calculator?', punchline: 'It felt like the relationship didn\'t add up!', style: 'dad-joke', topics: ['robots', 'math'], ageMin: 7, generation: 'universal' },
+  { id: 'ro2_010', text: 'What do you call a robot that takes the long way?', punchline: 'R2-Detour!', style: 'pun', topics: ['robots', 'star-wars', 'cars'], ageMin: 4, generation: 'universal' },
+];

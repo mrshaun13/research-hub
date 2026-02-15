@@ -703,6 +703,73 @@ export const projectRegistry = [
       },
     },
   },
+  {
+    slug: 'joke-jockey-mrshaun13',
+    title: 'Joke Jockey',
+    subtitle: '3,700+ Jokes on the DJ Mixer Board — Spin by Style, Topic, Age & Generation',
+    query: 'Build an interactive joke repository with thousands of jokes on a DJ mixer board UI — spin by style, topic, age group, and generation.',
+    lens: 'standard',
+    icon: 'Laugh',
+    accentColor: 'amber',
+    visibility: 'public',
+    createdAt: '2026-02-14T23:58:00Z',
+    telemetry: {
+      'runStartedAt': '2026-02-14T23:58:00Z',
+      'runCompletedAt': '2026-02-15T01:30:00Z',
+      'durationMinutes': 92,
+      'includedSetup': false,
+      'skillVersion': '7.2',
+      'userPrompt': 'Build an interactive joke repository with 10,000+ jokes classified by style (dad jokes, knock-knock, puns, riddles, etc.), topic (technology, animals, Disney, Star Wars, etc.), age group (4-6 through 16+), and generation (Gen Alpha, Gen Z, Millennial, Gen X, Boomer). Make it easy to click through with next/prev/random navigation.',
+      'researchPlan': 'TOPIC: Interactive Joke Repository\nSTYLES: 8 (Dad Jokes, Knock-Knock, Puns, One-Liners, Riddles, Story, Tongue Twisters, Would You Rather)\nTOPICS: 39 across 8 groups (STEM, Nature, Everyday, Movies & Pop Culture, Fantasy, Holidays, Learning, Silly)\nAGE GROUPS: 5 tiers (4-6, 7-9, 10-12, 13-15, 16+)\nGENERATIONS: 6 (Gen Alpha, Gen Z, Millennial, Gen X, Boomer, Universal)\nSECTIONS: Browse (filter + card viewer), Favorites (localStorage), Stats (bar charts)',
+      'checkpointModified': false,
+      'searchesPerformed': 0,
+      'sourcesCount': 0,
+      'sectionsBuilt': 3,
+      'chartsBuilt': 5,
+      'filesGenerated': 14,
+      'dataPointsCollected': 750,
+      'phaseTiming': {
+            'environment': 1,
+            'interpret': 2,
+            'survey': 0,
+            'discover': 5,
+            'research': 0,
+            'analyze': 5,
+            'build': 75,
+            'present': 4
+      },
+      'contentAnalysis': {
+            'fleschKincaidGrade': 3.5,
+            'fleschKincaidLabel': '3rd-4th Grade',
+            'bloomsLevel': 1,
+            'bloomsLabel': 'Remember',
+            'bloomsRange': 'Remember \u2192 Apply',
+            'totalWords': 25000,
+            'totalSentences': 1500,
+            'readabilityNote': 'Interactive joke browser with multi-dimensional filtering, designed for all ages from preschool through adult'
+      },
+      'hoursSaved': {
+            'researchHours': 30,
+            'totalHoursSaved': 120,
+            'equivalentLabel': '~3 weeks full-time',
+            'productionHours': {
+                  'interactive-dashboard': 90,
+                  'white-paper': 0,
+                  'blog-post': 0,
+                  'technical-doc': 0,
+                  'presentation': 0,
+                  'github-repo': 30
+            }
+      },
+      'consumptionTime': {
+            'estimatedMinutes': 999,
+            'readingMinutes': 0,
+            'chartExplorationMinutes': 0,
+            'interactiveOverheadMinutes': 999,
+            'estimatedLabel': 'Unlimited fun browsing'
+      }
+},
+  },
 ];
 
 export const projectComponents = {
@@ -718,4 +785,5 @@ export const projectComponents = {
   'skill-showcase-mrshaun13': lazy(() => import('./skill-showcase-mrshaun13/App')),
   'japanese-learning-center-djagger': lazy(() => import('./japanese-learning-center-djagger/App')),
   'convertible-laptop-finder-mrshaun13': lazy(() => import('./convertible-laptop-finder-mrshaun13/App')),
+  'joke-jockey-mrshaun13': lazy(() => import('./joke-jockey-mrshaun13/App')),
 };

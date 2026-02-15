@@ -1,0 +1,68 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-08T12:00:00Z",
+    "runCompletedAt": "2026-02-08T14:00:00Z",
+    "durationMinutes": 120,
+    "includedSetup": true,
+    "skillVersion": "3.0",
+    "userPrompt": "Research the history of Cisco Systems from founding to present day",
+    "researchPlan": "TOPIC: Cisco Systems Corporate History\nTIME AXIS: Decades — 1984-2026\nPOPULATIONS: Cisco as corporation, leadership eras, acquired companies\nCORE METRICS: Revenue, market cap, employee count, acquisitions\nTAXONOMIES: CEO eras (5), major acquisitions (20+), product lines\nPROPOSED SECTIONS: Overview, Financial Growth, Market Valuation, Workforce, Acquisitions, Leadership & Eras, Sources",
+    "checkpointModified": false,
+    "model": null,
+    "tokenUsage": null,
+    "searchesPerformed": 18,
+    "sourcesCount": 12,
+    "sectionsBuilt": 7,
+    "chartsBuilt": 10,
+    "filesGenerated": 12,
+    "productsCompared": null,
+    "dataPointsCollected": 180,
+    "phaseTiming": {
+      "environment": 3,
+      "interpret": 2,
+      "survey": 12,
+      "discover": 15,
+      "research": 35,
+      "analyze": 8,
+      "build": 35,
+      "present": 10
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 10.4,
+      "fleschKincaidLabel": "10th Grade",
+      "bloomsLevel": 4,
+      "bloomsLabel": "Analyze",
+      "bloomsRange": "Understand → Analyze",
+      "totalWords": 3800
+    },
+    "hoursSaved": {
+      "researchHours": 17.1,
+      "totalHoursSaved": 95.1,
+      "equivalentLabel": "~2.5 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 78,
+        "white-paper": 35.8,
+        "blog-post": 27.5,
+        "technical-doc": 24.6,
+        "presentation": 15.5,
+        "github-repo": 47
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 39,
+      "estimatedLabel": "~40 min deep read"
+    },
+    "promptComplexity": {
+      "wordCount": 12,
+      "entityCount": 1,
+      "ambiguityScore": 0.3
+    },
+    "sourceDiversityScore": 0.67,
+    "dataQualityDistribution": {
+      "t1": 15,
+      "t2": 85,
+      "t3": 55,
+      "t4": 25
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-11T19:48:00Z",
+    "runCompletedAt": "2026-02-12T01:30:00Z",
+    "durationMinutes": 102,
+    "includedSetup": false,
+    "skillVersion": "6.2",
+    "userPrompt": "Build an interactive analytics dashboard for The Traitors Season 3 with episode-gated spoiler protection, player breakdowns, social game scores, deception tracking, and game statistics.",
+    "researchPlan": "TOPIC: The Traitors US Season 3 Game Analytics\nSOURCES: Wikipedia, Peacock Official Recaps (Ep 1-11), NBC Insider, Fandom Wiki\nPLAYERS: 23 contestants with full stats\nEPISODES: 11 game episodes + reunion\nMETRICS: Social game score, vote accuracy, shields, deceptions, alliances, eliminations\nSPOILER SYSTEM: Episode gate (1-11) hides future events\nSECTIONS: Overview, Players, Timeline, Deception, Alliances",
+    "checkpointModified": false,
+    "model": null,
+    "tokenUsage": null,
+    "searchesPerformed": 12,
+    "sourcesCount": 15,
+    "sectionsBuilt": 5,
+    "chartsBuilt": 7,
+    "filesGenerated": 8,
+    "productsCompared": null,
+    "dataPointsCollected": 450,
+    "phaseTiming": {
+      "environment": 1,
+      "interpret": 2,
+      "survey": 5,
+      "discover": 15,
+      "research": 30,
+      "analyze": 10,
+      "build": 30,
+      "present": 9
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 8.5,
+      "fleschKincaidLabel": "8th-9th Grade",
+      "bloomsLevel": 4,
+      "bloomsLabel": "Analyze",
+      "bloomsRange": "Understand → Analyze",
+      "totalWords": 8500,
+      "totalSentences": 425,
+      "readabilityNote": "Interactive game analytics with spoiler-gated episode progression, player profiles, deception tracking, and social game scoring"
+    },
+    "hoursSaved": {
+      "researchHours": 22,
+      "totalHoursSaved": 110,
+      "equivalentLabel": "~3 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 88,
+        "white-paper": 44,
+        "blog-post": 30,
+        "technical-doc": 26,
+        "presentation": 16,
+        "github-repo": 54
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 90,
+      "readingMinutes": 40,
+      "chartExplorationMinutes": 25,
+      "interactiveOverheadMinutes": 25,
+      "estimatedLabel": "~90 min deep exploration"
+    },
+    "promptComplexity": {
+      "wordCount": 25,
+      "entityCount": 2,
+      "ambiguityScore": 0.2
+    },
+    "sourceDiversityScore": 0.53,
+    "dataQualityDistribution": {
+      "t1": 50,
+      "t2": 150,
+      "t3": 180,
+      "t4": 70
+    }
+  }
+}

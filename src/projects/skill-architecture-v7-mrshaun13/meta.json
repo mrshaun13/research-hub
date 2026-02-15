@@ -1,0 +1,73 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-13T17:16:00Z",
+    "runCompletedAt": "2026-02-13T17:42:00Z",
+    "durationMinutes": 26,
+    "includedSetup": false,
+    "skillVersion": "7.0",
+    "userPrompt": "Deep research the research-visualizer skill v7.0 architecture — pipeline flow, config layers, extension system, hub architecture, telemetry, visibility, and community library. Present as a product demo showing both how it works and what the end user experiences.",
+    "researchPlan": "TOPIC: Research Visualizer Skill v7.0 — Complete Architecture Deep Dive\nTIME AXIS: Current state (v7.0) with version evolution context\nPOPULATIONS: 8 subsystems (Pipeline, Config, Extensions, Hub, Telemetry, Visibility, Library, Collections)\nCORE METRICS: Component count, data flow paths, decision points, file counts, config fields\nSECTIONS: 8 sections",
+    "checkpointModified": false,
+    "model": "claude-sonnet-4-20250514",
+    "tokenUsage": null,
+    "searchesPerformed": 2,
+    "sourcesCount": 10,
+    "sectionsBuilt": 8,
+    "chartsBuilt": 9,
+    "filesGenerated": 12,
+    "productsCompared": null,
+    "dataPointsCollected": 186,
+    "phaseTiming": {
+      "environment": 1,
+      "interpret": 1,
+      "survey": 2,
+      "discover": 3,
+      "research": 5,
+      "analyze": 2,
+      "build": 10,
+      "present": 2
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 11.4,
+      "fleschKincaidLabel": "11th Grade",
+      "bloomsLevel": 4,
+      "bloomsLabel": "Analyze",
+      "bloomsRange": "Understand → Evaluate",
+      "totalWords": 5200,
+      "totalSentences": 260,
+      "readabilityNote": "Technical architecture documentation with analytical insight callouts and product demo framing"
+    },
+    "hoursSaved": {
+      "researchHours": 11.72,
+      "totalHoursSaved": 92.72,
+      "equivalentLabel": "~2.5 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 81,
+        "white-paper": 38.86,
+        "blog-post": 29,
+        "technical-doc": 27,
+        "presentation": 16.5,
+        "github-repo": 48
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 52,
+      "readingMinutes": 37,
+      "chartExplorationMinutes": 6.75,
+      "interactiveOverheadMinutes": 8.75,
+      "estimatedLabel": "~52 min deep read"
+    },
+    "dataQualityDistribution": {
+      "t1": 186,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "sourceDiversityScore": 0.8,
+    "promptComplexity": {
+      "wordCount": 42,
+      "entityCount": 7,
+      "ambiguityScore": 0.2
+    }
+  }
+}

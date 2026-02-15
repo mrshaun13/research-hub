@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FlaskConical, ArrowRight, Sparkles, Clock, Search, BarChart3,
   FileText, Database, Package, Timer, BookOpen, Zap, GraduationCap, Brain, Eye,
+  GitCompareArrows, Check,
 } from 'lucide-react';
+import ProjectDetailFlyout from './ProjectDetailFlyout';
+import CompareView from './CompareView';
 
 const LENS_BADGES = {
   standard: { label: 'Research', bg: 'bg-blue-500/10', text: 'text-blue-400', border: 'border-blue-500/20' },
@@ -90,6 +93,24 @@ function AggregateStats({ projects }) {
 }
 
 export default function HubHome({ projects, onProjectClick, getAccent, formatDate, ProjectIcon }) {
+  const [detailProject, setDetailProject] = useState(null);
+  const [compareSelection, setCompareSelection] = useState([]);
+  const [showCompare, setShowCompare] = useState(false);
+
+  const handleDetailClick = (e, project) => {
+    e.stopPropagation();
+    setDetailProject(project);
+  };
+
+  const handleCompareToggle = (e, slug) => {
+    e.stopPropagation();
+    setCompareSelection(prev =>
+      prev.includes(slug) ? prev.filter(s => s !== slug) : [...prev, slug]
+    );
+  };
+
+  const compareProjects = compareSelection.map(slug => projects.find(p => p.slug === slug)).filter(Boolean);
+
   return (
     <div className="min-h-full">
       {/* Hero */}
@@ -133,8 +154,28 @@ export default function HubHome({ projects, onProjectClick, getAccent, formatDat
                 <button
                   key={project.slug}
                   onClick={() => onProjectClick(project.slug)}
-                  className="group relative text-left p-5 rounded-xl border border-gray-800/80 bg-gray-900/50 hover:bg-gray-800/50 hover:border-gray-700 transition-all duration-200 hover:shadow-lg hover:shadow-black/20"
+                  className={`group relative text-left p-5 rounded-xl border transition-all duration-200 hover:shadow-lg hover:shadow-black/20 ${
+                    compareSelection.includes(project.slug)
+                      ? 'border-indigo-500/50 bg-indigo-500/5 hover:bg-indigo-500/10'
+                      : 'border-gray-800/80 bg-gray-900/50 hover:bg-gray-800/50 hover:border-gray-700'
+                  }`}
                 >
+                  {/* Compare checkbox */}
+                  <div
+                    className={`absolute top-3 left-3 z-10 transition-opacity ${
+                      compareSelection.includes(project.slug) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    }`}
+                    onClick={(e) => handleCompareToggle(e, project.slug)}
+                  >
+                    <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors cursor-pointer ${
+                      compareSelection.includes(project.slug)
+                        ? 'bg-indigo-500 border-indigo-500'
+                        : 'border-gray-600 hover:border-indigo-400 bg-gray-800/80'
+                    }`}>
+                      {compareSelection.includes(project.slug) && <Check className="w-3 h-3 text-white" />}
+                    </div>
+                  </div>
+
                   {/* Accent top border */}
                   <div className={`absolute top-0 left-4 right-4 h-px ${accent.border} opacity-50 group-hover:opacity-100 transition-opacity`} />
 
@@ -232,7 +273,13 @@ export default function HubHome({ projects, onProjectClick, getAccent, formatDat
                         </>
                       )}
                     </div>
-                    <ArrowRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-gray-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                    <div
+                      className="p-1.5 -m-1.5 rounded-lg hover:bg-indigo-500/10 transition-colors cursor-pointer"
+                      onClick={(e) => handleDetailClick(e, project)}
+                      title="View detailed telemetry"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-indigo-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                    </div>
                   </div>
                 </button>
               );
@@ -240,6 +287,44 @@ export default function HubHome({ projects, onProjectClick, getAccent, formatDat
           </div>
         )}
       </div>
+
+      {/* Floating compare button */}
+      {compareSelection.length >= 2 && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 animate-fade-in">
+          <button
+            onClick={() => setShowCompare(true)}
+            className="flex items-center gap-2.5 px-5 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm shadow-xl shadow-indigo-500/30 transition-colors"
+          >
+            <GitCompareArrows className="w-4 h-4" />
+            Compare ({compareSelection.length})
+          </button>
+          <button
+            onClick={() => setCompareSelection([])}
+            className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-colors text-[10px]"
+            title="Clear selection"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
+      {/* Detail flyout */}
+      {detailProject && (
+        <ProjectDetailFlyout
+          project={detailProject}
+          allProjects={projects}
+          onClose={() => setDetailProject(null)}
+        />
+      )}
+
+      {/* Compare view */}
+      {showCompare && compareProjects.length >= 2 && (
+        <CompareView
+          projects={compareProjects}
+          allProjects={projects}
+          onClose={() => setShowCompare(false)}
+        />
+      )}
     </div>
   );
 }

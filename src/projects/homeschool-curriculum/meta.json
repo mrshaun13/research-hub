@@ -1,0 +1,68 @@
+{
+  "telemetry": {
+    "runStartedAt": "2026-02-10T09:06:00Z",
+    "runCompletedAt": "2026-02-10T09:50:00Z",
+    "durationMinutes": 44,
+    "includedSetup": false,
+    "skillVersion": "4.0",
+    "userPrompt": "Research homeschool curricula for an advanced child moving from Three Oaks Academy to a choose-your-own-curriculum co-op model. Also research co-op programs near 37075 including CHET and Anchored at Long Hollow Church.",
+    "researchPlan": "TOPIC: Homeschool Curriculum & Co-op Guide\nFOCUS: Advanced learner, grade acceleration, parent-chosen curriculum\nPOPULATIONS: 13 curricula, 7 co-op programs near 37075\nCORE METRICS: Cost, advanced-friendliness, self-pacing, parent involvement, grade range\nPROPOSED SECTIONS: Overview, Curriculum Comparison, Cost Analysis, Co-op Programs, CHET vs Anchored, Recommendations, Sources",
+    "checkpointModified": false,
+    "model": null,
+    "tokenUsage": null,
+    "searchesPerformed": 20,
+    "sourcesCount": 31,
+    "sectionsBuilt": 7,
+    "chartsBuilt": 3,
+    "filesGenerated": 10,
+    "productsCompared": null,
+    "dataPointsCollected": 260,
+    "phaseTiming": {
+      "environment": 1,
+      "interpret": 2,
+      "survey": 10,
+      "discover": 8,
+      "research": 15,
+      "analyze": 3,
+      "build": 20,
+      "present": 5
+    },
+    "contentAnalysis": {
+      "fleschKincaidGrade": 9.2,
+      "fleschKincaidLabel": "9th Grade",
+      "bloomsLevel": 5,
+      "bloomsLabel": "Evaluate",
+      "bloomsRange": "Understand → Evaluate",
+      "totalWords": 5800
+    },
+    "hoursSaved": {
+      "researchHours": 28.5,
+      "totalHoursSaved": 99.5,
+      "equivalentLabel": "~2.5 weeks full-time",
+      "productionHours": {
+        "interactive-dashboard": 71,
+        "white-paper": 40.9,
+        "blog-post": 20.5,
+        "technical-doc": 30.3,
+        "presentation": 12,
+        "github-repo": 46
+      }
+    },
+    "consumptionTime": {
+      "estimatedMinutes": 48,
+      "estimatedLabel": "~50 min deep read"
+    },
+    "promptComplexity": {
+      "wordCount": 30,
+      "entityCount": 5,
+      "ambiguityScore": 0.3
+    },
+    "sourceDiversityScore": 0.65,
+    "dataQualityDistribution": {
+      "t1": 10,
+      "t2": 80,
+      "t3": 120,
+      "t4": 50
+    }
+  }
+}

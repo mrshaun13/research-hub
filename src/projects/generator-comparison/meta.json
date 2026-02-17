@@ -1,68 +1,66 @@
 {
-  "telemetry": {
-    "runStartedAt": "2026-02-10T06:16:00Z",
-    "runCompletedAt": "2026-02-10T06:50:00Z",
-    "durationMinutes": 34,
-    "includedSetup": false,
-    "skillVersion": "4.0",
-    "userPrompt": "Research a generator for me. I want to eventually run natural gas to it but for now I will probably use gasoline. 3300w minimum up to ~15000w for whole home transfer switch. Gas furnace blower 650W, 3 refrigerators, 3 computers (1 gaming), networking gear, TVs. Summer: AC unit in Hendersonville TN.",
-    "researchPlan": "PRODUCT TYPE: Tri-Fuel Portable Generator\nLIFECYCLE: Durable / Investment (5+ years)\nYOUR PROFILE: Homeowner, Hendersonville TN, gas furnace, 3 fridges, gaming PC, wants NG eventually, 3-ton AC in summer\nPRODUCTS: 12 models across 6 brands\nTIERS: Budget, Mid-Range, Whole-Home, Inverter\nKEY SPECS: Running watts (gas/NG/propane), engine cc, weight, noise, THD, runtime, fuel tank\nDERIVED METRICS: Watts-per-dollar (NG), NG-to-Gas ratio, Power-to-weight\nFLAGS: Ecosystem ✗, Multi-Use ✓, Features Matrix ✓, TCO ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Power Analysis, Value & Cost, Features Matrix, Recommendations, Sources",
-    "checkpointModified": false,
-    "model": null,
-    "tokenUsage": null,
-    "searchesPerformed": 16,
-    "sourcesCount": 14,
-    "sectionsBuilt": 7,
-    "chartsBuilt": 12,
-    "filesGenerated": 12,
-    "productsCompared": 12,
-    "dataPointsCollected": 288,
-    "phaseTiming": {
-      "environment": 0,
-      "interpret": 2,
-      "survey": 8,
-      "discover": 10,
-      "research": 30,
-      "analyze": 5,
-      "build": 25,
-      "present": 5
-    },
-    "contentAnalysis": {
-      "fleschKincaidGrade": 9.5,
-      "fleschKincaidLabel": "10th Grade",
-      "bloomsLevel": 5,
-      "bloomsLabel": "Evaluate",
-      "bloomsRange": "Understand → Evaluate",
-      "totalWords": 6200
-    },
-    "hoursSaved": {
-      "researchHours": 28,
-      "totalHoursSaved": 130,
-      "equivalentLabel": "~3.5 weeks full-time",
-      "productionHours": {
-        "interactive-dashboard": 102,
-        "white-paper": 46,
-        "blog-post": 36,
-        "technical-doc": 30,
-        "presentation": 20,
-        "github-repo": 62
-      }
-    },
-    "consumptionTime": {
-      "estimatedMinutes": 58,
-      "estimatedLabel": "~1 hr deep read"
-    },
-    "promptComplexity": {
-      "wordCount": 50,
-      "entityCount": 6,
-      "ambiguityScore": 0.2
-    },
-    "sourceDiversityScore": 0.64,
-    "dataQualityDistribution": {
-      "t1": 25,
-      "t2": 110,
-      "t3": 105,
-      "t4": 48
+  "runStartedAt": "2026-02-10T06:16:00Z",
+  "runCompletedAt": "2026-02-10T06:50:00Z",
+  "durationMinutes": 34,
+  "includedSetup": false,
+  "skillVersion": "4.0",
+  "userPrompt": "Research a generator for me. I want to eventually run natural gas to it but for now I will probably use gasoline. 3300w minimum up to ~15000w for whole home transfer switch. Gas furnace blower 650W, 3 refrigerators, 3 computers (1 gaming), networking gear, TVs. Summer: AC unit in Hendersonville TN.",
+  "researchPlan": "PRODUCT TYPE: Tri-Fuel Portable Generator\nLIFECYCLE: Durable / Investment (5+ years)\nYOUR PROFILE: Homeowner, Hendersonville TN, gas furnace, 3 fridges, gaming PC, wants NG eventually, 3-ton AC in summer\nPRODUCTS: 12 models across 6 brands\nTIERS: Budget, Mid-Range, Whole-Home, Inverter\nKEY SPECS: Running watts (gas/NG/propane), engine cc, weight, noise, THD, runtime, fuel tank\nDERIVED METRICS: Watts-per-dollar (NG), NG-to-Gas ratio, Power-to-weight\nFLAGS: Ecosystem ✗, Multi-Use ✓, Features Matrix ✓, TCO ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Power Analysis, Value & Cost, Features Matrix, Recommendations, Sources",
+  "checkpointModified": false,
+  "model": null,
+  "tokenUsage": null,
+  "searchesPerformed": 16,
+  "sourcesCount": 14,
+  "sectionsBuilt": 7,
+  "chartsBuilt": 12,
+  "filesGenerated": 12,
+  "productsCompared": 12,
+  "dataPointsCollected": 288,
+  "phaseTiming": {
+    "environment": 0,
+    "interpret": 2,
+    "survey": 8,
+    "discover": 10,
+    "research": 30,
+    "analyze": 5,
+    "build": 25,
+    "present": 5
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 9.5,
+    "fleschKincaidLabel": "10th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 6200
+  },
+  "hoursSaved": {
+    "researchHours": 28,
+    "totalHoursSaved": 130,
+    "equivalentLabel": "~3.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 102,
+      "white-paper": 46,
+      "blog-post": 36,
+      "technical-doc": 30,
+      "presentation": 20,
+      "github-repo": 62
     }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 58,
+    "estimatedLabel": "~1 hr deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 50,
+    "entityCount": 6,
+    "ambiguityScore": 0.2
+  },
+  "sourceDiversityScore": 0.64,
+  "dataQualityDistribution": {
+    "t1": 25,
+    "t2": 110,
+    "t3": 105,
+    "t4": 48
   }
 }

@@ -1,68 +1,66 @@
 {
-  "telemetry": {
-    "runStartedAt": "2026-02-10T05:53:00Z",
-    "runCompletedAt": "2026-02-10T06:30:00Z",
-    "durationMinutes": 37,
-    "includedSetup": false,
-    "skillVersion": "4.0",
-    "userPrompt": "Research the history of Limelight Networks the CDN",
-    "researchPlan": "TOPIC: Rise & Fall of Limelight Networks (2001-2025)\nTIME AXIS: Technology Eras — 6 periods\nPOPULATIONS: Limelight/Edgio, CDN competitors, CDN industry\nCORE METRICS: Revenue, stock price, market share, network scale\nTAXONOMIES: Eras (6), acquisitions (7), legal events (13)\nPROPOSED SECTIONS: Overview, Financial Journey, Competitive Landscape, Events Timeline, Patent Wars, Acquisitions, The Collapse, Sources",
-    "checkpointModified": false,
-    "model": null,
-    "tokenUsage": null,
-    "searchesPerformed": 14,
-    "sourcesCount": 15,
-    "sectionsBuilt": 8,
-    "chartsBuilt": 8,
-    "filesGenerated": 11,
-    "productsCompared": null,
-    "dataPointsCollected": 220,
-    "phaseTiming": {
-      "environment": 0,
-      "interpret": 2,
-      "survey": 10,
-      "discover": 8,
-      "research": 25,
-      "analyze": 5,
-      "build": 30,
-      "present": 5
-    },
-    "contentAnalysis": {
-      "fleschKincaidGrade": 10.8,
-      "fleschKincaidLabel": "11th Grade",
-      "bloomsLevel": 4,
-      "bloomsLabel": "Analyze",
-      "bloomsRange": "Understand → Analyze",
-      "totalWords": 4200
-    },
-    "hoursSaved": {
-      "researchHours": 18.5,
-      "totalHoursSaved": 98,
-      "equivalentLabel": "~2.5 weeks full-time",
-      "productionHours": {
-        "interactive-dashboard": 80,
-        "white-paper": 37,
-        "blog-post": 28,
-        "technical-doc": 25,
-        "presentation": 16,
-        "github-repo": 48
-      }
-    },
-    "consumptionTime": {
-      "estimatedMinutes": 42,
-      "estimatedLabel": "~42 min deep read"
-    },
-    "promptComplexity": {
-      "wordCount": 9,
-      "entityCount": 1,
-      "ambiguityScore": 0.2
-    },
-    "sourceDiversityScore": 0.67,
-    "dataQualityDistribution": {
-      "t1": 25,
-      "t2": 95,
-      "t3": 70,
-      "t4": 30
+  "runStartedAt": "2026-02-10T05:53:00Z",
+  "runCompletedAt": "2026-02-10T06:30:00Z",
+  "durationMinutes": 37,
+  "includedSetup": false,
+  "skillVersion": "4.0",
+  "userPrompt": "Research the history of Limelight Networks the CDN",
+  "researchPlan": "TOPIC: Rise & Fall of Limelight Networks (2001-2025)\nTIME AXIS: Technology Eras — 6 periods\nPOPULATIONS: Limelight/Edgio, CDN competitors, CDN industry\nCORE METRICS: Revenue, stock price, market share, network scale\nTAXONOMIES: Eras (6), acquisitions (7), legal events (13)\nPROPOSED SECTIONS: Overview, Financial Journey, Competitive Landscape, Events Timeline, Patent Wars, Acquisitions, The Collapse, Sources",
+  "checkpointModified": false,
+  "model": null,
+  "tokenUsage": null,
+  "searchesPerformed": 14,
+  "sourcesCount": 15,
+  "sectionsBuilt": 8,
+  "chartsBuilt": 8,
+  "filesGenerated": 11,
+  "productsCompared": null,
+  "dataPointsCollected": 220,
+  "phaseTiming": {
+    "environment": 0,
+    "interpret": 2,
+    "survey": 10,
+    "discover": 8,
+    "research": 25,
+    "analyze": 5,
+    "build": 30,
+    "present": 5
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 10.8,
+    "fleschKincaidLabel": "11th Grade",
+    "bloomsLevel": 4,
+    "bloomsLabel": "Analyze",
+    "bloomsRange": "Understand → Analyze",
+    "totalWords": 4200
+  },
+  "hoursSaved": {
+    "researchHours": 18.5,
+    "totalHoursSaved": 98,
+    "equivalentLabel": "~2.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 80,
+      "white-paper": 37,
+      "blog-post": 28,
+      "technical-doc": 25,
+      "presentation": 16,
+      "github-repo": 48
     }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 42,
+    "estimatedLabel": "~42 min deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 9,
+    "entityCount": 1,
+    "ambiguityScore": 0.2
+  },
+  "sourceDiversityScore": 0.67,
+  "dataQualityDistribution": {
+    "t1": 25,
+    "t2": 95,
+    "t3": 70,
+    "t4": 30
   }
 }

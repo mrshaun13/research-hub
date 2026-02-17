@@ -1,73 +1,71 @@
 {
-  "telemetry": {
-    "runStartedAt": "2026-02-12T07:24:00Z",
-    "runCompletedAt": "2026-02-12T08:30:00Z",
-    "durationMinutes": 66,
-    "includedSetup": false,
-    "skillVersion": "6.3",
-    "userPrompt": "Build a showcase of the research-visualizer skill itself, demonstrating the diversity of projects it produces, its 8-phase pipeline, scaffold layer, telemetry system, and centralized research hub with public sharing.",
-    "researchPlan": "TOPIC: Research Visualizer Skill Showcase\nTYPE: Meta-project — a research dashboard about the tool that creates research dashboards\nDATA SOURCE: Real telemetry from 5 existing projects\nSECTIONS: Overview, Project Gallery (5 screenshots), The Pipeline (8 phases), Scaffold Layer (config architecture, evolution timeline), Telemetry (formulas, charts, content analysis), Research Hub (contribution flow, GitHub Actions, security model), Sources",
-    "checkpointModified": false,
-    "model": null,
-    "tokenUsage": null,
-    "searchesPerformed": 6,
-    "sourcesCount": 6,
-    "sectionsBuilt": 7,
-    "chartsBuilt": 4,
-    "filesGenerated": 10,
-    "productsCompared": null,
-    "dataPointsCollected": 150,
-    "phaseTiming": {
-      "environment": 1,
-      "interpret": 2,
-      "survey": 3,
-      "discover": 5,
-      "research": 7,
-      "analyze": 5,
-      "build": 38,
-      "present": 5
-    },
-    "contentAnalysis": {
-      "fleschKincaidGrade": 11.5,
-      "fleschKincaidLabel": "11th-12th Grade",
-      "bloomsLevel": 4,
-      "bloomsLabel": "Analyze",
-      "bloomsRange": "Understand → Evaluate",
-      "totalWords": 5800,
-      "totalSentences": 290,
-      "readabilityNote": "Technical showcase with architecture diagrams, real telemetry visualizations, and pipeline documentation"
-    },
-    "hoursSaved": {
-      "researchHours": 4.5,
-      "totalHoursSaved": 51.5,
-      "equivalentLabel": "~1.5 weeks full-time",
-      "productionHours": {
-        "interactive-dashboard": 47,
-        "white-paper": 31,
-        "blog-post": 21.5,
-        "technical-doc": 22.8,
-        "presentation": 12.5,
-        "github-repo": 30
-      }
-    },
-    "consumptionTime": {
-      "estimatedMinutes": 50,
-      "readingMinutes": 38.7,
-      "chartExplorationMinutes": 3,
-      "interactiveOverheadMinutes": 8.3,
-      "estimatedLabel": "~50 min deep read"
-    },
-    "promptComplexity": {
-      "wordCount": 30,
-      "entityCount": 1,
-      "ambiguityScore": 0.3
-    },
-    "sourceDiversityScore": 0.67,
-    "dataQualityDistribution": {
-      "t1": 60,
-      "t2": 50,
-      "t3": 30,
-      "t4": 10
+  "runStartedAt": "2026-02-12T07:24:00Z",
+  "runCompletedAt": "2026-02-12T08:30:00Z",
+  "durationMinutes": 66,
+  "includedSetup": false,
+  "skillVersion": "6.3",
+  "userPrompt": "Build a showcase of the research-visualizer skill itself, demonstrating the diversity of projects it produces, its 8-phase pipeline, scaffold layer, telemetry system, and centralized research hub with public sharing.",
+  "researchPlan": "TOPIC: Research Visualizer Skill Showcase\nTYPE: Meta-project — a research dashboard about the tool that creates research dashboards\nDATA SOURCE: Real telemetry from 5 existing projects\nSECTIONS: Overview, Project Gallery (5 screenshots), The Pipeline (8 phases), Scaffold Layer (config architecture, evolution timeline), Telemetry (formulas, charts, content analysis), Research Hub (contribution flow, GitHub Actions, security model), Sources",
+  "checkpointModified": false,
+  "model": null,
+  "tokenUsage": null,
+  "searchesPerformed": 6,
+  "sourcesCount": 6,
+  "sectionsBuilt": 7,
+  "chartsBuilt": 4,
+  "filesGenerated": 10,
+  "productsCompared": null,
+  "dataPointsCollected": 150,
+  "phaseTiming": {
+    "environment": 1,
+    "interpret": 2,
+    "survey": 3,
+    "discover": 5,
+    "research": 7,
+    "analyze": 5,
+    "build": 38,
+    "present": 5
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 11.5,
+    "fleschKincaidLabel": "11th-12th Grade",
+    "bloomsLevel": 4,
+    "bloomsLabel": "Analyze",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 5800,
+    "totalSentences": 290,
+    "readabilityNote": "Technical showcase with architecture diagrams, real telemetry visualizations, and pipeline documentation"
+  },
+  "hoursSaved": {
+    "researchHours": 4.5,
+    "totalHoursSaved": 51.5,
+    "equivalentLabel": "~1.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 47,
+      "white-paper": 31,
+      "blog-post": 21.5,
+      "technical-doc": 22.8,
+      "presentation": 12.5,
+      "github-repo": 30
     }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 50,
+    "readingMinutes": 38.7,
+    "chartExplorationMinutes": 3,
+    "interactiveOverheadMinutes": 8.3,
+    "estimatedLabel": "~50 min deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 30,
+    "entityCount": 1,
+    "ambiguityScore": 0.3
+  },
+  "sourceDiversityScore": 0.67,
+  "dataQualityDistribution": {
+    "t1": 60,
+    "t2": 50,
+    "t3": 30,
+    "t4": 10
   }
 }

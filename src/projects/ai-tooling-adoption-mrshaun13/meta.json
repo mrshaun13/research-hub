@@ -1,73 +1,71 @@
 {
-  "telemetry": {
-    "runStartedAt": "2026-02-10T22:00:00Z",
-    "runCompletedAt": "2026-02-10T23:15:00Z",
-    "durationMinutes": 75,
-    "includedSetup": false,
-    "skillVersion": "5.1",
-    "userPrompt": "I want to research the adoption rate of the more modern AI tooling that exists that are considered the game changing ways of using an AI agent. agents.md, skills.md, MCP servers. Is it really on a huge climb or is it still really slow? Include future projections.",
-    "researchPlan": "TOPIC: Adoption Rate of Modern AI Developer Tooling — Hype vs Reality\nTIME AXIS: Technology Eras (Pre-Copilot, Copilot Era, Chat-Augmented, Agentic Explosion)\nCATEGORIES: AI Coding Assistants, Agentic Coding, MCP Servers, Agent Instruction Files, Skills & Workflows\nCORE METRICS: User growth, revenue, developer survey adoption, GitHub stars, enterprise adoption, sentiment/trust, productivity impact, market projections\nHYPE VS REALITY: Scorecard with gap analysis\nPROPOSED SECTIONS: Overview, Growth Timelines, Reality Check, Tool Deep Dive, Enterprise vs Individual, Future Projections, Sources",
-    "checkpointModified": false,
-    "model": null,
-    "tokenUsage": null,
-    "searchesPerformed": 12,
-    "sourcesCount": 15,
-    "sectionsBuilt": 7,
-    "chartsBuilt": 12,
-    "filesGenerated": 11,
-    "productsCompared": null,
-    "dataPointsCollected": 300,
-    "phaseTiming": {
-      "environment": 2,
-      "interpret": 3,
-      "survey": 10,
-      "discover": 10,
-      "research": 15,
-      "analyze": 5,
-      "build": 25,
-      "present": 5
-    },
-    "contentAnalysis": {
-      "fleschKincaidGrade": 10.5,
-      "fleschKincaidLabel": "11th Grade",
-      "bloomsLevel": 5,
-      "bloomsLabel": "Evaluate",
-      "bloomsRange": "Understand → Evaluate",
-      "totalWords": 7377,
-      "totalSentences": 369,
-      "readabilityNote": "Data-driven analysis with hype-vs-reality framework and multi-dimensional adoption metrics"
-    },
-    "hoursSaved": {
-      "researchHours": 20.25,
-      "totalHoursSaved": 103.75,
-      "equivalentLabel": "~2.5 weeks full-time",
-      "productionHours": {
-        "interactive-dashboard": 83.5,
-        "white-paper": 43.5,
-        "blog-post": 29.5,
-        "technical-doc": 25.5,
-        "presentation": 16.5,
-        "github-repo": 51.5
-      }
-    },
-    "consumptionTime": {
-      "estimatedMinutes": 70,
-      "readingMinutes": 49.2,
-      "chartExplorationMinutes": 9,
-      "interactiveOverheadMinutes": 11.6,
-      "estimatedLabel": "~1 hr deep read"
-    },
-    "promptComplexity": {
-      "wordCount": 40,
-      "entityCount": 4,
-      "ambiguityScore": 0.4
-    },
-    "sourceDiversityScore": 0.8,
-    "dataQualityDistribution": {
-      "t1": 20,
-      "t2": 110,
-      "t3": 120,
-      "t4": 50
+  "runStartedAt": "2026-02-10T22:00:00Z",
+  "runCompletedAt": "2026-02-10T23:15:00Z",
+  "durationMinutes": 75,
+  "includedSetup": false,
+  "skillVersion": "5.1",
+  "userPrompt": "I want to research the adoption rate of the more modern AI tooling that exists that are considered the game changing ways of using an AI agent. agents.md, skills.md, MCP servers. Is it really on a huge climb or is it still really slow? Include future projections.",
+  "researchPlan": "TOPIC: Adoption Rate of Modern AI Developer Tooling — Hype vs Reality\nTIME AXIS: Technology Eras (Pre-Copilot, Copilot Era, Chat-Augmented, Agentic Explosion)\nCATEGORIES: AI Coding Assistants, Agentic Coding, MCP Servers, Agent Instruction Files, Skills & Workflows\nCORE METRICS: User growth, revenue, developer survey adoption, GitHub stars, enterprise adoption, sentiment/trust, productivity impact, market projections\nHYPE VS REALITY: Scorecard with gap analysis\nPROPOSED SECTIONS: Overview, Growth Timelines, Reality Check, Tool Deep Dive, Enterprise vs Individual, Future Projections, Sources",
+  "checkpointModified": false,
+  "model": null,
+  "tokenUsage": null,
+  "searchesPerformed": 12,
+  "sourcesCount": 15,
+  "sectionsBuilt": 7,
+  "chartsBuilt": 12,
+  "filesGenerated": 11,
+  "productsCompared": null,
+  "dataPointsCollected": 300,
+  "phaseTiming": {
+    "environment": 2,
+    "interpret": 3,
+    "survey": 10,
+    "discover": 10,
+    "research": 15,
+    "analyze": 5,
+    "build": 25,
+    "present": 5
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 10.5,
+    "fleschKincaidLabel": "11th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 7377,
+    "totalSentences": 369,
+    "readabilityNote": "Data-driven analysis with hype-vs-reality framework and multi-dimensional adoption metrics"
+  },
+  "hoursSaved": {
+    "researchHours": 20.25,
+    "totalHoursSaved": 103.75,
+    "equivalentLabel": "~2.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 83.5,
+      "white-paper": 43.5,
+      "blog-post": 29.5,
+      "technical-doc": 25.5,
+      "presentation": 16.5,
+      "github-repo": 51.5
     }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 70,
+    "readingMinutes": 49.2,
+    "chartExplorationMinutes": 9,
+    "interactiveOverheadMinutes": 11.6,
+    "estimatedLabel": "~1 hr deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 40,
+    "entityCount": 4,
+    "ambiguityScore": 0.4
+  },
+  "sourceDiversityScore": 0.8,
+  "dataQualityDistribution": {
+    "t1": 20,
+    "t2": 110,
+    "t3": 120,
+    "t4": 50
   }
 }

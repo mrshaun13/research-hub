@@ -1,68 +1,66 @@
 {
-  "telemetry": {
-    "runStartedAt": "2026-02-09T12:00:00Z",
-    "runCompletedAt": "2026-02-09T14:30:00Z",
-    "durationMinutes": 150,
-    "includedSetup": false,
-    "skillVersion": "3.0",
-    "userPrompt": "I'm looking to buy a gas chainsaw for property maintenance",
-    "researchPlan": "PRODUCT TYPE: Gas Chainsaw\nLIFECYCLE: Durable / Investment (5+ years)\nYOUR PROFILE: Homeowner, property maintenance, moderate budget\nPRODUCTS: 18 models across 6 brands\nTIERS: Entry/Homeowner, Farm & Ranch, Professional\nKEY SPECS: Displacement, HP, weight, bar length, noise, vibration, crankcase\nDERIVED METRICS: Power-to-weight ratio, Price per HP\nFLAGS: Ecosystem ✗, Multi-Use ✓, Features Matrix ✓, TCO ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Power & Weight, Value Analysis, Features Matrix, Use Case Fit, Recommendations, Sources",
-    "checkpointModified": false,
-    "model": null,
-    "tokenUsage": null,
-    "searchesPerformed": 24,
-    "sourcesCount": 18,
-    "sectionsBuilt": 8,
-    "chartsBuilt": 14,
-    "filesGenerated": 14,
-    "productsCompared": 18,
-    "dataPointsCollected": 324,
-    "phaseTiming": {
-      "environment": 1,
-      "interpret": 3,
-      "survey": 15,
-      "discover": 20,
-      "research": 50,
-      "analyze": 10,
-      "build": 40,
-      "present": 11
-    },
-    "contentAnalysis": {
-      "fleschKincaidGrade": 9.1,
-      "fleschKincaidLabel": "9th Grade",
-      "bloomsLevel": 5,
-      "bloomsLabel": "Evaluate",
-      "bloomsRange": "Understand → Evaluate",
-      "totalWords": 5200
-    },
-    "hoursSaved": {
-      "researchHours": 26,
-      "totalHoursSaved": 123,
-      "equivalentLabel": "~3 weeks full-time",
-      "productionHours": {
-        "interactive-dashboard": 97,
-        "white-paper": 44.2,
-        "blog-post": 34,
-        "technical-doc": 29.4,
-        "presentation": 19,
-        "github-repo": 59
-      }
-    },
-    "consumptionTime": {
-      "estimatedMinutes": 54,
-      "estimatedLabel": "~55 min deep read"
-    },
-    "promptComplexity": {
-      "wordCount": 11,
-      "entityCount": 0,
-      "ambiguityScore": 0.6
-    },
-    "sourceDiversityScore": 0.56,
-    "dataQualityDistribution": {
-      "t1": 20,
-      "t2": 120,
-      "t3": 130,
-      "t4": 54
+  "runStartedAt": "2026-02-09T12:00:00Z",
+  "runCompletedAt": "2026-02-09T14:30:00Z",
+  "durationMinutes": 150,
+  "includedSetup": false,
+  "skillVersion": "3.0",
+  "userPrompt": "I'm looking to buy a gas chainsaw for property maintenance",
+  "researchPlan": "PRODUCT TYPE: Gas Chainsaw\nLIFECYCLE: Durable / Investment (5+ years)\nYOUR PROFILE: Homeowner, property maintenance, moderate budget\nPRODUCTS: 18 models across 6 brands\nTIERS: Entry/Homeowner, Farm & Ranch, Professional\nKEY SPECS: Displacement, HP, weight, bar length, noise, vibration, crankcase\nDERIVED METRICS: Power-to-weight ratio, Price per HP\nFLAGS: Ecosystem ✗, Multi-Use ✓, Features Matrix ✓, TCO ✓\nPROPOSED SECTIONS: Overview, Head-to-Head, Power & Weight, Value Analysis, Features Matrix, Use Case Fit, Recommendations, Sources",
+  "checkpointModified": false,
+  "model": null,
+  "tokenUsage": null,
+  "searchesPerformed": 24,
+  "sourcesCount": 18,
+  "sectionsBuilt": 8,
+  "chartsBuilt": 14,
+  "filesGenerated": 14,
+  "productsCompared": 18,
+  "dataPointsCollected": 324,
+  "phaseTiming": {
+    "environment": 1,
+    "interpret": 3,
+    "survey": 15,
+    "discover": 20,
+    "research": 50,
+    "analyze": 10,
+    "build": 40,
+    "present": 11
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 9.1,
+    "fleschKincaidLabel": "9th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 5200
+  },
+  "hoursSaved": {
+    "researchHours": 26,
+    "totalHoursSaved": 123,
+    "equivalentLabel": "~3 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 97,
+      "white-paper": 44.2,
+      "blog-post": 34,
+      "technical-doc": 29.4,
+      "presentation": 19,
+      "github-repo": 59
     }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 54,
+    "estimatedLabel": "~55 min deep read"
+  },
+  "promptComplexity": {
+    "wordCount": 11,
+    "entityCount": 0,
+    "ambiguityScore": 0.6
+  },
+  "sourceDiversityScore": 0.56,
+  "dataQualityDistribution": {
+    "t1": 20,
+    "t2": 120,
+    "t3": 130,
+    "t4": 54
   }
 }

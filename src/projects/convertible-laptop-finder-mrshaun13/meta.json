@@ -1,14 +1,23 @@
 {
-  "slug": "convertible-laptop-finder-mrshaun13",
-  "title": "2-in-1 Convertible Laptop Finder",
-  "subtitle": "13 Models Compared \u2014 Performance, Display, Battery & Use Case Fit for Developers",
-  "lens": "product",
-  "contributor": "mrshaun13",
-  "createdAt": "2026-02-14T21:00:00Z",
-  "skillVersion": "7.2",
-  "productsCompared": 13,
-  "sectionsBuilt": 8,
-  "chartsBuilt": 10,
+  "durationMinutes": 90,
+  "searchesPerformed": 10,
+  "sourcesCount": 14,
+  "sectionsBuilt": 7,
+  "chartsBuilt": 8,
   "filesGenerated": 12,
-  "dataPointsCollected": 390
+  "dataPointsCollected": 480,
+  "skillVersion": "5.1",
+  "model": null,
+  "hoursSaved": {
+    "researchHours": 20.5,
+    "totalHoursSaved": 95,
+    "equivalentLabel": "~2.5 weeks full-time"
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 10.5,
+    "fleschKincaidLabel": "10th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "totalWords": 6200
+  }
 }

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import {
   FlaskConical, ArrowRight, Sparkles, Clock, Search, BarChart3,
   FileText, Database, Package, Timer, BookOpen, Zap, GraduationCap, Brain, Eye,
-  GitCompareArrows, Check,
+  GitCompareArrows, Check, MessageSquare, X,
 } from 'lucide-react';
 import ProjectDetailFlyout from './ProjectDetailFlyout';
 import CompareView from './CompareView';
@@ -92,10 +92,24 @@ function AggregateStats({ projects }) {
   );
 }
 
+const HOVER_TOOLTIP_DELAY_MS = 400;
+
 export default function HubHome({ projects, onProjectClick, getAccent, formatDate, ProjectIcon }) {
   const [detailProject, setDetailProject] = useState(null);
   const [compareSelection, setCompareSelection] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
+  const [promptModalProject, setPromptModalProject] = useState(null);
+  const [hoveredCardSlug, setHoveredCardSlug] = useState(null);
+  const hoverTimeoutRef = useRef(null);
+
+  const handlePromptMouseEnter = useCallback((slug) => {
+    hoverTimeoutRef.current = setTimeout(() => setHoveredCardSlug(slug), HOVER_TOOLTIP_DELAY_MS);
+  }, []);
+  const handlePromptMouseLeave = useCallback(() => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    hoverTimeoutRef.current = null;
+    setHoveredCardSlug(null);
+  }, []);
 
   const handleDetailClick = (e, project) => {
     e.stopPropagation();
@@ -193,11 +207,34 @@ export default function HubHome({ projects, onProjectClick, getAccent, formatDat
                     </div>
                   </div>
 
-                  {/* Query preview */}
+                  {/* Query preview — hover shows full prompt in custom tooltip */}
                   {project.query && (
-                    <p className="text-[11px] text-gray-600 mt-3 line-clamp-2 leading-relaxed italic">
-                      "{project.query}"
-                    </p>
+                    <div
+                      className="mt-3"
+                      onMouseEnter={() => handlePromptMouseEnter(project.slug)}
+                      onMouseLeave={handlePromptMouseLeave}
+                    >
+                      <p className="text-[11px] text-gray-600 line-clamp-2 leading-relaxed italic cursor-default">
+                        "{project.query}"
+                      </p>
+                      {hoveredCardSlug === project.slug && (
+                        <div
+                          className="absolute z-10 left-0 right-0 bottom-full mb-1.5 p-3 rounded-lg bg-gray-800 border border-gray-600 shadow-xl text-left"
+                          role="tooltip"
+                        >
+                          <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider mb-1.5">Full prompt</p>
+                          <p className="text-xs text-gray-200 leading-relaxed whitespace-pre-wrap">{project.query}</p>
+                        </div>
+                      )}
+                      <button
+                        type="button"
+                        onClick={(e) => { e.stopPropagation(); e.preventDefault(); setPromptModalProject(project); }}
+                        className="mt-1 flex items-center gap-1 text-[10px] text-indigo-400 hover:text-indigo-300 transition-colors"
+                      >
+                        <MessageSquare className="w-3 h-3 flex-shrink-0" />
+                        Original prompt
+                      </button>
+                    </div>
                   )}
 
                   {/* Telemetry: Hours saved + key stats */}
@@ -324,6 +361,35 @@ export default function HubHome({ projects, onProjectClick, getAccent, formatDat
           allProjects={projects}
           onClose={() => setShowCompare(false)}
         />
+      )}
+
+      {/* Original prompt modal */}
+      {promptModalProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          onClick={() => setPromptModalProject(null)}
+        >
+          <div
+            className="bg-gray-900 border border-gray-700 rounded-xl shadow-xl max-w-lg w-full max-h-[80vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between gap-3 p-4 border-b border-gray-800">
+              <h3 className="text-sm font-semibold text-white truncate">{promptModalProject.title}</h3>
+              <button
+                type="button"
+                onClick={() => setPromptModalProject(null)}
+                className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="p-4 overflow-y-auto flex-1">
+              <p className="text-[10px] font-medium text-gray-500 uppercase tracking-wider mb-2">Original prompt</p>
+              <p className="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">{promptModalProject.query}</p>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

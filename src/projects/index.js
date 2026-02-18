@@ -825,8 +825,6 @@ export const projectRegistry = [
       promptComplexity: { wordCount: 28, entityCount: 5, ambiguityScore: 0.15 },
       sourceDiversityScore: 0.85,
       dataQualityDistribution: { t1: 168, t2: 210, t3: 30, t4: 12 },
-    },
-  },
       hoursSaved: {
         researchHours: 30,
         totalHoursSaved: 180,

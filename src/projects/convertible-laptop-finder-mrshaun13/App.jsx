@@ -46,7 +46,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-full bg-gray-950 text-gray-100">
+    <div className="h-full overflow-y-auto bg-gray-950 text-gray-100">
       <div className="border-b border-gray-800 bg-gray-900/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-3 mb-3">

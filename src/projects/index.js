@@ -827,17 +827,6 @@ export const projectRegistry = [
       dataQualityDistribution: { t1: 168, t2: 210, t3: 30, t4: 12 },
     },
   },
-      hoursSaved: {
-        researchHours: 30,
-        totalHoursSaved: 180,
-        equivalentLabel: '~5 weeks full-time',
-      },
-      consumptionTime: {
-        estimatedMinutes: 600,
-        estimatedLabel: '~10 hours deep study',
-      },
-    },
-  },
   {
     slug: 'japanese-learning-center-djagger',
     title: 'Japanese Learning Center',

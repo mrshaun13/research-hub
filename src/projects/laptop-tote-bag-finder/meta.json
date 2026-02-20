@@ -1,0 +1,42 @@
+{
+  "runStartedAt": "2026-02-20T06:49:00Z",
+  "runCompletedAt": "2026-02-20T07:05:00Z",
+  "durationMinutes": 16,
+  "skillVersion": "3.0",
+  "userPrompt": "Research a tote bag that fits a 14\" laptop, has zipper closure, is not too big for a 160cm woman, multiple carry options, durable quality but not ultra high-end, fits water bottle and notepads, available in Canada, with a Japanese premium alternative.",
+  "researchPlan": "Product comparison: 12 laptop tote bags across 11 brands, 4 tiers (Budget/Mid/Premium/Japanese Premium), 7 dashboard sections",
+  "checkpointModified": false,
+  "searchesPerformed": 14,
+  "sourcesCount": 15,
+  "sectionsBuilt": 6,
+  "chartsBuilt": 5,
+  "filesGenerated": 9,
+  "dataPointsCollected": 144,
+  "phaseTiming": {
+    "phase0_environment": 0.2,
+    "phase1_interpret": 0.5,
+    "phase2_survey": 2.0,
+    "phase3_discover": 3.0,
+    "phase4_research": 4.0,
+    "phase5_analyze": 1.5,
+    "phase6_build": 4.0,
+    "phase7_present": 0.8
+  },
+  "contentAnalysis": {
+    "fleschKincaid": 8.2,
+    "bloomsLevel": "Analysis",
+    "wordCount": 4200
+  },
+  "hoursSaved": 6.5,
+  "consumptionTime": "12 minutes",
+  "dataQualityDistribution": {
+    "T1_gold": 48,
+    "T2_silver": 62,
+    "T3_bronze": 24,
+    "T4_estimate": 10
+  },
+  "sourceDiversityScore": 0.85,
+  "promptComplexity": "high",
+  "extension": "product-purchase",
+  "outputMode": "bespoke"
+}

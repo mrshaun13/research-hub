@@ -1,6 +1,4 @@
-import React from 'react';
-import { MapPin, Clock, DollarSign, Users, Check, X, ExternalLink, Calendar, BookOpen } from 'lucide-react';
-import InsightCallout from './InsightCallout';
+import { MapPin, Clock, DollarSign, Users, Calendar, BookOpen } from 'lucide-react';
 
 const chet = {
   name: 'CHET',

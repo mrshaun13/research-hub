@@ -241,8 +241,6 @@ function DayLengthViz() {
 /* ─── 4. YEAR LENGTH — ratio table + interactive converter ─── */
 function YearLengthViz() {
   const [earthMinutes, setEarthMinutes] = useState(20);
-  const planetNames = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
-
   const convertTime = useCallback((mins, planetYearDays) => {
     const earthYearDays = 365;
     const ratio = planetYearDays / earthYearDays;
@@ -422,12 +420,8 @@ function WindRaceGame() {
     setProgress2(0);
     startRef.current = performance.now();
 
-    const maxTime = Math.max(r1.quarterMile, r2.quarterMile);
-    const duration = Math.min(maxTime * 40, 6000);
-
     const animate = (now) => {
       const elapsed = now - startRef.current;
-      const t = Math.min(elapsed / duration, 1);
 
       const p1Target = Math.min(100, (elapsed / (r1.quarterMile * 40)) * 100);
       const p2Target = Math.min(100, (elapsed / (r2.quarterMile * 40)) * 100);

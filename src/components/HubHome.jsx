@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import {
-  FlaskConical, ArrowRight, Sparkles, Clock, Search, BarChart3,
-  FileText, Database, Package, Timer, BookOpen, Zap, GraduationCap, Brain, Eye,
-  GitCompareArrows, Check,
+import { useState } from 'react';
+import { Sparkles, Clock, Search, BarChart3,
+  FileText, Database, Package, Timer, BookOpen, Zap, GraduationCap, Eye,
 } from 'lucide-react';
-import ProjectDetailFlyout from './ProjectDetailFlyout';
-import CompareView from './CompareView';
 
 const LENS_BADGES = {
   standard: { label: 'Research', bg: 'bg-blue-500/10', text: 'text-blue-400', border: 'border-blue-500/20' },

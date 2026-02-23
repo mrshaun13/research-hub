@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Cell } from 'recharts';
 import { jobData, costOfLiving } from '../data/researchData';
 import InsightCallout from './InsightCallout';
-import CustomTooltip from './CustomTooltip';
 
 const tierColors = { chill: '#22c55e', comfortable: '#eab308', leveraged: '#f97316', ambitious: '#ef4444' };
 

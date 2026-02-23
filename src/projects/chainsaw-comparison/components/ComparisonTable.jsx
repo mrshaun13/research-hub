@@ -1,5 +1,4 @@
-import React, { useState, useMemo } from 'react';
-import { ChevronDown, ChevronUp, ArrowUpDown, ExternalLink } from 'lucide-react';
+import { useState, useMemo } from 'react';
 import { products, BRAND_COLORS, TIER_COLORS } from '../data/products';
 
 const ComparisonTable = ({ onProductSelect }) => {

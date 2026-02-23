@@ -1,6 +1,3 @@
-import React from 'react';
-import { ExternalLink, AlertTriangle } from 'lucide-react';
-import InsightCallout from './InsightCallout';
 
 const sources = [
   { category: 'Manufacturer Sites', items: [

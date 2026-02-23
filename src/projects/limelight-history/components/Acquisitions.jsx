@@ -1,7 +1,3 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 import { acquisitions } from '../data/limelightData';
 
 const OUTCOME_COLORS = {

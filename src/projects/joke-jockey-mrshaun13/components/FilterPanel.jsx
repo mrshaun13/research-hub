@@ -58,7 +58,7 @@ export default function FilterPanel({
   clearAll, hasFilters, totalActiveFilters,
   filtersOpen, setFiltersOpen,
   favorites, showFavorites, setShowFavorites,
-  view, setView, stats,
+  view, setView,
 }) {
   return (
     <div className="border-b border-gray-800/50 bg-gray-900/40">

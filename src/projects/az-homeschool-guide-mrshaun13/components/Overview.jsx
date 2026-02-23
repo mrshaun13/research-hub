@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, BookOpen, Users, DollarSign, GraduationCap, Shield, Sparkles } from 'lucide-react';
+import { BookOpen, Users, DollarSign, GraduationCap, Shield, Sparkles } from 'lucide-react';
 import { curricula, coopPrograms, azLawSummary } from '../data/researchData';
 
 const StatCard = ({ icon: Icon, label, value, color }) => (

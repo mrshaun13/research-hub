@@ -124,7 +124,7 @@ const UseCaseFit = () => {
             <PolarGrid stroke="#374151" />
             <PolarAngleAxis dataKey="useCase" stroke="#9ca3af" fontSize={11} />
             <PolarRadiusAxis domain={[0, 5]} stroke="#4b5563" fontSize={9} />
-            {selectedIds.map((id, i) => {
+            {selectedIds.map((id) => {
               const p = products.find(x => x.id === id);
               return (
                 <Radar

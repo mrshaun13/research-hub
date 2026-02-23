@@ -1,8 +1,4 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { speciesData } from '../data/researchData';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 
 const PIE_COLORS = ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'];
 

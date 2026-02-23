@@ -1,6 +1,7 @@
 import React from 'react';
-import { Trophy, Star, Gem, Eye, Backpack, Zap, Target } from 'lucide-react';
+import { Trophy, Star, Gem, Eye, Backpack, Target } from 'lucide-react';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { products, BRAND_COLORS } from '../data/products';
 
 const awards = [
@@ -18,7 +19,7 @@ const awards = [
     productId: 'celestron-origin-mk2',
     color: 'text-purple-400',
     bg: 'bg-purple-500/10 border-purple-700',
-    reason: 'If money is no object, the Origin Mark II is in a class by itself. Its 152mm RASA optics produce images nothing else can touch. It has land-based viewing mode, multi-user simultaneous viewing, and built-in TV casting. At 35 lbs it\'s a permanent porch fixture — which is exactly what you want.',
+    reason: 'If money is no object, the Origin Mark II is in a class by itself. Its 152mm <GlossaryTerm term="RASA">RASA</GlossaryTerm> optics produce images nothing else can touch. It has land-based viewing mode, multi-user simultaneous viewing, and built-in TV casting. At 35 lbs it\'s a permanent porch fixture — which is exactly what you want.',
   },
   {
     icon: Gem,
@@ -177,7 +178,7 @@ const Recommendations = ({ onSelectProduct }) => {
       </div>
 
       <InsightCallout variant="warning" title="Think Twice About...">
-        <strong>Unistellar eVscope 2 ($4,999)</strong> — Most expensive, oldest design (2022), requires manual collimation, NO terrestrial mode, and Telescopic Watch gave it a "Not Recommended" rating. The Celestron Origin Mark II does more for $700 less.<br /><br />
+        <strong>Unistellar eVscope 2 ($4,999)</strong> — Most expensive, oldest design (2022), requires manual <GlossaryTerm term="collimation">collimation</GlossaryTerm>, NO terrestrial mode, and Telescopic Watch gave it a "Not Recommended" rating. The Celestron Origin Mark II does more for $700 less.<br /><br />
         <strong>Vaonis Vespera Pro ($2,990)</strong> — Beautiful 12.5MP images, but same 50mm aperture as the $549 Seestar S50. No terrestrial mode. You're paying $2,440 more for resolution and build quality, not capability.<br /><br />
         <strong>Any Unistellar model for YOUR use case</strong> — None of them have terrestrial viewing. If you want to see the Nashville skyline, Unistellar is off the table.
       </InsightCallout>

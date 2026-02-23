@@ -1,7 +1,5 @@
-import React from 'react';
-import { Trophy, Star, DollarSign, Zap, Shield, Lightbulb, AlertTriangle, ChevronRight } from 'lucide-react';
+import { Trophy, Star, DollarSign, Zap, Shield, Lightbulb } from 'lucide-react';
 import { products } from '../data/products';
-import InsightCallout from './InsightCallout';
 
 const awards = [
   {

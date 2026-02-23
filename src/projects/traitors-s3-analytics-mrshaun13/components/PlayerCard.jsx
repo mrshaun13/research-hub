@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Skull, UserX, Crown, Swords, Eye, Target, MessageCircle, Star } from 'lucide-react';
+import { Shield, Skull, UserX, Crown, Eye, Target, MessageCircle, Star } from 'lucide-react';
 
 const affiliationColors = {
   faithful: { bg: 'from-blue-950/80 to-blue-900/40', border: 'border-blue-700/40', badge: 'bg-blue-600/80 text-blue-100', dot: 'bg-blue-400' },
@@ -77,7 +77,7 @@ export default function PlayerCard({ player, maxEpisode, onClick, isSelected }) 
   );
 }
 
-function StatMini({ icon, value, label, color }) {
+function StatMini({ icon, value, color }) {
   return (
     <div className={`flex items-center gap-1 ${color}`}>
       {icon}

@@ -1,5 +1,3 @@
-import React from 'react';
-import { ExternalLink, BookOpen, AlertTriangle } from 'lucide-react';
 
 const sources = [
   { category: 'Curriculum Publishers', items: [

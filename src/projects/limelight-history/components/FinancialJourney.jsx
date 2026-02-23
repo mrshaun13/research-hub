@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
-import {
-  LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine, Legend
-} from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
+import { useState } from 'react';
+
 import { revenueData, stockPriceData, ERAS } from '../data/limelightData';
 
-const eraColors = Object.values(ERAS).map(e => e.color);
+const _eraColors = Object.values(ERAS).map(e => e.color);
 
 function getEraColor(year) {
   if (year <= 2006) return ERAS['Startup'].color;
@@ -21,7 +16,7 @@ function getEraColor(year) {
 export default function FinancialJourney() {
   const [view, setView] = useState('revenue');
 
-  const revenueWithColor = revenueData.map(d => ({
+  const _revenueWithColor = revenueData.map(d => ({
     ...d,
     fill: getEraColor(d.year),
   }));
@@ -68,7 +63,7 @@ export default function FinancialJourney() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis dataKey="year" stroke="#94a3b8" tick={{ fontSize: 12 }} />
                 <YAxis stroke="#94a3b8" tick={{ fontSize: 12 }} tickFormatter={v => `$${v}M`} />
-                <Tooltip content={<CustomTooltip formatter={(v, n) => `$${v}M`} />} />
+                <Tooltip content={<CustomTooltip formatter={(v, _n) => `$${v}M`} />} />
                 <ReferenceLine x={2007} stroke="#10b981" strokeDasharray="3 3" label={{ value: 'IPO', fill: '#10b981', fontSize: 11 }} />
                 <ReferenceLine x={2022} stroke="#8b5cf6" strokeDasharray="3 3" label={{ value: 'Edgio', fill: '#8b5cf6', fontSize: 11 }} />
                 <ReferenceLine x={2024} stroke="#ef4444" strokeDasharray="3 3" label={{ value: 'Bankrupt', fill: '#ef4444', fontSize: 11 }} />
@@ -119,7 +114,7 @@ export default function FinancialJourney() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis dataKey="year" stroke="#94a3b8" tick={{ fontSize: 12 }} />
                 <YAxis stroke="#94a3b8" tick={{ fontSize: 12 }} tickFormatter={v => `$${v}`} domain={[0, 'auto']} />
-                <Tooltip content={<CustomTooltip formatter={(v, n) => `$${v.toFixed(2)}`} />} />
+                <Tooltip content={<CustomTooltip formatter={(v, _n) => `$${v.toFixed(2)}`} />} />
                 <Area type="monotone" dataKey="high" stroke="#10b981" fill="none" strokeWidth={1} strokeDasharray="3 3" name="52w High" />
                 <Area type="monotone" dataKey="price" stroke="#f59e0b" fill="url(#stockGradient)" strokeWidth={2} name="Avg Price" />
                 <Area type="monotone" dataKey="low" stroke="#ef4444" fill="none" strokeWidth={1} strokeDasharray="3 3" name="52w Low" />

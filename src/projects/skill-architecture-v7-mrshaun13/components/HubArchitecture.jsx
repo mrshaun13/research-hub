@@ -1,6 +1,7 @@
 import React from 'react';
-import { PanelLeft, Zap, Shield, Library, BarChart3, Globe, Database, Layers, Search, Eye, ArrowRight } from 'lucide-react';
+import { PanelLeft, Zap, Shield, Library, BarChart3, Globe, Database, Layers, Search } from 'lucide-react';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { hubFeatures } from '../data/researchData';
 
 const CATEGORY_COLORS = {
@@ -89,7 +90,7 @@ export default function HubArchitecture() {
       {/* Directory Structure */}
       <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
         <h3 className="text-sm font-semibold text-white mb-1">Hub Directory Structure</h3>
-        <p className="text-xs text-gray-500 mb-4">Everything lives under one directory. Projects are lazy-loaded, collections scale independently, local projects are gitignored.</p>
+        <p className="text-xs text-gray-500 mb-4">Everything lives under one directory. Projects are <GlossaryTerm term="lazy-loaded">lazy-loaded</GlossaryTerm>, collections scale independently, local projects are gitignored.</p>
         <div className="bg-gray-950 rounded-lg p-4 font-mono text-xs space-y-0.5 overflow-x-auto">
           {directoryTree.map((item, i) => (
             <div key={i} className="flex items-start gap-2" style={{ paddingLeft: item.indent * 20 }}>

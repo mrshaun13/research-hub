@@ -1,8 +1,5 @@
-import React from 'react';
-import { Building2, DollarSign, Globe, Calendar, Skull, Scale } from 'lucide-react';
-import StatCard from './StatCard';
-import InsightCallout from './InsightCallout';
-import { revenueData, ERAS, milestones, networkScale } from '../data/limelightData';
+import { Building2, DollarSign, Globe, Skull, Scale } from 'lucide-react';
+import { ERAS } from '../data/limelightData';
 
 export default function Overview() {
   return (

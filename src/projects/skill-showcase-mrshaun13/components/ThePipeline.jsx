@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { pipelinePhases, realProjectTelemetry } from '../data/showcaseData';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';

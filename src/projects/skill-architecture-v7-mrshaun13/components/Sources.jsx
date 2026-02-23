@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, FileText, Globe, AlertTriangle, Info } from 'lucide-react';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { sources } from '../data/researchData';
 
 export default function Sources() {
@@ -63,7 +64,7 @@ export default function Sources() {
               <span className="text-[10px] font-bold text-indigo-400">5</span>
             </div>
             <div>
-              <p className="text-xs font-medium text-white">Self-Referential Build</p>
+              <p className="text-xs font-medium text-white"><GlossaryTerm term="self-referential">Self-Referential</GlossaryTerm> Build</p>
               <p className="text-[10px] text-gray-500">This dashboard was built using the very skill it documents — following the same 8-phase pipeline, using the same hub, the same tech stack, and the same telemetry system.</p>
             </div>
           </div>

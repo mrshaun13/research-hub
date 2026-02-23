@@ -1,10 +1,6 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ComposedChart, Line, Legend } from 'recharts';
 import { caffeineComparison, keepAwakeData } from '../data/researchData';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 
-const INTENSITY_COLORS = {
+const _INTENSITY_COLORS = {
   'Extreme': '#ef4444',
   'Very High': '#f97316',
   'Moderate': '#eab308',

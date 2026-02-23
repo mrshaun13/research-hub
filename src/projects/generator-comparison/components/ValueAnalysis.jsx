@@ -1,8 +1,4 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ScatterChart, Scatter, Legend } from 'recharts';
 import { products, BRAND_COLORS, TCO_ASSUMPTIONS } from '../data/products';
-import InsightCallout from './InsightCallout';
-import CustomTooltip from './CustomTooltip';
 
 export default function ValueAnalysis() {
   const triFuel = products.filter(p => p.fuelType === 'Tri-Fuel');
@@ -18,7 +14,7 @@ export default function ValueAnalysis() {
     .map(p => ({ name: p.model, brand: p.brand, value: p.wattsPerDollarNG }));
 
   // Watts per dollar (Gas) — all
-  const wattsPerDollarGas = [...products]
+  const _wattsPerDollarGas = [...products]
     .sort((a, b) => b.wattsPerDollarGas - a.wattsPerDollarGas)
     .map(p => ({ name: p.model, brand: p.brand, value: p.wattsPerDollarGas, fuelType: p.fuelType }));
 

@@ -1,9 +1,5 @@
-import React from 'react';
-import { Zap, DollarSign, Fuel, Weight, Volume2 } from 'lucide-react';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, Legend, BarChart, Bar, LabelList } from 'recharts';
-import { products, BRAND_COLORS, USER_LOAD_PROFILE, SOFT_START_INFO } from '../data/products';
-import InsightCallout from './InsightCallout';
-import CustomTooltip from './CustomTooltip';
+import { Zap, DollarSign, Fuel, Weight } from 'lucide-react';
+import { products, BRAND_COLORS, USER_LOAD_PROFILE } from '../data/products';
 
 const StatCard = ({ icon: Icon, label, value, sub, color = 'text-amber-400' }) => (
   <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
@@ -16,7 +12,7 @@ const StatCard = ({ icon: Icon, label, value, sub, color = 'text-amber-400' }) =
   </div>
 );
 
-export default function Overview({ onProductSelect }) {
+export default function Overview({ onProductSelect: _onProductSelect }) {
   const triFuel = products.filter(p => p.fuelType === 'Tri-Fuel');
   const dualFuel = products.filter(p => p.fuelType === 'Dual-Fuel');
 
@@ -37,7 +33,7 @@ export default function Overview({ onProductSelect }) {
   })).sort((a, b) => b.running - a.running);
 
   // Fuel type comparison
-  const fuelTypeData = [
+  const _fuelTypeData = [
     { name: 'Tri-Fuel', count: triFuel.length, avgPrice: Math.round(triFuel.reduce((s, p) => s + p.price, 0) / triFuel.length) },
     { name: 'Dual-Fuel', count: dualFuel.length, avgPrice: Math.round(dualFuel.reduce((s, p) => s + p.price, 0) / dualFuel.length) },
   ];

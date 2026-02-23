@@ -77,7 +77,6 @@ export default function SpaceTimeline() {
 
       <div className="flex gap-1.5 flex-wrap">
         {categories.map(c => {
-          const cat = CATEGORY_COLORS[c];
           return (
             <button
               key={c}

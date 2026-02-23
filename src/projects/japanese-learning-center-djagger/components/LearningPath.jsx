@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, BookOpen, CheckCircle2 } from 'lucide-react';
+import { useState } from 'react';
 import { learningPath } from '../data/learningPathData';
-import InsightCallout from './InsightCallout';
 
 const LEVEL_COLORS = {
   emerald: { bg: 'bg-emerald-500/10', border: 'border-emerald-500/20', text: 'text-emerald-400', badge: 'bg-emerald-500/20 text-emerald-300' },

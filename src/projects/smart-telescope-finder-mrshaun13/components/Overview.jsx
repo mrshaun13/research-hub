@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, BarChart, Bar, Legend } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, BarChart, Bar } from 'recharts';
 import { Telescope, DollarSign, Eye, Zap } from 'lucide-react';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import CustomTooltip from './CustomTooltip';
 import { products, BRAND_COLORS, TIER_COLORS } from '../data/products';
 
@@ -57,7 +58,7 @@ const Overview = () => {
 
       <InsightCallout variant="recommendation" title="Your Use Case: Porch → Phone → TV">
         You want a smart telescope that sits on your porch, is controlled from your phone, and streams live to your TV via screen casting.
-        <strong> Only {terrestrialCount} of {products.length} models</strong> support terrestrial/daytime viewing for your Nashville skyline goal.
+        <strong> Only {terrestrialCount} of {products.length} models</strong> support <GlossaryTerm term="terrestrial viewing">terrestrial/daytime viewing</GlossaryTerm> for your Nashville skyline goal.
         The Unistellar and Vaonis lines are astronomy-only — a critical distinction most buyers miss.
       </InsightCallout>
 
@@ -167,7 +168,7 @@ const Overview = () => {
 
       <InsightCallout variant="critical" title="The #1 Thing Most Buyers Miss">
         Smart telescopes are NOT traditional telescopes. You never look through an eyepiece (except the Unistellar Odyssey Pro and eVscope 2).
-        Instead, the image builds on your phone over time via "live stacking." For terrestrial viewing, the image is near-real-time — perfect for watching the Nashville skyline.
+        Instead, the image builds on your phone over time via "<GlossaryTerm term="live stacking">live stacking</GlossaryTerm>." For terrestrial viewing, the image is near-real-time — perfect for watching the Nashville skyline.
         Every model here connects via WiFi to your phone, and you can cast your phone screen to your TV using Chromecast, AirPlay, or screen mirroring.
       </InsightCallout>
     </div>

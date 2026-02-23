@@ -1,5 +1,5 @@
 import React from 'react';
-import { sunData, planets, plutoData } from '../data/solarSystemData';
+import { sunData, planets } from '../data/solarSystemData';
 import InsightCallout from './InsightCallout';
 import QuizSection from './QuizSection';
 import { overviewQuiz } from '../data/quizData';

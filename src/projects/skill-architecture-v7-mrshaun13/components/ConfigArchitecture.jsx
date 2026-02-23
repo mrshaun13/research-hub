@@ -1,8 +1,9 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { HardDrive, GitBranch, Eye, ArrowDown, Check, X } from 'lucide-react';
+import { HardDrive, GitBranch, ArrowDown, Check, X } from 'lucide-react';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { configLayers, compatibilityMatrix } from '../data/researchData';
 
 const fieldCountData = configLayers.map(l => ({ name: `Layer ${l.layer}`, fields: l.fieldCount, color: l.color }));
@@ -13,7 +14,7 @@ export default function ConfigArchitecture() {
       <div>
         <h2 className="text-xl font-bold text-white mb-1">Config Architecture — Three Layers</h2>
         <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
-          The skill uses a three-layer config to make the entire setup portable across machines.
+          The skill uses a three-layer config to make the entire setup <GlossaryTerm term="portable">portable</GlossaryTerm> across machines.
           The personal hub repo IS the portable unit — clone it on a new machine, point the skill at it, done.
         </p>
       </div>

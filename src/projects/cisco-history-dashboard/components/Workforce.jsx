@@ -1,10 +1,4 @@
-import React from 'react';
-import {
-  AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine, ComposedChart, Line
-} from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
+
 import { employeeData, revenuePerEmployee } from '../data/ciscoData';
 
 const growthData = employeeData.slice(1).map((e, i) => ({

@@ -7,7 +7,7 @@ import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';
 import {
   copilotUserGrowth, cursorRevenueGrowth, mcpEcosystemGrowth,
-  agentsMdAdoption, timelineMilestones, timelineEras,
+  agentsMdAdoption, timelineMilestones, timelineEras, toolCategories,
 } from '../data/researchData';
 
 const TABS = [

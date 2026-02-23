@@ -3,6 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieCha
 import { Sparkles, FileText, Code2, Puzzle, Layers, GitBranch, Zap, Shield } from 'lucide-react';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { skillFileStructure, totalSkillLines, techStack, guardrails } from '../data/researchData';
 
 const CATEGORY_COLORS = { Core: '#6366f1', Reference: '#06b6d4', Extension: '#f59e0b', Config: '#10b981' };
@@ -31,7 +32,7 @@ export default function Overview() {
       <div>
         <h2 className="text-xl font-bold text-white mb-1">Skill Overview</h2>
         <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
-          The Research Visualizer is an agentic AI skill that takes a simple research topic in natural language and autonomously
+          The Research Visualizer is an <GlossaryTerm term="agentic">agentic</GlossaryTerm> AI skill that takes a simple research topic in natural language and autonomously
           produces an interactive web dashboard — discovering dimensions, metrics, subgroups, and taxonomies along the way.
           Version 7.0 represents a full architecture uplift with a portable hub, pluggable extensions, 3-tier visibility,
           community library sharing, and template-mode collections.
@@ -61,7 +62,7 @@ export default function Overview() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
           <h3 className="text-sm font-semibold text-white mb-1">Skill File Structure — Lines by File</h3>
-          <p className="text-xs text-gray-500 mb-4">Progressive disclosure: SKILL.md stays under 500 lines; reference files loaded on demand</p>
+          <p className="text-xs text-gray-500 mb-4"><GlossaryTerm term="progressive disclosure">Progressive disclosure</GlossaryTerm>: SKILL.md stays under 500 lines; reference files loaded on demand</p>
           <ResponsiveContainer width="100%" height={320}>
             <BarChart data={skillFileStructure} layout="vertical" margin={{ left: 10, right: 20 }}>
               <XAxis type="number" tick={{ fill: '#6b7280', fontSize: 10 }} />

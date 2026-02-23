@@ -1,8 +1,6 @@
-import React from 'react';
-import { Star, ExternalLink, Check, X, ShoppingCart, Shield, MapPin, Calendar } from 'lucide-react';
 import { BRAND_COLORS, TIER_COLORS, USE_CASES } from '../data/products';
 
-const ProductDetail = ({ product, details, getAggregateRating, onBack }) => {
+const ProductDetail = ({ product, details, getAggregateRating, onBack: _onBack }) => {
   if (!product || !details) return <p className="text-gray-500">Product not found.</p>;
 
   const agg = getAggregateRating(product.id);

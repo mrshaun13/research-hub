@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine, ComposedChart, Line } from 'recharts';
-import { DollarSign } from 'lucide-react';
 import { costComparisonData, fundingComparison } from '../data/researchData';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';

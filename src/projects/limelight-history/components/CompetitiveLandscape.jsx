@@ -1,10 +1,4 @@
-import React from 'react';
-import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, LineChart, Line, Legend, BarChart, Bar
-} from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
+
 import { marketShareData, cdnMarketSize, competitors } from '../data/limelightData';
 
 const COLORS = {

@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import {
-  X, Clock, Search, BookOpen, BarChart3, FileText, Database, Package,
-  Zap, GraduationCap, Brain, Eye, Timer, ChevronDown, ChevronUp,
-  Sparkles, Activity, Target, Gauge, Type, Focus,
+import { useState, useEffect } from 'react';
+import { Search, BookOpen, BarChart3, FileText, Database, Package,
+  Zap, Eye, Timer, Activity, Target, Gauge, Type, Focus,
 } from 'lucide-react';
+
+
 import {
-  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell,
-  RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
-} from 'recharts';
-import {
-  computeDerivedMetrics, DERIVED_METRIC_META, PHASE_COLORS, PHASE_LABELS, PHASE_ORDER,
-  getPhaseTimingData, getProductionHoursData, getConsumptionData, getBuildProfileData,
-  BLOOMS_LABELS, BLOOMS_COLORS, formatDuration, formatHours,
+  computeDerivedMetrics, DERIVED_METRIC_META,
+  getPhaseTimingData, getProductionHoursData, getConsumptionData, getBuildProfileData, BLOOMS_COLORS, formatDuration, formatHours,
 } from './telemetryUtils';
 
 const LENS_BADGES = {

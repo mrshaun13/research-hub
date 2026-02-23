@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie } from 'recharts';
-import { Zap, Clock, Brain, GraduationCap, Eye, BookOpen, BarChart3, FileText, Search, Timer, ChevronDown, ChevronRight } from 'lucide-react';
+import { Zap, ChevronDown, ChevronRight } from 'lucide-react';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { telemetryCategories, totalTelemetryFields } from '../data/researchData';
 
 const categoryChartData = telemetryCategories.map(c => ({ name: c.category, fields: c.fieldCount, color: c.color }));
@@ -141,7 +142,7 @@ export default function TelemetrySystem() {
       <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
         <h3 className="text-sm font-semibold text-white mb-1">Hours Saved Estimation — 6 Output Formats</h3>
         <p className="text-xs text-gray-500 mb-4">
-          Estimates the equivalent manual effort for each output format. The headline metric (totalHoursSaved) = research + interactive dashboard.
+          Estimates the equivalent manual effort for each output format. The headline metric (totalHoursSaved) = research + interactive dashboard. Paired with <GlossaryTerm term="Flesch-Kincaid">Flesch-Kincaid</GlossaryTerm> readability scores.
         </p>
         <div className="space-y-1.5">
           {hoursSavedFormulas.map((f) => (
@@ -161,7 +162,7 @@ export default function TelemetrySystem() {
 
       {/* Bloom's Taxonomy */}
       <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
-        <h3 className="text-sm font-semibold text-white mb-1">Bloom's Taxonomy — Cognitive Depth Assessment</h3>
+        <h3 className="text-sm font-semibold text-white mb-1"><GlossaryTerm term="Bloom's Taxonomy">Bloom's Taxonomy</GlossaryTerm> — Cognitive Depth Assessment</h3>
         <p className="text-xs text-gray-500 mb-4">Each dashboard is assessed for cognitive depth. Most research dashboards land at Level 4 (Analyze) with a range from Understand to Evaluate.</p>
         <div className="space-y-1.5">
           {bloomsLevels.map((b) => (

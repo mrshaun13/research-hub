@@ -1,7 +1,4 @@
-import React from 'react';
-import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { products, USE_CASES, BRAND_COLORS } from '../data/products';
-import InsightCallout from './InsightCallout';
 
 const UseCaseFit = () => {
   const topContenders = ['stihl-ms-261', 'echo-cs-590', 'husqvarna-545-mk2', 'husqvarna-550xp-mk2', 'echo-cs-620p'];

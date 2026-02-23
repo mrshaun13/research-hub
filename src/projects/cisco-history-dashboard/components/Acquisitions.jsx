@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, PieChart, Pie, Cell, Legend, ComposedChart, Line, ScatterChart, Scatter, ZAxis
-} from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
+import { useState } from 'react';
+
 import {
   acquisitionsByYear, acquisitionCategories, topAcquisitions, acquisitionGeography
 } from '../data/ciscoData';
 
-const COLORS = ['#049fd9', '#6b21a8', '#059669', '#d97706', '#dc2626', '#0284c7', '#7c3aed', '#ea580c', '#64748b'];
+const _COLORS = ['#049fd9', '#6b21a8', '#059669', '#d97706', '#dc2626', '#0284c7', '#7c3aed', '#ea580c', '#64748b'];
 
 export default function Acquisitions() {
   const [view, setView] = useState('timeline');

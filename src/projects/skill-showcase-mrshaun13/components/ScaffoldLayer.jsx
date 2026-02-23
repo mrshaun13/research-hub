@@ -1,34 +1,7 @@
-import React, { useState } from 'react';
-import { ChevronRight, FolderOpen, FileCode, Layers } from 'lucide-react';
+import React from 'react';
+import { FolderOpen, FileCode, Layers } from 'lucide-react';
 import { scaffoldEvolution } from '../data/showcaseData';
 import InsightCallout from './InsightCallout';
-
-function StageCard({ stage, index, isActive, onClick }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`w-full text-left p-4 rounded-xl border transition-all duration-200 ${
-        isActive
-          ? 'border-indigo-500/50 bg-indigo-500/10 shadow-lg shadow-indigo-500/5'
-          : 'border-gray-700/50 bg-gray-800/20 hover:bg-gray-800/40'
-      }`}
-    >
-      <div className="flex items-center gap-3">
-        <div
-          className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold flex-shrink-0"
-          style={{ backgroundColor: stage.color + '20', color: stage.color }}
-        >
-          {index + 1}
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="text-sm font-semibold text-gray-200">{stage.label}</div>
-          <div className="text-[10px] text-gray-500">{stage.stage}</div>
-        </div>
-        <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform ${isActive ? 'text-indigo-400 rotate-90' : 'text-gray-600'}`} />
-      </div>
-    </button>
-  );
-}
 
 function FileTree({ files, color }) {
   if (!files || files.length === 0) return null;

@@ -1,8 +1,4 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { processingMethods, cuppingTiers } from '../data/researchData';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 
 export default function Processing() {
   return (
@@ -38,7 +34,7 @@ export default function Processing() {
 
       {/* Processing method cards */}
       <div className="space-y-3">
-        {processingMethods.map((m, i) => (
+        {processingMethods.map((m, _i) => (
           <div key={m.method} className="p-4 rounded-xl border border-gray-800 bg-gray-900/50">
             <div className="flex items-start justify-between mb-2">
               <div>

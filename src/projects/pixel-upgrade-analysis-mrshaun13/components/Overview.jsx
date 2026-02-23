@@ -1,7 +1,7 @@
 import React from 'react';
 import { Smartphone, TrendingDown, Clock, DollarSign, Zap, Shield } from 'lucide-react';
 import InsightCallout from './InsightCallout';
-import { currentPhone, recommendations, featureDelta } from '../data/researchData';
+import { recommendations, featureDelta } from '../data/researchData';
 
 const STATS = [
   { icon: Smartphone, label: 'Your Phone', value: 'Pixel 9 Pro', sub: 'Owned outright', color: 'text-emerald-400' },

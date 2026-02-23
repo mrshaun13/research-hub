@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lock, Eye, EyeOff, ChevronDown } from 'lucide-react';
+import { Eye, EyeOff, ChevronDown } from 'lucide-react';
 
 export default function EpisodeGate({ maxEpisode, setMaxEpisode }) {
   const episodes = Array.from({ length: 11 }, (_, i) => i + 1);

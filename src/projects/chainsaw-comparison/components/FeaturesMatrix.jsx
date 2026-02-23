@@ -1,7 +1,4 @@
-import React from 'react';
-import { Check, X } from 'lucide-react';
 import { products, FEATURES, BRAND_COLORS } from '../data/products';
-import InsightCallout from './InsightCallout';
 
 const FeaturesMatrix = () => {
   const scored = products.map(p => {

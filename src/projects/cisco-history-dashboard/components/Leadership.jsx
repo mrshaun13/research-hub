@@ -1,6 +1,3 @@
-import React from 'react';
-import { User, ArrowRight } from 'lucide-react';
-import InsightCallout from './InsightCallout';
 import { leadershipTimeline } from '../data/ciscoData';
 
 const eraColors = {

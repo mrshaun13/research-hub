@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Cell, ReferenceLine, ScatterChart, Scatter } from 'recharts';
+import { useState } from 'react';
 import { products, BRAND_COLORS, USER_LOAD_PROFILE } from '../data/products';
-import InsightCallout from './InsightCallout';
-import CustomTooltip from './CustomTooltip';
 
 export default function PowerAnalysis() {
   const [fuelFilter, setFuelFilter] = useState('all');

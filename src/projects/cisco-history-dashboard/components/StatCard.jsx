@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function StatCard({ icon: Icon, label, value, subtext, color = '#049fd9' }) {
   return (

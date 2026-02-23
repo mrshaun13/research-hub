@@ -1,5 +1,3 @@
-import React from 'react';
-import { Lightbulb } from 'lucide-react';
 
 const COLORS = {
   amber: 'bg-amber-500/5 border-amber-500/20 text-amber-300',

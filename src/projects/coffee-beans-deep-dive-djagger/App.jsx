@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
-  Coffee, Zap, Globe, BarChart3, Award, FlaskConical, BookOpen,
-  ChevronRight, Leaf,
+  Coffee, Zap, Globe, BarChart3, Award, FlaskConical, BookOpen, Leaf,
 } from 'lucide-react';
 import Overview from './components/Overview';
 import CaffeineAnalysis from './components/CaffeineAnalysis';

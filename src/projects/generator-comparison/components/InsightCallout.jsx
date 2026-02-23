@@ -1,4 +1,3 @@
-import React from 'react';
 import { Info, AlertTriangle, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
 
 const variants = {

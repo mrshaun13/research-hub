@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Trophy, Zap, DollarSign, Battery, Feather, Monitor, Cpu, ShoppingCart, ExternalLink } from 'lucide-react';
+import { Trophy, Zap, DollarSign, Battery, Feather, Monitor, Cpu, ShoppingCart, ExternalLink } from 'lucide-react';
 import { productsWithDerived, BRAND_COLORS } from '../data/products';
 import { productDetails } from '../data/productDetails';
 import InsightCallout from './InsightCallout';

@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
-import { Zap, BarChart3, Table2, DollarSign, CheckSquare, Award, BookOpen, ChevronLeft } from 'lucide-react';
+import { useState } from 'react';
+import { Zap, BarChart3, Table2, DollarSign, CheckSquare, Award, BookOpen } from 'lucide-react';
 import { products } from './data/products';
 import { productDetails, getAggregateRating } from './data/productDetails';
-import Overview from './components/Overview';
-import ComparisonTable from './components/ComparisonTable';
-import PowerAnalysis from './components/PowerAnalysis';
-import ValueAnalysis from './components/ValueAnalysis';
-import FeaturesMatrix from './components/FeaturesMatrix';
-import Recommendations from './components/Recommendations';
-import Sources from './components/Sources';
-import ProductDetail from './components/ProductDetail';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: Zap },

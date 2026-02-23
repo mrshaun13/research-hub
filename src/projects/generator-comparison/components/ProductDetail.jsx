@@ -1,5 +1,3 @@
-import React from 'react';
-import { Star, ExternalLink, Check, X, ChevronLeft, ShoppingCart, Shield, Wrench, MapPin } from 'lucide-react';
 import { BRAND_COLORS, TIER_COLORS } from '../data/products';
 
 const StarRating = ({ stars }) => {

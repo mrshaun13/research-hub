@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { milestones, ERAS } from '../data/limelightData';
 
 const CATEGORY_COLORS = {
@@ -51,7 +51,7 @@ export default function Timeline() {
               const [start, end] = era.years.split('-').map(Number);
               return m.year >= start && m.year <= end;
             });
-            const eraColor = eraEntry ? eraEntry[1].color : '#64748b';
+            const _eraColor = eraEntry ? eraEntry[1].color : '#64748b';
 
             return (
               <div key={i} className="relative pl-14">

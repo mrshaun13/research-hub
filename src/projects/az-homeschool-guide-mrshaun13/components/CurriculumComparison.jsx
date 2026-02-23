@@ -1,24 +1,8 @@
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend } from 'recharts';
-import { Filter, BookOpen, Sparkles } from 'lucide-react';
-import { curricula, advancedMetrics } from '../data/researchData';
-import CustomTooltip from './CustomTooltip';
+import { ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend } from 'recharts';
+import { Filter } from 'lucide-react';
+import { curricula } from '../data/researchData';
 import InsightCallout from './InsightCallout';
-
-const COLORS = {
-  advancedFriendly: '#f59e0b',
-  selfPacing: '#10b981',
-  rigor: '#6366f1',
-  parentInvolvement: '#ec4899',
-};
-
-const worldviewColors = {
-  'Christian': '#8b5cf6',
-  'Secular': '#10b981',
-  'Christian (LDS-influenced)': '#a78bfa',
-  'Secular (Public School)': '#06b6d4',
-  'Christian (Classical)': '#7c3aed',
-};
 
 const RatingDots = ({ value, max = 5, color = 'amber' }) => (
   <div className="flex gap-0.5">

@@ -1,6 +1,7 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ScatterChart, Scatter } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import CustomTooltip from './CustomTooltip';
 import { products, BRAND_COLORS } from '../data/products';
 
@@ -29,8 +30,8 @@ const OpticsDeepDive = () => {
       </div>
 
       <InsightCallout variant="info" title="What Aperture Means For You">
-        Aperture (mm) is the single most important spec for a telescope. It determines how much light the scope collects — bigger = brighter images, fainter objects visible, and better detail.
-        For terrestrial viewing of the Nashville skyline (1-20 miles), aperture matters less than focal length and sensor resolution.
+        <GlossaryTerm term="aperture">Aperture</GlossaryTerm> (mm) is the single most important spec for a telescope. It determines how much light the scope collects — bigger = brighter images, fainter objects visible, and better detail.
+        For terrestrial viewing of the Nashville skyline (1-20 miles), aperture matters less than <GlossaryTerm term="focal length">focal length</GlossaryTerm> and sensor resolution.
         For stargazing, aperture is king.
       </InsightCallout>
 

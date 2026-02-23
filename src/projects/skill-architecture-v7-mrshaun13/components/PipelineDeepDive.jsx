@@ -3,6 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, RadarC
 import { ChevronDown, ChevronRight, Clock, FileText, GitFork, User, ArrowRight } from 'lucide-react';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { pipelinePhases, researchLenses, vizRules, dataQualityTiers } from '../data/researchData';
 
 const timingData = pipelinePhases.map(p => ({ name: p.shortName, minutes: p.avgMinutes, color: p.color }));
@@ -24,7 +25,7 @@ export default function PipelineDeepDive() {
         <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
           Every research project flows through the same 8-phase pipeline. The phases are sequential but the skill
           adapts at each stage — extensions can inject, augment, or override any phase. The only required user
-          interaction is the lightweight checkpoint in Phase 3.
+          interaction is the lightweight <GlossaryTerm term="checkpoint">checkpoint</GlossaryTerm> in Phase 3.
         </p>
       </div>
 
@@ -227,7 +228,7 @@ export default function PipelineDeepDive() {
 
       {/* Visualization Rules */}
       <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
-        <h3 className="text-sm font-semibold text-white mb-1">Deterministic Visualization Rules</h3>
+        <h3 className="text-sm font-semibold text-white mb-1"><GlossaryTerm term="deterministic">Deterministic</GlossaryTerm> Visualization Rules</h3>
         <p className="text-xs text-gray-500 mb-4">Same data shape → same chart type, always. Decided in Phase 5 AFTER seeing the data, not before.</p>
         <div className="space-y-1.5">
           {vizRules.map((r, i) => (

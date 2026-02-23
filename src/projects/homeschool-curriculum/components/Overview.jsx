@@ -1,8 +1,6 @@
-import React from 'react';
-import { BookOpen, DollarSign, Zap, Users, MapPin, Star } from 'lucide-react';
+import { BookOpen, DollarSign, Users, MapPin } from 'lucide-react';
 import { curricula } from '../data/curricula';
 import { programs } from '../data/programs';
-import InsightCallout from './InsightCallout';
 
 const statCards = [
   { label: 'Curricula Compared', value: curricula.length, icon: BookOpen, color: 'text-violet-400' },

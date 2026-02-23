@@ -431,17 +431,16 @@ function VinylRecord({ joke, showPunchline, onReveal, onNext, onPrev, onRandom, 
 export default function MixerPanel({
   styleWeights, setStyleWeight,
   groupWeights, setGroupWeight,
-  ageGroups, toggleAge, clearAges,
-  generations, toggleGen, clearGens,
+  ageGroups, toggleAge,
+  generations, toggleGen,
   filteredCount, totalCount,
   shuffled, setShuffled,
   clearAll, hasFilters,
   favorites, showFavorites, setShowFavorites,
   view, setView,
   applyPreset,
-  mixerOpen, setMixerOpen,
   joke, showPunchline, onReveal, onNext, onPrev, onRandom,
-  isFavorite, onToggleFavorite, currentIndex,
+  isFavorite, onToggleFavorite,
 }) {
   const leftGroups = TOPIC_GROUPS.slice(0, 4);
   const rightGroups = TOPIC_GROUPS.slice(4, 8);

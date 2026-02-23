@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Compass, Target, Layers, GitCompare, Sparkles, DollarSign, BookOpen, ChevronRight,
+  Compass, Target, Layers, GitCompare, Sparkles, DollarSign, BookOpen,
 } from 'lucide-react';
 import Overview from './components/Overview';
 import Spectrum from './components/Spectrum';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitBranch, Shield, CheckCircle, XCircle, ArrowRight, Globe, Lock, Eye } from 'lucide-react';
+import { GitBranch, Shield, CheckCircle, ArrowRight, Globe, Lock, Eye } from 'lucide-react';
 import { contributionFlow } from '../data/showcaseData';
 import InsightCallout from './InsightCallout';
 

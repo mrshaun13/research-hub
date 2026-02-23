@@ -1,8 +1,4 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { productionByCountry } from '../data/researchData';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 
 const REGION_COLORS = {
   'South America': '#f59e0b',

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Laptop, Building2, DollarSign, Battery, Weight, Cpu } from 'lucide-react';
+import { Laptop, DollarSign, Battery, Weight } from 'lucide-react';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { productsWithDerived, summaryStats, BRAND_COLORS, TIER_COLORS } from '../data/products';
+import { productsWithDerived, summaryStats, BRAND_COLORS } from '../data/products';
 import InsightCallout from './InsightCallout';
 
 const StatCard = ({ icon: Icon, label, value, sub, color = 'text-teal-400' }) => (

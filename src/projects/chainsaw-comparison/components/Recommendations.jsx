@@ -1,7 +1,5 @@
-import React from 'react';
-import { Trophy, Star, DollarSign, Shield, Sparkles, Wrench, Heart, Zap } from 'lucide-react';
+import { Trophy, DollarSign, Shield, Sparkles, Wrench, Zap } from 'lucide-react';
 import { products, BRAND_COLORS } from '../data/products';
-import InsightCallout from './InsightCallout';
 
 const awards = [
   {

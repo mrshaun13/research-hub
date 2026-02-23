@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ScatterChart, Scatter, ZAxis } from 'recharts';
+import { useState } from 'react';
 import { curricula } from '../data/curricula';
-import InsightCallout from './InsightCallout';
 
 const costData = curricula
   .map(c => ({
@@ -23,7 +21,7 @@ const valueData = curricula.map(c => ({
   allSubjects: c.allSubjects,
 }));
 
-const barColors = {
+const _barColors = {
   0: '#10b981',
   1: '#34d399',
   2: '#6ee7b7',

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Crown, Skull, UserX, Shield, Eye, Swords, Users, TrendingUp, BarChart3, Clock, MapPin, Filter, Search, ChevronRight, Flame, Sparkles } from 'lucide-react';
+import { Crown, Skull, UserX, Shield, Eye, Swords, Users, BarChart3, Clock, Search, ChevronRight, Flame, Sparkles } from 'lucide-react';
 import EpisodeGate from './components/EpisodeGate';
 import PlayerCard from './components/PlayerCard';
 import PlayerDetail from './components/PlayerDetail';

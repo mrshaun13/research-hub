@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flame, Users, Crown, Skull, Shield, Eye, MapPin, Tv } from 'lucide-react';
-import { SEASON_INFO, PLAYERS, EPISODES } from '../data/gameData';
+import { SEASON_INFO, PLAYERS } from '../data/gameData';
 
 export default function Overview() {
   const totalFaithfuls = PLAYERS.filter(p => p.affiliation === 'faithful').length;

@@ -1,20 +1,8 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import { ALL_JOKES, STYLES, TOPICS, TOPIC_GROUPS, AGE_GROUPS, GENERATIONS, weightedFilterJokes, shuffleJokes, getJokeStats, TOTAL_JOKE_COUNT } from './data';
-import JokeCard from './components/JokeCard';
+import { ALL_JOKES, weightedFilterJokes, shuffleJokes, getJokeStats, TOTAL_JOKE_COUNT } from './data';
 import MixerPanel from './components/MixerPanel';
 import StatsBar from './components/StatsBar';
 import FavoritesPanel from './components/FavoritesPanel';
-
-const ACCENT = {
-  from: 'from-amber-500',
-  to: 'to-orange-600',
-  bg: 'bg-amber-500',
-  text: 'text-amber-400',
-  border: 'border-amber-500/30',
-  ring: 'ring-amber-500/20',
-  hover: 'hover:bg-amber-500/10',
-  badge: 'bg-amber-500/15 text-amber-300',
-};
 
 function useToggleSet(initial = []) {
   const [items, setItems] = useState(initial);
@@ -124,8 +112,6 @@ export default function JokeRepository() {
   }, [clearAges, clearGens]);
 
   const hasFilters = Object.keys(styleWeights).length > 0 || Object.keys(groupWeights).length > 0 || ageGroups.length > 0 || generations.length > 0;
-
-  const isBrowse = view === 'browse' && !showFavorites;
 
   if (showFavorites) {
     return (

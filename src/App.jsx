@@ -1,15 +1,7 @@
-import React, { useState, Suspense } from 'react';
-import {
-  Search, ChevronLeft, ChevronRight, Home, Menu, X,
-  Microscope, FlaskConical,
+import { useState } from 'react';
+import { FlaskConical,
 } from 'lucide-react';
 import { projectRegistry, projectComponents } from './projects';
-import HubHome from './components/HubHome';
-
-const ICON_MAP = {
-  Building2: () => import('lucide-react').then(m => m.Building2),
-  Axe: () => import('lucide-react').then(m => m.Axe),
-};
 
 function ProjectIcon({ iconName, className }) {
   const icons = {

@@ -155,7 +155,6 @@ function ExperimentCard({ exp, isSelected, onSelect }) {
 }
 
 function ExperimentDetail({ exp }) {
-  const [step, setStep] = useState(0);
   const [completedSteps, setCompletedSteps] = useState({});
 
   const toggleStep = (idx) => {

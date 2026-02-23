@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   Smartphone, BarChart3, ArrowLeftRight, DollarSign, RefreshCw,
-  ThumbsUp, Award, BookOpen, ChevronRight,
+  ThumbsUp, Award, BookOpen,
 } from 'lucide-react';
 import Overview from './components/Overview';
 import SpecComparison from './components/SpecComparison';

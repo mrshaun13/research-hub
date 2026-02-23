@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Puzzle, Check, Clock, ArrowRight, Layers, Database, ChevronDown, ChevronRight } from 'lucide-react';
-import CustomTooltip from './CustomTooltip';
+import { Puzzle, Layers, Database, ChevronDown, ChevronRight } from 'lucide-react';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { extensionModes, hookTypes, extensionRegistry } from '../data/researchData';
 
 const hookData = [
@@ -24,7 +23,7 @@ export default function ExtensionSystem() {
         <h2 className="text-xl font-bold text-white mb-1">Extension System — Pluggable Specializations</h2>
         <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
           Extensions auto-detect from user prompts and augment the pipeline with domain-specific logic.
-          They support two output modes (bespoke and template) and three hook types (augment, override, inject).
+          They support two output modes (<GlossaryTerm term="bespoke">bespoke</GlossaryTerm> and template) and three hook types (augment, override, inject).
           The system is designed so new extensions can be added without modifying the core pipeline.
         </p>
       </div>

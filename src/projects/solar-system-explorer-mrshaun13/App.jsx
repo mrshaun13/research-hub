@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Overview from './components/Overview';
 import PlanetExplorer from './components/PlanetExplorer';
 import SizeShowdown from './components/SizeShowdown';

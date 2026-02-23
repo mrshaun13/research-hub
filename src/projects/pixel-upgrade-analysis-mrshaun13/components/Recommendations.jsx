@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { recommendations } from '../data/researchData';
 
 const TIER_STYLES = {

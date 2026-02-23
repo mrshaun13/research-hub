@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ScatterChart, Scatter, ZAxis, Legend } from 'recharts';
+import { useState } from 'react';
 import { arabicaVarieties } from '../data/researchData';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 
 const AVAILABILITY_COLORS = {
   'Common': '#22c55e',
@@ -16,7 +13,7 @@ export default function Varieties() {
 
   const sorted = [...arabicaVarieties].sort((a, b) => b[sortBy] - a[sortBy]);
 
-  const scatterData = arabicaVarieties.map((v) => ({
+  const _scatterData = arabicaVarieties.map((v) => ({
     name: v.name,
     flavorRating: v.flavorRating,
     caffeinePercent: v.caffeinePercent,

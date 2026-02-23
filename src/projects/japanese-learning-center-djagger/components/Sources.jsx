@@ -1,5 +1,3 @@
-import React from 'react';
-import { ExternalLink } from 'lucide-react';
 import { sources } from '../data/researchData';
 
 const TIER_BADGES = {

@@ -9,7 +9,7 @@ export default function PlayerDetail({ player, maxEpisode, onClose }) {
   const isTraitor = player.affiliation === 'traitor';
   const accentColor = showAffiliation ? (isTraitor ? 'red' : 'blue') : 'stone';
 
-  const visibleQuotes = player.stats.confessionalQuotes.filter((_, i) => {
+  const visibleQuotes = player.stats.confessionalQuotes.filter(() => {
     return true;
   });
 

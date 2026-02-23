@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
+import { ArrowUp, ArrowDown } from 'lucide-react';
 import InsightCallout from './InsightCallout';
 import { featureDelta } from '../data/researchData';
 

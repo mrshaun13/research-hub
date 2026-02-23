@@ -1,4 +1,3 @@
-import React from 'react';
 import { Info, AlertTriangle, Star, AlertCircle, Lightbulb } from 'lucide-react';
 
 const variants = {

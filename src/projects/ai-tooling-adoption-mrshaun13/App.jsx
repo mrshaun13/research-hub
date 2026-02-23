@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Brain, TrendingUp, ShieldAlert, Layers, Building2, Rocket, BookOpen, ChevronRight,
+  Brain, TrendingUp, ShieldAlert, Layers, Building2, Rocket, BookOpen,
 } from 'lucide-react';
 import Overview from './components/Overview';
 import GrowthTimelines from './components/GrowthTimelines';

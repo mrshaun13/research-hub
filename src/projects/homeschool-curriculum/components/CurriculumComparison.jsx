@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowUpDown, Check, X, ExternalLink, Filter } from 'lucide-react';
+import { useState } from 'react';
 import { curricula, curriculumTypes } from '../data/curricula';
-import InsightCallout from './InsightCallout';
 
 const sortOptions = [
   { key: 'name', label: 'Name' },

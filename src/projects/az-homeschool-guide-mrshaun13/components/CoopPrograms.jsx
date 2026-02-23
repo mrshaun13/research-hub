@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
-import { MapPin, Users, Filter, ExternalLink } from 'lucide-react';
+import { MapPin, Filter, ExternalLink } from 'lucide-react';
 import { coopPrograms, coopComparisonData } from '../data/researchData';
 import CustomTooltip from './CustomTooltip';
 import InsightCallout from './InsightCallout';

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { vocabularyCategories } from '../data/researchData';
-import InsightCallout from './InsightCallout';
 
 export default function Vocabulary() {
   const [activeCategory, setActiveCategory] = useState(0);

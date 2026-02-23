@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Shield, AlertTriangle, Info } from 'lucide-react';
+import { ExternalLink, AlertTriangle, Info } from 'lucide-react';
 import { sources } from '../data/researchData';
 import InsightCallout from './InsightCallout';
 

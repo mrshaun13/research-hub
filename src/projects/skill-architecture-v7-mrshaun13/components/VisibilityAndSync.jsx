@@ -1,8 +1,7 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { HardDrive, GitBranch, Globe, ArrowRight, Shield, Upload, Check, X, AlertTriangle } from 'lucide-react';
-import CustomTooltip from './CustomTooltip';
+import { HardDrive, GitBranch, Globe, ArrowRight, Shield, Check, X, AlertTriangle } from 'lucide-react';
 import InsightCallout from './InsightCallout';
+import { GlossaryTerm } from '../../../components/GlossaryTerm';
 import { visibilityTiers, contributionSteps } from '../data/researchData';
 
 const TIER_ICONS = { HardDrive, GitBranch, Globe };
@@ -150,7 +149,7 @@ export default function VisibilityAndSync() {
       <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
         <h3 className="text-sm font-semibold text-white mb-1">Community Contribution — GitHub API Flow</h3>
         <p className="text-xs text-gray-500 mb-4">
-          The agent pushes directly via the GitHub REST API (Git Data endpoints). No local clone of the library needed.
+          The agent pushes directly via the <GlossaryTerm term="GitHub REST API">GitHub REST API</GlossaryTerm> (Git Data endpoints). No local clone of the library needed.
           7 steps from your hub to the public library.
         </p>
         <div className="space-y-1.5">

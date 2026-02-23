@@ -1,10 +1,4 @@
-import React from 'react';
-import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine, ReferenceArea
-} from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
+
 import { marketCapData } from '../data/ciscoData';
 
 export default function MarketValuation() {
@@ -25,7 +19,7 @@ export default function MarketValuation() {
             <Tooltip
               content={
                 <CustomTooltip
-                  formatter={(val, name) => {
+                  formatter={(val, _name) => {
                     const point = marketCapData.find(d => d.marketCap === val);
                     const note = point?.note ? ` (${point.note})` : '';
                     return `$${val.toFixed(1)}B${note}`;

@@ -1,6 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { ChevronDown, ChevronUp, ExternalLink, ArrowUpDown } from 'lucide-react';
-import { products, BRAND_COLORS, TIER_COLORS, FUEL_TYPE_COLORS } from '../data/products';
+import { useState, useMemo } from 'react';
+import { products, BRAND_COLORS, TIER_COLORS } from '../data/products';
 
 const columns = [
   { key: 'name', label: 'Model', sortable: true },
@@ -106,7 +105,7 @@ export default function ComparisonTable({ onProductSelect }) {
                   {columns.map(col => {
                     const val = p[col.key];
                     const display = col.format ? col.format(val) : val;
-                    let extra = '';
+                    let _extra = '';
                     if (col.key === 'name') {
                       return (
                         <td key={col.key} className="px-3 py-2.5 font-medium text-white whitespace-nowrap">

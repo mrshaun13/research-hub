@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { projectShowcases } from '../data/showcaseData';
 import InsightCallout from './InsightCallout';
 

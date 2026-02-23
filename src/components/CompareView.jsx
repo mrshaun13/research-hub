@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
+
+
 import {
-  X, ArrowUpRight, ArrowDownRight, Minus, ChevronDown, ChevronUp,
-} from 'lucide-react';
-import {
-  RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
-  ResponsiveContainer, Tooltip,
-  BarChart, Bar, XAxis, YAxis, Cell,
-} from 'recharts';
-import {
-  computeCompareRows, getBuildProfileData, getPhaseTimingData,
+  computeCompareRows,
   PHASE_ORDER, PHASE_LABELS, PHASE_COLORS, formatDuration,
 } from './telemetryUtils';
 
@@ -114,7 +109,7 @@ function PhaseCompare({ projects }) {
   );
 }
 
-function DeltaIndicator({ values, best, higherIsBetter, lowerIsBetter }) {
+function DeltaIndicator({ values, best: _best, higherIsBetter: _higherIsBetter, lowerIsBetter: _lowerIsBetter }) {
   if (values.length < 2) return null;
   const numericVals = values.filter(v => typeof v === 'number');
   if (numericVals.length < 2) return null;
@@ -132,7 +127,7 @@ function DeltaIndicator({ values, best, higherIsBetter, lowerIsBetter }) {
   );
 }
 
-function CompareTable({ projects, allProjects }) {
+function CompareTable({ projects, allProjects: _allProjects }) {
   const rows = computeCompareRows(projects);
   const [collapsedCategories, setCollapsedCategories] = useState({});
 

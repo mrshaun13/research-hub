@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Languages, Route, Type, BookOpen, Library, Zap, Circle, BookMarked,
-  ChevronRight,
 } from 'lucide-react';
 import Overview from './components/Overview';
 import LearningPath from './components/LearningPath';

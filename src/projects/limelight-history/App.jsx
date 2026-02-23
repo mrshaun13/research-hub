@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   LayoutDashboard, DollarSign, Globe, Clock, Scale,
-  ShoppingCart, Skull, BookOpen, ChevronLeft, ChevronRight
+  ShoppingCart, Skull, BookOpen
 } from 'lucide-react';
 import Overview from './components/Overview';
 import FinancialJourney from './components/FinancialJourney';

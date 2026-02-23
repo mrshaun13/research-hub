@@ -1,5 +1,4 @@
-import React from 'react';
-import { ExternalLink, BookOpen, Database, Globe, Building2 } from 'lucide-react';
+import { BookOpen, Database, Building2 } from 'lucide-react';
 
 const sources = [
   {

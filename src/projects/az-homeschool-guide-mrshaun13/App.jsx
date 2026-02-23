@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Scale, DollarSign, Users, GraduationCap, Star, FileText, MapPin, Shield } from 'lucide-react';
+import { BookOpen, DollarSign, Users, GraduationCap, Star, FileText, MapPin, Shield } from 'lucide-react';
 import Overview from './components/Overview';
 import CurriculumComparison from './components/CurriculumComparison';
 import CostAnalysis from './components/CostAnalysis';

@@ -1,7 +1,3 @@
-import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import InsightCallout from './InsightCallout';
 import { bankruptcySales } from '../data/limelightData';
 
 const COLORS = ['#06b6d4', '#8b5cf6', '#f59e0b', '#ec4899', '#64748b'];
@@ -74,7 +70,7 @@ export default function Collapse() {
                 outerRadius={100}
                 paddingAngle={3}
                 dataKey="value"
-                label={({ name, value }) => `$${value}M`}
+                label={({ name: _name, value }) => `$${value}M`}
               >
                 {pieData.map((entry, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />

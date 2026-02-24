@@ -73,5 +73,6 @@
     "entityCount": 10,
     "ambiguityScore": 0.2
   },
-  "sourceDiversityScore": 0.63
+  "sourceDiversityScore": 0.63,
+  "timingSource": "estimated"
 }

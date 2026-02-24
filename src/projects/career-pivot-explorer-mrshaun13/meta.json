@@ -74,5 +74,6 @@
     "wordCount": 42,
     "entityCount": 6,
     "ambiguityScore": 0.2
-  }
+  },
+  "timingSource": "estimated"
 }

@@ -24,7 +24,8 @@
     "research": 8,
     "analyze": 3,
     "build": 10,
-    "present": 4
+    "present": 4,
+    "enrich": 0
   },
   "contentAnalysis": {
     "fleschKincaidGrade": 9.2,
@@ -55,5 +56,23 @@
     "chartExplorationMinutes": 16,
     "interactiveOverheadMinutes": 8,
     "estimatedLabel": "~55 min deep read"
+  },
+  "sourceDiversityScore": 0.88,
+  "glossary": {
+    "enabled": false,
+    "termsIdentified": 0,
+    "termsRendered": 0,
+    "termsByCategory": {}
+  },
+  "dataQualityDistribution": {
+    "t1": 162,
+    "t2": 81,
+    "t3": 49,
+    "t4": 32
+  },
+  "promptComplexity": {
+    "wordCount": 42,
+    "entityCount": 6,
+    "ambiguityScore": 0.2
   }
 }

@@ -21,7 +21,8 @@
     "research": 0,
     "analyze": 5,
     "build": 75,
-    "present": 4
+    "present": 4,
+    "enrich": 0
   },
   "contentAnalysis": {
     "fleschKincaidGrade": 3.5,
@@ -52,5 +53,25 @@
     "chartExplorationMinutes": 0,
     "interactiveOverheadMinutes": 999,
     "estimatedLabel": "Unlimited fun browsing"
-  }
+  },
+  "model": "claude-sonnet-4-20250514",
+  "tokenUsage": null,
+  "glossary": {
+    "enabled": false,
+    "termsIdentified": 0,
+    "termsRendered": 0,
+    "termsByCategory": {}
+  },
+  "dataQualityDistribution": {
+    "t1": 375,
+    "t2": 188,
+    "t3": 113,
+    "t4": 75
+  },
+  "promptComplexity": {
+    "wordCount": 48,
+    "entityCount": 10,
+    "ambiguityScore": 0.2
+  },
+  "sourceDiversityScore": 0.63
 }

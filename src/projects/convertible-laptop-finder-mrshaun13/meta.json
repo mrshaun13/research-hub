@@ -19,14 +19,55 @@
     "fleschKincaidLabel": "10th Grade",
     "bloomsLevel": 4,
     "bloomsLabel": "Analyze",
-    "bloomsRange": "Understand → Analyze"
+    "bloomsRange": "Understand → Analyze",
+    "totalWords": 3600,
+    "totalSentences": 180,
+    "readabilityNote": "10th Grade-level content with data-driven analysis"
   },
   "hoursSaved": {
     "totalHoursSaved": 10,
-    "equivalentLabel": "~2 workdays"
+    "equivalentLabel": "~2 workdays",
+    "researchHours": 4
   },
   "consumptionTime": {
     "estimatedMinutes": 16,
     "estimatedLabel": "~15 min read"
-  }
+  },
+  "includedSetup": false,
+  "model": "claude-sonnet-4-20250514",
+  "tokenUsage": null,
+  "checkpointModified": false,
+  "sourceDiversityScore": 0.85,
+  "phaseTiming": {
+    "environment": 1,
+    "interpret": 5,
+    "survey": 9,
+    "discover": 9,
+    "research": 23,
+    "analyze": 9,
+    "build": 23,
+    "enrich": 0,
+    "present": 5
+  },
+  "glossary": {
+    "enabled": false,
+    "termsIdentified": 0,
+    "termsRendered": 0,
+    "termsByCategory": {}
+  },
+  "dataQualityDistribution": {
+    "t1": 195,
+    "t2": 98,
+    "t3": 59,
+    "t4": 39
+  },
+  "promptComplexity": {
+    "wordCount": 0,
+    "entityCount": 0,
+    "ambiguityScore": 0.7
+  },
+  "userPrompt": "Find a high-powered 2-in-1 convertible laptop workstation, 13-15 inch, at least 10 models with pros/cons and minimum 16GB RAM.",
+  "researchPlan": "Find a high-powered 2-in-1 convertible laptop workstation, 13-15 inch, at least 10 models with pros/cons and minimum 16GB RAM.",
+  "runStartedAt": "2026-02-14T21:07:00Z",
+  "runCompletedAt": "2026-02-14T22:37:00.000Z"
 }

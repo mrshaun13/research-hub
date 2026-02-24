@@ -24,7 +24,8 @@
     "research": 10,
     "analyze": 2,
     "build": 20,
-    "present": 6
+    "present": 6,
+    "enrich": 0
   },
   "contentAnalysis": {
     "fleschKincaidGrade": 10.1,
@@ -67,5 +68,11 @@
     "t2": 100,
     "t3": 95,
     "t4": 39
+  },
+  "glossary": {
+    "enabled": false,
+    "termsIdentified": 0,
+    "termsRendered": 0,
+    "termsByCategory": {}
   }
 }

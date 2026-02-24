@@ -24,7 +24,8 @@
     "research": 50,
     "analyze": 10,
     "build": 40,
-    "present": 11
+    "present": 11,
+    "enrich": 0
   },
   "contentAnalysis": {
     "fleschKincaidGrade": 9.1,
@@ -32,7 +33,9 @@
     "bloomsLevel": 5,
     "bloomsLabel": "Evaluate",
     "bloomsRange": "Understand → Evaluate",
-    "totalWords": 5200
+    "totalWords": 5200,
+    "totalSentences": 260,
+    "readabilityNote": "9th Grade-level content with data-driven analysis"
   },
   "hoursSaved": {
     "researchHours": 26,
@@ -62,5 +65,11 @@
     "t2": 120,
     "t3": 130,
     "t4": 54
+  },
+  "glossary": {
+    "enabled": false,
+    "termsIdentified": 0,
+    "termsRendered": 0,
+    "termsByCategory": {}
   }
 }

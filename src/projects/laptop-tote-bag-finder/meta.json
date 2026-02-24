@@ -15,28 +15,68 @@
   "phaseTiming": {
     "phase0_environment": 0.2,
     "phase1_interpret": 0.5,
-    "phase2_survey": 2.0,
-    "phase3_discover": 3.0,
-    "phase4_research": 4.0,
+    "phase2_survey": 2,
+    "phase3_discover": 3,
+    "phase4_research": 4,
     "phase5_analyze": 1.5,
-    "phase6_build": 4.0,
-    "phase7_present": 0.8
+    "phase6_build": 4,
+    "phase7_present": 0.8,
+    "environment": 1,
+    "interpret": 1,
+    "survey": 2,
+    "discover": 2,
+    "research": 4,
+    "analyze": 2,
+    "build": 4,
+    "enrich": 0,
+    "present": 1
   },
   "contentAnalysis": {
     "fleschKincaid": 8.2,
     "bloomsLevel": "Analysis",
-    "wordCount": 4200
+    "wordCount": 4200,
+    "totalWords": 2700,
+    "totalSentences": 135,
+    "fleschKincaidGrade": 11,
+    "fleschKincaidLabel": "College",
+    "bloomsLabel": "Analyze",
+    "bloomsRange": "L3-L5",
+    "readabilityNote": "College-level content with data-driven analysis"
   },
-  "hoursSaved": 6.5,
-  "consumptionTime": "12 minutes",
+  "hoursSaved": {
+    "totalHoursSaved": 12,
+    "researchHours": 5,
+    "equivalentLabel": "1.5 workdays"
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 14,
+    "estimatedLabel": "14 min read"
+  },
   "dataQualityDistribution": {
     "T1_gold": 48,
     "T2_silver": 62,
     "T3_bronze": 24,
-    "T4_estimate": 10
+    "T4_estimate": 10,
+    "t1": 72,
+    "t2": 36,
+    "t3": 22,
+    "t4": 14
   },
   "sourceDiversityScore": 0.85,
-  "promptComplexity": "high",
+  "promptComplexity": {
+    "wordCount": 42,
+    "entityCount": 3,
+    "ambiguityScore": 0.2
+  },
   "extension": "product-purchase",
-  "outputMode": "bespoke"
+  "outputMode": "bespoke",
+  "includedSetup": false,
+  "model": "claude-sonnet-4-20250514",
+  "tokenUsage": null,
+  "glossary": {
+    "enabled": false,
+    "termsIdentified": 0,
+    "termsRendered": 0,
+    "termsByCategory": {}
+  }
 }

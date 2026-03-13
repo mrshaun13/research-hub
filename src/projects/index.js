@@ -1041,6 +1041,26 @@ export const projectRegistry = [
       }
 },
   },
+  {
+    "slug": "usb-desktop-microphone-comparison-mrshaun13",
+    "title": "USB Desktop Microphone Finder",
+    "subtitle": "9 Mics, 4 Price Tiers, Real Prices — Plug-In-and-Go for WebEx, Recording & Streaming",
+    "query": "I am looking to purchase an easy-to-use USB sit-on-your-desktop microphone that will capture really high-quality audio for WebEx calls, voice recording, and streaming. Single device, plug-and-play, no board or mixer. Show me what is out there, pros and cons, prices, and help me buy.",
+    "lens": "product",
+    "icon": "Mic",
+    "accentColor": "indigo",
+    "visibility": "public",
+    "contributor": "mrshaun13",
+    "createdAt": "2026-03-13T06:43:00.000Z",
+    "meta": {
+      "skillVersion": "8.12",
+      "sectionsBuilt": 7,
+      "chartsBuilt": 3,
+      "sourcesCount": 22,
+      "hoursSaved": 60,
+      "consumptionTime": 35
+    }
+  },
 ];
 
 export const projectComponents = {
@@ -1062,4 +1082,5 @@ export const projectComponents = {
   'career-pivot-explorer-mrshaun13': lazy(() => import('./career-pivot-explorer-mrshaun13/App')),
   'skill-architecture-v7-mrshaun13': lazy(() => import('./skill-architecture-v7-mrshaun13/App')),
   'az-homeschool-guide-mrshaun13': lazy(() => import('./az-homeschool-guide-mrshaun13/App')),
+  'usb-desktop-microphone-comparison-mrshaun13': lazy(() => import('./usb-desktop-microphone-comparison-mrshaun13/App')),
 };

@@ -1,0 +1,168 @@
+{
+  "title": "USB Desktop Microphone Finder",
+  "subtitle": "9 Mics, 4 Price Tiers, Real Prices — Plug-In-and-Go for WebEx, Recording & Streaming",
+  "description": "Interactive comparison of 9 plug-and-play USB desktop microphones across 4 price tiers ($49–$389). All prices verified from official sources. Covers WebEx/video call fit, feature matrix, value vs. price scatter, use-case scoring, and tiered buy recommendations.",
+  "model": "claude-sonnet-4-5",
+  "userPrompt": "I am looking to purchase an easy-to-use USB sit-on-your-desktop microphone that will capture really high-quality audio for WebEx calls, voice recording, and streaming. Single device, plug-and-play, no board or mixer. Show me what is out there, pros and cons, prices, and help me buy. Verify the prices — no fabrications.",
+  "researchPlan": {
+    "topic": "USB Desktop Microphone Comparison",
+    "populations": [
+      "Budget ($40-70)",
+      "Mid-Range ($90-140)",
+      "Upper-Mid ($190-280)",
+      "Premium ($340-400)"
+    ],
+    "timeScope": "March 2026 pricing",
+    "intent": "Purchase decision support — 9 mics across 4 tiers with verified prices, feature matrix, use-case fit, and buy recommendations",
+    "lenses": [
+      "product"
+    ],
+    "sections": [
+      "Overview",
+      "Comparison Table",
+      "Value vs. Price",
+      "Feature Matrix",
+      "Use Case Fit",
+      "Recommendations",
+      "Sources"
+    ]
+  },
+  "includedSetup": false,
+  "checkpointModified": true,
+  "tokenUsage": null,
+  "searchesPerformed": 14,
+  "sourcesCount": 22,
+  "sectionsBuilt": 7,
+  "chartsBuilt": 3,
+  "dataPointsCollected": 126,
+  "sourceDiversityScore": 0.88,
+  "phaseTiming": {
+    "environment": 0.4,
+    "interpret": 0.1,
+    "survey": 1.9,
+    "discover": 0.3,
+    "research": 0.3,
+    "analyze": 0.1,
+    "build": 9,
+    "enrich": 0,
+    "present": 0,
+    "buildBreakdown": {
+      "add-project": 0
+    }
+  },
+  "glossary": {
+    "enabled": true,
+    "termsIdentified": 8,
+    "termsRendered": 5,
+    "termsByCategory": {
+      "acronyms": [
+        "DSP",
+        "XLR",
+        "MAP"
+      ],
+      "domain_jargon": [
+        "cardioid",
+        "condenser",
+        "dynamic",
+        "APHEX",
+        "polar pattern"
+      ]
+    }
+  },
+  "contentAnalysis": {
+    "fleschKincaidGrade": 9.2,
+    "fleschKincaidLabel": "9th Grade",
+    "bloomsLevel": 5,
+    "bloomsLabel": "Evaluate",
+    "bloomsRange": "Understand → Evaluate",
+    "totalWords": 4800,
+    "totalSentences": 290,
+    "readabilityNote": "Consumer purchase guide with verified pricing, feature comparisons, and tiered recommendations"
+  },
+  "hoursSaved": {
+    "researchHours": 12,
+    "totalHoursSaved": 60,
+    "equivalentLabel": "~1.5 weeks full-time",
+    "productionHours": {
+      "interactive-dashboard": 48,
+      "white-paper": 30,
+      "blog-post": 18,
+      "technical-doc": 20,
+      "presentation": 10,
+      "github-repo": 28
+    }
+  },
+  "consumptionTime": {
+    "estimatedMinutes": 35,
+    "readingMinutes": 22,
+    "chartExplorationMinutes": 9,
+    "interactiveOverheadMinutes": 4,
+    "estimatedLabel": "~35 min deep read"
+  },
+  "dataQualityDistribution": {
+    "T1": 6,
+    "T2": 9,
+    "T3": 5,
+    "T4": 2,
+    "t1": 90,
+    "t2": 45,
+    "t3": 27,
+    "t4": 18
+  },
+  "promptComplexity": {
+    "wordCount": 62,
+    "entityCount": 4,
+    "ambiguityScore": 0.15
+  },
+  "runStartedAt": "2026-03-13T05:49:27.658Z",
+  "runCompletedAt": "2026-03-13T06:53:01.262Z",
+  "durationMinutes": 63.6,
+  "timingSource": "verified",
+  "userWaitMinutes": 51.3,
+  "agentActiveMinutes": 12.3,
+  "checkpointWaitMinutes": 51.3,
+  "sessionTimeline": [
+    {
+      "type": "phase",
+      "phase": "environment",
+      "minutes": 0.4
+    },
+    {
+      "type": "phase",
+      "phase": "interpret",
+      "minutes": 0.1
+    },
+    {
+      "type": "phase",
+      "phase": "survey",
+      "minutes": 1.9
+    },
+    {
+      "type": "phase",
+      "phase": "discover",
+      "minutes": 0.3
+    },
+    {
+      "type": "wait",
+      "context": "checkpoint",
+      "minutes": 51.3
+    },
+    {
+      "type": "phase",
+      "phase": "research",
+      "minutes": 0.3
+    },
+    {
+      "type": "phase",
+      "phase": "analyze",
+      "minutes": 0.1
+    },
+    {
+      "type": "phase",
+      "phase": "build",
+      "minutes": 9
+    }
+  ],
+  "filesGenerated": 9,
+  "skillVersion": "8.12"
+}

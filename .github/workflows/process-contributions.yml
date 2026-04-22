@@ -4,31 +4,43 @@ on:
   push:
     branches: [agent-contributions]
 
+# Skip bot remediation commits so they don't re-trigger the workflow
+concurrency:
+  group: contributions-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
   issues: write
 
 jobs:
   validate-and-merge:
+    # Ignore commits made by the remediation bot itself
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
+
     steps:
+      # ── Checkout ────────────────────────────────────────────────────────────
       - name: Checkout agent-contributions
         uses: actions/checkout@v4
         with:
           ref: agent-contributions
           fetch-depth: 0
+          # Use ADMIN_PAT so the runner can push remediation commits back
+          token: ${{ secrets.ADMIN_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
+      # ── Detect new projects ─────────────────────────────────────────────────
       - name: Detect new projects
         id: detect
         run: |
-          # Compare agent-contributions against main
           git fetch origin main
-          NEW_PROJECTS=$(git diff --name-only origin/main...HEAD -- 'src/projects/*/App.jsx' | sed 's|src/projects/||;s|/App.jsx||' | sort -u)
+          NEW_PROJECTS=$(git diff --name-only origin/main...HEAD -- 'src/projects/*/App.jsx' \
+            | sed 's|src/projects/||;s|/App.jsx||' | sort -u)
 
           if [ -z "$NEW_PROJECTS" ]; then
             echo "No new projects detected."
@@ -36,30 +48,63 @@ jobs:
             echo "## ℹ️ No New Projects" >> $GITHUB_STEP_SUMMARY
             echo "Push to agent-contributions did not contain new research projects." >> $GITHUB_STEP_SUMMARY
           else
-            echo "New projects detected:"
-            echo "$NEW_PROJECTS"
+            echo "New projects: $NEW_PROJECTS"
             echo "has_projects=true" >> $GITHUB_OUTPUT
-
             COUNT=$(echo "$NEW_PROJECTS" | wc -l | tr -d ' ')
             echo "count=$COUNT" >> $GITHUB_OUTPUT
-
-            # Save slugs space-separated for validation script
             SLUG_ARGS=$(echo "$NEW_PROJECTS" | tr '\n' ' ')
             echo "slugs=$SLUG_ARGS" >> $GITHUB_OUTPUT
-
-            # Save project list for later steps
             echo "projects<<EOF" >> $GITHUB_OUTPUT
             echo "$NEW_PROJECTS" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
+
+            # Extract contributor info from the most recent commit touching the project
+            CONTRIB_NAME=$(git log -1 --format="%an" -- src/projects/)
+            CONTRIB_EMAIL=$(git log -1 --format="%ae" -- src/projects/)
+            echo "contributor_name=$CONTRIB_NAME" >> $GITHUB_OUTPUT
+            echo "contributor_email=$CONTRIB_EMAIL" >> $GITHUB_OUTPUT
           fi
 
-      - name: Validate project structure
-        id: validate
+      # ── First validation pass ───────────────────────────────────────────────
+      - name: Validate (pass 1)
+        id: validate1
         if: steps.detect.outputs.has_projects == 'true'
         run: |
           node .github/scripts/validate-research-project.mjs ${{ steps.detect.outputs.slugs }}
         continue-on-error: true
 
+      # ── Remediation (only runs if first pass failed) ────────────────────────
+      - name: Remediate telemetry gaps
+        id: remediate
+        if: steps.detect.outputs.has_projects == 'true' && steps.validate1.outcome == 'failure'
+        run: |
+          node .github/scripts/remediate-research-project.mjs ${{ steps.detect.outputs.slugs }}
+        continue-on-error: true
+
+      - name: Commit remediation
+        id: remediate_commit
+        if: steps.detect.outputs.has_projects == 'true' && steps.remediate.outcome == 'success'
+        run: |
+          git config user.name "research-hub-bot"
+          git config user.email "bot@research-hub.local"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Nothing to commit after remediation."
+          else
+            git commit -m "chore: auto-fill telemetry gaps for ${{ steps.detect.outputs.slugs }}[skip ci]"
+            git push
+            echo "committed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # ── Second validation pass (after remediation) ──────────────────────────
+      - name: Validate (pass 2 — post-remediation)
+        id: validate2
+        if: steps.detect.outputs.has_projects == 'true' && steps.validate1.outcome == 'failure'
+        run: |
+          node .github/scripts/validate-research-project.mjs ${{ steps.detect.outputs.slugs }}
+        continue-on-error: true
+
+      # ── Build test ──────────────────────────────────────────────────────────
       - name: Build test
         id: build
         if: steps.detect.outputs.has_projects == 'true'
@@ -68,24 +113,44 @@ jobs:
           npx vite build 2>&1 | tail -30
         continue-on-error: true
 
-      - name: Create summary
+      # ── Evaluate final outcome ──────────────────────────────────────────────
+      - name: Evaluate results
+        id: eval
         if: steps.detect.outputs.has_projects == 'true'
         run: |
-          VALIDATE="${{ steps.validate.outcome }}"
+          V1="${{ steps.validate1.outcome }}"
+          V2="${{ steps.validate2.outcome }}"
           BUILD="${{ steps.build.outcome }}"
+          REMEDIATED="${{ steps.remediate.outcome }}"
+
+          # Pass if first validation passed, OR second validation passed after remediation
+          if [ "$V1" = "success" ] || [ "$V2" = "success" ]; then
+            FINAL_VALIDATE="success"
+          else
+            FINAL_VALIDATE="failure"
+          fi
+
+          echo "final_validate=$FINAL_VALIDATE" >> $GITHUB_OUTPUT
+          echo "build=$BUILD" >> $GITHUB_OUTPUT
 
           echo "## Community Contribution Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** agent-contributions" >> $GITHUB_STEP_SUMMARY
           echo "**Projects:** ${{ steps.detect.outputs.count }}" >> $GITHUB_STEP_SUMMARY
           echo "**Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Pushed by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Contributor:** ${{ steps.detect.outputs.contributor_name }} <${{ steps.detect.outputs.contributor_email }}>" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if [ "$VALIDATE" = "success" ]; then
-            echo "✅ **Structure validation:** passed" >> $GITHUB_STEP_SUMMARY
+          if [ "$V1" = "success" ]; then
+            echo "✅ **Validation (pass 1):** passed" >> $GITHUB_STEP_SUMMARY
+          elif [ "$REMEDIATED" = "success" ] && [ "$V2" = "success" ]; then
+            echo "⚠️ **Validation (pass 1):** failed — telemetry gaps found" >> $GITHUB_STEP_SUMMARY
+            echo "🔧 **Remediation:** applied — gaps filled automatically" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **Validation (pass 2):** passed" >> $GITHUB_STEP_SUMMARY
           else
-            echo "❌ **Structure validation:** failed" >> $GITHUB_STEP_SUMMARY
+            echo "❌ **Validation:** failed" >> $GITHUB_STEP_SUMMARY
+            if [ "$REMEDIATED" = "success" ]; then
+              echo "🔧 **Remediation:** attempted but did not resolve all failures" >> $GITHUB_STEP_SUMMARY
+            fi
           fi
 
           if [ "$BUILD" = "success" ]; then
@@ -94,9 +159,12 @@ jobs:
             echo "❌ **Build test:** failed" >> $GITHUB_STEP_SUMMARY
           fi
 
-      # ── SUCCESS PATH: Auto-merge to main via GitHub API ──
+      # ── SUCCESS PATH ────────────────────────────────────────────────────────
       - name: Auto-merge to main
-        if: steps.detect.outputs.has_projects == 'true' && steps.validate.outcome == 'success' && steps.build.outcome == 'success'
+        if: |
+          steps.detect.outputs.has_projects == 'true' &&
+          steps.eval.outputs.final_validate == 'success' &&
+          steps.eval.outputs.build == 'success'
         env:
           ADMIN_PAT: ${{ secrets.ADMIN_PAT }}
         run: |
@@ -104,11 +172,11 @@ jobs:
             -H "Authorization: token ${ADMIN_PAT}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/merges" \
-            -d '{
-              "base": "main",
-              "head": "agent-contributions",
-              "commit_message": "Auto-merge: ${{ steps.detect.outputs.count }} validated research project(s)\n\nProjects: ${{ steps.detect.outputs.slugs }}\nContributor: ${{ github.actor }}\nValidation: ✅ structure passed, ✅ build passed"
-            }')
+            -d "{
+              \"base\": \"main\",
+              \"head\": \"agent-contributions\",
+              \"commit_message\": \"feat: accept ${{ steps.detect.outputs.count }} research project(s) from community\n\nProjects: ${{ steps.detect.outputs.slugs }}\nContributor: ${{ steps.detect.outputs.contributor_name }} <${{ steps.detect.outputs.contributor_email }}>\nValidation: ✅ structure + build passed\"
+            }")
 
           HTTP_CODE=$(echo "$RESPONSE" | tail -1)
           BODY=$(echo "$RESPONSE" | head -n -1)
@@ -118,64 +186,66 @@ jobs:
             echo "✅ Merged to main: $MERGE_SHA"
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### ✅ Auto-merged to main" >> $GITHUB_STEP_SUMMARY
-            echo "All checks passed. Research has been accepted into the public library." >> $GITHUB_STEP_SUMMARY
             echo "Merge commit: \`$MERGE_SHA\`" >> $GITHUB_STEP_SUMMARY
+            echo "Research is now available in the public library." >> $GITHUB_STEP_SUMMARY
           elif [ "$HTTP_CODE" = "204" ]; then
-            echo "✅ Already up to date (no merge needed)"
+            echo "✅ Already up to date"
           else
-            echo "❌ Merge failed (HTTP $HTTP_CODE)"
-            echo "$BODY" | jq .
+            echo "❌ Merge failed (HTTP $HTTP_CODE): $BODY"
             exit 1
           fi
 
-      # ── FAILURE PATH: Create GitHub Issue ──
+      # ── FAILURE PATH ─────────────────────────────────────────────────────────
       - name: Create failure issue
-        if: steps.detect.outputs.has_projects == 'true' && (steps.validate.outcome == 'failure' || steps.build.outcome == 'failure')
+        if: |
+          steps.detect.outputs.has_projects == 'true' &&
+          (steps.eval.outputs.final_validate != 'success' || steps.eval.outputs.build != 'success')
         uses: actions/github-script@v7
         with:
           script: |
-            const validatePassed = '${{ steps.validate.outcome }}' === 'success';
-            const buildPassed = '${{ steps.build.outcome }}' === 'success';
-            const projects = `${{ steps.detect.outputs.projects }}`.trim();
-            const actor = '${{ github.actor }}';
-            const sha = '${{ github.sha }}';
-            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const validatePassed = '${{ steps.eval.outputs.final_validate }}' === 'success';
+            const buildPassed    = '${{ steps.eval.outputs.build }}' === 'success';
+            const remediated     = '${{ steps.remediate.outcome }}' === 'success';
+            const projects       = `${{ steps.detect.outputs.projects }}`.trim();
+            const contribName    = `${{ steps.detect.outputs.contributor_name }}`;
+            const contribEmail   = `${{ steps.detect.outputs.contributor_email }}`;
+            const sha            = '${{ github.sha }}';
+            const runUrl         = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
 
-            // Read validation report if it exists
             const fs = require('fs');
             let validationReport = '';
-            try {
-              validationReport = fs.readFileSync('validation-report.md', 'utf-8');
-            } catch {
-              validationReport = '_Validation report not generated._';
-            }
+            try { validationReport = fs.readFileSync('validation-report.md', 'utf-8'); } catch {}
 
-            let body = `## ❌ Community Contribution Failed Validation\n\n`;
-            body += `**Contributor:** @${actor}\n`;
+            let body = `## ❌ Contribution Failed Validation\n\n`;
+            body += `**Contributor:** ${contribName} <${contribEmail}>\n`;
             body += `**Commit:** \`${sha}\`\n`;
             body += `**Projects:** ${projects.split('\n').map(p => '`' + p + '`').join(', ')}\n\n`;
-            body += `### Check Results\n\n`;
+            body += `### Checks\n\n`;
             body += `| Check | Result |\n|-------|--------|\n`;
-            body += `| Structure validation | ${validatePassed ? '✅ Passed' : '❌ Failed'} |\n`;
-            body += `| Build test | ${buildPassed ? '✅ Passed' : '❌ Failed'} |\n\n`;
-            body += `### Validation Details\n\n${validationReport}\n\n`;
-            body += `---\n[View full workflow run](${runUrl})\n\n`;
-            body += `_The contributor should fix the issues and push again to \`agent-contributions\`. A passing push will auto-merge to \`main\`._`;
+            body += `| Structure + telemetry validation | ${validatePassed ? '✅ Passed' : '❌ Failed'} |\n`;
+            body += `| Build test | ${buildPassed ? '✅ Passed' : '❌ Failed'} |\n`;
+            if (remediated) {
+              body += `| Auto-remediation | ⚠️ Attempted — could not resolve all failures |\n`;
+            }
+            body += `\n### Validation Details\n\n${validationReport}\n\n`;
+            body += `### How to Fix\n\n`;
+            body += `Re-run the research-visualizer skill on the same topic to produce a fresh, fully-validated project, `;
+            body += `then push to \`agent-contributions\` again. A passing push will auto-merge to \`main\`.\n\n`;
+            body += `---\n[View workflow run](${runUrl})`;
 
             const { data: issue } = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `❌ Contribution validation failed: ${projects.split('\n')[0]}`,
+              title: `❌ Contribution failed: ${projects.split('\n')[0]}`,
               body,
               labels: ['validation-failed'],
             });
 
-            core.summary.addRaw(`\n### ❌ Validation failed — Issue #${issue.number} created\n`);
-            core.summary.addRaw(`[View issue](${issue.html_url})\n`);
+            core.summary.addRaw(`\n### ❌ Validation failed — [Issue #${issue.number}](${issue.html_url}) created\n`);
             await core.summary.write();
 
       - name: Fail workflow on validation failure
-        if: steps.detect.outputs.has_projects == 'true' && (steps.validate.outcome == 'failure' || steps.build.outcome == 'failure')
-        run: |
-          echo "❌ Validation failed. See the GitHub Issue for details."
-          exit 1
+        if: |
+          steps.detect.outputs.has_projects == 'true' &&
+          (steps.eval.outputs.final_validate != 'success' || steps.eval.outputs.build != 'success')
+        run: exit 1

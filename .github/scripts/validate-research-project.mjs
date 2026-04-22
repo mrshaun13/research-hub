@@ -34,7 +34,7 @@ const REQUIRED_TELEMETRY_FIELDS = [
 ];
 
 const REQUIRED_PHASE_TIMING_FIELDS = [
-  'environment', 'interpret', 'survey', 'discover', 'research', 'analyze', 'build', 'present',
+  'environment', 'interpret', 'survey', 'discover', 'research', 'analyze', 'build', 'enrich', 'present',
 ];
 
 const REQUIRED_CONTENT_ANALYSIS_FIELDS = [
@@ -365,9 +365,11 @@ function validateTelemetry(report, telemetry) {
 
   report.pass('Telemetry', 'Telemetry object present');
 
-  // Required top-level fields
+  // Required top-level fields — phaseTiming: null is valid (user opted out of timing)
   for (const field of REQUIRED_TELEMETRY_FIELDS) {
-    if (telemetry[field] !== undefined && telemetry[field] !== null) {
+    const val = telemetry[field];
+    const present = val !== undefined && (val !== null || field === 'phaseTiming');
+    if (present) {
       report.pass('Telemetry', `\`${field}\` is present`);
     } else {
       report.fail('Telemetry', `\`${field}\` is missing`);
@@ -396,8 +398,10 @@ function validateTelemetry(report, telemetry) {
     }
   }
 
-  // Phase timing
-  if (telemetry.phaseTiming && typeof telemetry.phaseTiming === 'object') {
+  // Phase timing — null means user opted out of timing (valid); object must have all phases
+  if (telemetry.phaseTiming === null) {
+    report.pass('Telemetry', 'Phase timing opted out (null) — accepted');
+  } else if (telemetry.phaseTiming && typeof telemetry.phaseTiming === 'object') {
     const missingPhases = REQUIRED_PHASE_TIMING_FIELDS.filter(p => telemetry.phaseTiming[p] === undefined);
     if (missingPhases.length === 0) {
       report.pass('Telemetry', 'All phase timing fields present');

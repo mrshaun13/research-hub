@@ -1,6 +1,5 @@
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { products, BRAND_COLORS, TIER_COLORS } from '../data/products';
-import React from 'react';
 import { ArrowUpDown, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 
 const columns = [

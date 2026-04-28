@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { curricula, curriculumTypes } from '../data/curricula';
-import React from 'react';
 import { Check, ExternalLink, Filter, X } from 'lucide-react';
 import InsightCallout from './InsightCallout';
 

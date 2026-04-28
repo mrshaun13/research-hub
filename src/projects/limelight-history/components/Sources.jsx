@@ -1,4 +1,5 @@
 import { sources } from '../data/limelightData';
+import InsightCallout from './InsightCallout';
 
 const TIER_LABELS = {
   T1: { label: 'Primary Source', color: 'text-emerald-400 bg-emerald-500/10' },

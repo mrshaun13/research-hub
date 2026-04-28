@@ -10,6 +10,7 @@ import RareCoffees from './components/RareCoffees';
 import GlobalProduction from './components/GlobalProduction';
 import Processing from './components/Processing';
 import Sources from './components/Sources';
+import { ChevronRight } from 'lucide-react';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: Coffee, color: 'text-amber-400' },

@@ -1,3 +1,4 @@
+import InsightCallout from './InsightCallout';
 
 const legalTimeline = [
   { year: 2006, month: 'Jun', event: 'Akamai & MIT sue Limelight', outcome: null, side: 'akamai', detail: 'Alleged infringement of US Patent 6,108,703 — CDN content delivery method' },

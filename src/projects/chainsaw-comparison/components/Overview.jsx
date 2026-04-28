@@ -1,5 +1,7 @@
 import { Axe, DollarSign, Gauge } from 'lucide-react';
 import { products, BRAND_COLORS, TIER_COLORS } from '../data/products';
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
 
 const Overview = ({ onProductSelect }) => {
   const scatterData = products.map(p => ({

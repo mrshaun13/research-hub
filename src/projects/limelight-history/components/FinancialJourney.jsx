@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
 import { revenueData, stockPriceData, ERAS } from '../data/limelightData';
+import { Area, AreaChart, CartesianGrid, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import CustomTooltip from './CustomTooltip';
+import InsightCallout from './InsightCallout';
 
 const _eraColors = Object.values(ERAS).map(e => e.color);
 

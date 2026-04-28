@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { programs } from '../data/programs';
+import { Calendar, Check, ChevronDown, ChevronUp, Clock, DollarSign, ExternalLink, MapPin, Users, X } from 'lucide-react';
+import InsightCallout from './InsightCallout';
 
 const gradeLabel = (range) => {
   if (range[0] === 0 && range[1] === 12) return 'K–12';

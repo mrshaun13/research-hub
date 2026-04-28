@@ -1,4 +1,7 @@
 import { products, BRAND_COLORS, TCO_ASSUMPTIONS } from '../data/products';
+import { Bar, BarChart, CartesianGrid, Cell, Legend, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis } from 'recharts';
+import CustomTooltip from './CustomTooltip';
+import InsightCallout from './InsightCallout';
 
 export default function ValueAnalysis() {
   const triFuel = products.filter(p => p.fuelType === 'Tri-Fuel');

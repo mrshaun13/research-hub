@@ -1,5 +1,7 @@
 import { Building2, DollarSign, Globe, Skull, Scale } from 'lucide-react';
 import { ERAS } from '../data/limelightData';
+import StatCard from './StatCard';
+import InsightCallout from './InsightCallout';
 
 export default function Overview() {
   return (

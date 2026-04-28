@@ -1,4 +1,5 @@
-import { Award, DollarSign, BookOpen } from 'lucide-react';
+import { Award, BookOpen, Brain, DollarSign, ExternalLink, Star, Users, Zap } from 'lucide-react';
+import InsightCallout from './InsightCallout';
 
 const recommendations = [
   {

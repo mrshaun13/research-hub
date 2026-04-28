@@ -1,4 +1,5 @@
 import { sources } from '../data/researchData';
+import { ExternalLink } from 'lucide-react';
 
 const TIER_BADGES = {
   T1: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',

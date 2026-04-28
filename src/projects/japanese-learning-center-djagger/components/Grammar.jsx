@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { grammarPoints } from '../data/researchData';
+import InsightCallout from './InsightCallout';
 
 const LEVELS = ['All', 'N5', 'N4', 'N3', 'N2', 'N1'];
 const LEVEL_COLORS = {

@@ -1,5 +1,8 @@
 
 import { employeeData, revenuePerEmployee } from '../data/ciscoData';
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, ComposedChart, Line, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import CustomTooltip from './CustomTooltip';
+import InsightCallout from './InsightCallout';
 
 const growthData = employeeData.slice(1).map((e, i) => ({
   year: e.year,

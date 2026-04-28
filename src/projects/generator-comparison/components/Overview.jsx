@@ -1,5 +1,8 @@
 import { Zap, DollarSign, Fuel, Weight } from 'lucide-react';
 import { products, BRAND_COLORS, USER_LOAD_PROFILE } from '../data/products';
+import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const StatCard = ({ icon: Icon, label, value, sub, color = 'text-amber-400' }) => (
   <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">

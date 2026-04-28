@@ -1,7 +1,16 @@
 import { useState } from 'react';
-import { LayoutDashboard, Table2, Zap, DollarSign, ListChecks, Target, Award, BookOpen } from 'lucide-react';
+import { ArrowLeft, Award, BookOpen, DollarSign, LayoutDashboard, ListChecks, Table2, Target, Zap } from 'lucide-react';
 import { products } from './data/products';
 import { productDetails, getAggregateRating } from './data/productDetails';
+import ProductDetail from './components/ProductDetail';
+import Overview from './components/Overview';
+import ComparisonTable from './components/ComparisonTable';
+import PowerPerformance from './components/PowerPerformance';
+import ValueAnalysis from './components/ValueAnalysis';
+import FeaturesMatrix from './components/FeaturesMatrix';
+import UseCaseFit from './components/UseCaseFit';
+import Recommendations from './components/Recommendations';
+import Sources from './components/Sources';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },

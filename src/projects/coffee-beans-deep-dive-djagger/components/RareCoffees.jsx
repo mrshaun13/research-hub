@@ -1,4 +1,7 @@
 import { rareCoffees } from '../data/researchData';
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const AVAILABILITY_BADGES = {
   'Ultra Rare': 'bg-rose-500/10 text-rose-400 border-rose-500/20',

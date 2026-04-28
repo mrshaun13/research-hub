@@ -1,4 +1,5 @@
 import { BRAND_COLORS, TIER_COLORS } from '../data/products';
+import { Check, ExternalLink, MapPin, Shield, ShoppingCart, Star, Wrench, X } from 'lucide-react';
 
 const StarRating = ({ stars }) => {
   const full = Math.floor(stars);

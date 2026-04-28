@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { curricula } from '../data/curricula';
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
 
 const costData = curricula
   .map(c => ({

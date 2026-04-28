@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { GraduationCap, Table2, DollarSign, Users, GitCompare, Award, BookOpen } from 'lucide-react';
 import { curricula } from './data/curricula';
 import { programs } from './data/programs';
+import Overview from './components/Overview';
+import CurriculumComparison from './components/CurriculumComparison';
+import CostAnalysis from './components/CostAnalysis';
+import CoopPrograms from './components/CoopPrograms';
+import HeadToHead from './components/HeadToHead';
+import Recommendations from './components/Recommendations';
+import Sources from './components/Sources';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: GraduationCap },

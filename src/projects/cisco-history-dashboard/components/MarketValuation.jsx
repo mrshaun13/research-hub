@@ -1,5 +1,8 @@
 
 import { marketCapData } from '../data/ciscoData';
+import { Area, AreaChart, CartesianGrid, ReferenceArea, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import CustomTooltip from './CustomTooltip';
+import InsightCallout from './InsightCallout';
 
 export default function MarketValuation() {
   return (

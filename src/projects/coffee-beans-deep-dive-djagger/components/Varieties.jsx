@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { arabicaVarieties } from '../data/researchData';
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const AVAILABILITY_COLORS = {
   'Common': '#22c55e',

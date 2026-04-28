@@ -1,3 +1,5 @@
+import { ExternalLink } from 'lucide-react';
+import InsightCallout from './InsightCallout';
 
 const sources = [
   { name: 'GeneratorBible.com', url: 'https://generatorbible.com', type: 'Independent Reviews', desc: 'Independent generator comparison site with standardized specs, pricing history, and cross-model comparisons. Not affiliated with manufacturers.' },

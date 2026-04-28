@@ -1,4 +1,5 @@
 import { BRAND_COLORS, TIER_COLORS, USE_CASES } from '../data/products';
+import { Check, ExternalLink, MapPin, ShoppingCart, Star, X } from 'lucide-react';
 
 const ProductDetail = ({ product, details, getAggregateRating, onBack: _onBack }) => {
   if (!product || !details) return <p className="text-gray-500">Product not found.</p>;

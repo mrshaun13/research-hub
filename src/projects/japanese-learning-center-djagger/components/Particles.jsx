@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { particles } from '../data/researchData';
+import InsightCallout from './InsightCallout';
 
 const LEVEL_COLORS = {
   N5: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',

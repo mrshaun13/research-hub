@@ -1,4 +1,6 @@
 import { leadershipTimeline } from '../data/ciscoData';
+import { ArrowRight, User } from 'lucide-react';
+import InsightCallout from './InsightCallout';
 
 const eraColors = {
   'Founding': '#6366f1',

@@ -11,6 +11,7 @@ import PatentWars from './components/PatentWars';
 import Acquisitions from './components/Acquisitions';
 import Collapse from './components/Collapse';
 import Sources from './components/Sources';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard, component: Overview },

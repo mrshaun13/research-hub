@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { hiraganaChart, hiraganaDakuten, hiraganaCombos, katakanaChart, katakanaDakuten, katakanaCombos } from '../data/writingData';
+import InsightCallout from './InsightCallout';
 
 function CharGrid({ chars, cols = 5, label }) {
   return (

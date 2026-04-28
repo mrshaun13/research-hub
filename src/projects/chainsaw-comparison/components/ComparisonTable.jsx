@@ -1,5 +1,7 @@
 import { useState, useMemo } from 'react';
 import { products, BRAND_COLORS, TIER_COLORS } from '../data/products';
+import React from 'react';
+import { ArrowUpDown, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 
 const ComparisonTable = ({ onProductSelect }) => {
   const [sortKey, setSortKey] = useState('price');

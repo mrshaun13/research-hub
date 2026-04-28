@@ -1,4 +1,7 @@
 import { flavorRadarData, speciesData } from '../data/researchData';
+import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer, Tooltip } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const SPECIES_COLORS = { Arabica: '#f59e0b', Robusta: '#ef4444', Liberica: '#8b5cf6', Excelsa: '#06b6d4' };
 

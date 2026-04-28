@@ -1,3 +1,4 @@
+import InsightCallout from './InsightCallout';
 
 const LEVEL_CARDS = [
   { level: 'N5 — Beginner', color: 'emerald', hours: '~350', desc: 'Basic grammar, hiragana, katakana, 800 words. Survive daily life.' },

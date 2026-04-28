@@ -10,6 +10,7 @@ import Vocabulary from './components/Vocabulary';
 import Verbs from './components/Verbs';
 import Particles from './components/Particles';
 import Sources from './components/Sources';
+import { ChevronRight } from 'lucide-react';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: Languages, color: 'text-rose-400' },

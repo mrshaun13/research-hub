@@ -10,6 +10,7 @@ import Workforce from './components/Workforce';
 import Acquisitions from './components/Acquisitions';
 import Leadership from './components/Leadership';
 import Sources from './components/Sources';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const sections = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard, component: Overview },

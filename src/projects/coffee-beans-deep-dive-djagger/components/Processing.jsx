@@ -1,4 +1,7 @@
 import { processingMethods, cuppingTiers } from '../data/researchData';
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 export default function Processing() {
   return (

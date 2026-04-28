@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
 import { revenueData, netIncomeData } from '../data/ciscoData';
+import { Area, Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import CustomTooltip from './CustomTooltip';
+import InsightCallout from './InsightCallout';
 
 const combinedData = revenueData.map(r => {
   const ni = netIncomeData.find(n => n.year === r.year);

@@ -1,5 +1,7 @@
 import { Building2, DollarSign, Users, TrendingUp, Calendar, ShoppingCart } from 'lucide-react';
 import { ERAS, milestones } from '../data/ciscoData';
+import StatCard from './StatCard';
+import InsightCallout from './InsightCallout';
 
 export default function Overview() {
   return (

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { commonVerbs, verbGroups, teFormRules, conjugationForms } from '../data/verbData';
+import InsightCallout from './InsightCallout';
 
 const GROUP_COLORS = {
   Godan: 'bg-blue-500/10 text-blue-400 border-blue-500/20',

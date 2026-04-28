@@ -1,4 +1,6 @@
 import { products, BRAND_COLORS } from '../data/products';
+import { Check, X } from 'lucide-react';
+import InsightCallout from './InsightCallout';
 
 const features = [
   { key: 'electricStart', label: 'Electric Start', desc: 'Push-button start with battery' },

@@ -3,6 +3,9 @@ import { useState } from 'react';
 import {
   acquisitionsByYear, acquisitionCategories, topAcquisitions, acquisitionGeography
 } from '../data/ciscoData';
+import { Bar, BarChart, CartesianGrid, Cell, ComposedChart, Legend, Line, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const _COLORS = ['#049fd9', '#6b21a8', '#059669', '#d97706', '#dc2626', '#0284c7', '#7c3aed', '#ea580c', '#64748b'];
 

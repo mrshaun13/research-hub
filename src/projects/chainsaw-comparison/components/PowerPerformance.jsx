@@ -1,4 +1,7 @@
 import { products, BRAND_COLORS } from '../data/products';
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const PowerPerformance = () => {
   const byPtw = [...products].sort((a, b) => b.powerToWeight - a.powerToWeight).map(p => ({

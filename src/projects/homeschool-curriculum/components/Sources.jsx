@@ -1,3 +1,4 @@
+import { AlertTriangle, BookOpen, ExternalLink } from 'lucide-react';
 
 const sources = [
   { category: 'Curriculum Publishers', items: [

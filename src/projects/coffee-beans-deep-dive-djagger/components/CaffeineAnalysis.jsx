@@ -1,4 +1,7 @@
 import { caffeineComparison, keepAwakeData } from '../data/researchData';
+import { Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
+import CustomTooltip from './CustomTooltip';
 
 const _INTENSITY_COLORS = {
   'Extreme': '#ef4444',

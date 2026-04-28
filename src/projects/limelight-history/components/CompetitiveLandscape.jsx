@@ -1,5 +1,8 @@
 
 import { marketShareData, cdnMarketSize, competitors } from '../data/limelightData';
+import { Area, AreaChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import CustomTooltip from './CustomTooltip';
+import InsightCallout from './InsightCallout';
 
 const COLORS = {
   akamai: '#06b6d4',

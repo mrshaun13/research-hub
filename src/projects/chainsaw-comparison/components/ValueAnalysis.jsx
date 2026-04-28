@@ -1,4 +1,6 @@
 import { products, BRAND_COLORS } from '../data/products';
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis } from 'recharts';
+import InsightCallout from './InsightCallout';
 
 const ValueAnalysis = () => {
   const byPrice = [...products].sort((a, b) => a.price - b.price).map(p => ({
